@@ -1,40 +1,47 @@
 /* App.css */
 
-.App {
-  text-align: center;
+body {
+margin: 0;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+code {
+font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.top-bar {
+background-color: #fff;
+border-bottom: 2px solid lightblue;
+padding: 10px 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.top-bar-row {
+display: flex;
+align-items: center;
+margin-bottom: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.logo {
+height: 40px;
+margin-right: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+margin: 0;
+font-size: 24px;
+}
+
+.top-bar-row:last-child {
+margin-bottom: 0;
+}
+
+.content {
+padding: 20px;
+}
+
+/* Additional styling to ensure the dropdowns and buttons are properly aligned */
+.top-bar select, .top-bar button {
+margin-right: 10px;
 }
