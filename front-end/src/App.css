@@ -1,47 +1,103 @@
 /* App.css */
 
 body {
-margin: 0;
-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;
-}
-
-code {
-font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-}
-
-.top-bar {
-background-color: #fff;
-border-bottom: 2px solid lightblue;
-padding: 10px 20px;
-}
-
-.top-bar-row {
-display: flex;
-align-items: center;
-margin-bottom: 10px;
-}
-
-.logo {
-height: 40px;
-margin-right: 20px;
-}
-
-h1 {
-margin: 0;
-font-size: 24px;
-}
-
-.top-bar-row:last-child {
-margin-bottom: 0;
-}
-
-.content {
-padding: 20px;
-}
-
-/* Additional styling to ensure the dropdowns and buttons are properly aligned */
-.top-bar select, .top-bar button {
-margin-right: 10px;
-}
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  }
+  
+  .top-bar {
+    background-color: #fff;
+    border-bottom: 0.125em solid lightblue; /* 2px */
+    padding: 0.625em 1.25em; /* 10px 20px */
+  }
+  
+  .top-bar-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.625em; /* 10px */
+    margin-right: 5em;
+  }
+  
+  .logo {
+    height: 4em; /* 60px */
+    margin-right: 1em; /* 16px */
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 1.5em; /* 24px */
+  }
+  
+  .top-bar-row:last-child {
+    margin-bottom: 0;
+  }
+  
+  .filter-row {
+    display: flex;
+    align-items: center;
+    gap: 0.0625em; /* Reduced spacing between filter elements to 1px */
+    justify-content: flex-start;
+    width: 100%;
+    margin-left: 2.5em; /* 40px */
+  }
+  
+  .filter-row > * {
+    min-width: 9em; /* 250px */
+  }
+  
+  .apply-button {
+    min-width: 7.5em; /* 120px */
+  }
+  
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 200vh;
+  }
+  
+  .main-content {
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+  }
+  
+  .left-section,
+  .middle-section,
+  .right-section {
+    flex: 1;
+    padding: 0.625em; /* 10px */
+    overflow-y: auto;
+  }
+  
+  .left-section {
+    flex: 1;
+    border-right: 0.0625em solid #ccc; /* 1px */
+  }
+  
+  .middle-section {
+    flex: 1;
+    border-right: 0.0625em solid #ccc; /* 1px */
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+  }
+  
+  .right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .cr-list-container {
+    flex: 1;
+    overflow-y: auto;
+  }
+  

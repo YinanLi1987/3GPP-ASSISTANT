@@ -1,5 +1,4 @@
-/* RelationshipsBox */
-
+// src/components/RelationshipsBox.js
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Graph from "./Graph";
@@ -20,7 +19,7 @@ const RelationshipsBox = ({ sectionId }) => {
         console.error("Error fetching relationships:", error);
       });
   }, [sectionId]);
-  console.log(elements);
+
   if (!elements.length) {
     return <div>Loading relationships...</div>;
   }
