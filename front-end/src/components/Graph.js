@@ -1,4 +1,5 @@
-// Graph.js
+/* Graph.js */
+
 import React from "react";
 import CytoscapeComponent from "react-cytoscapejs";
 import { useNavigate } from "react-router-dom";
