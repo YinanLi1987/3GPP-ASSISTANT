@@ -1,4 +1,4 @@
-// src/components/Chatbot.js
+/* Chatbot.js */
 import React, { useState, useEffect } from "react";
 import styles from "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
 import {

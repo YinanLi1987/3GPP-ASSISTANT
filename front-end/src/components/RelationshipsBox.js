@@ -1,4 +1,4 @@
-// src/components/RelationshipsBox.js
+/* RelationshipsBox.js */
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Graph from "./Graph";

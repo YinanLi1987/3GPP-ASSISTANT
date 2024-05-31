@@ -1,10 +1,10 @@
-// src/components/TopBar.js
+/* TopBar.js */
 import React from 'react';
 import SpecDropdown from './SpecDropdown';
 import VersionDropdown from './VersionDropdown';
 import SectionDropdown from './SectionDropdown';
 import ApplyButton from './ApplyButton';
-import logo from '../logo.png'; // Ensure you have the logo.svg file
+import logo from '../logo.png';
 
 function TopBar({ setSelectedSpecId, selectedSpecId, setSelectedVersionId, selectedVersionId, setSelectedSectionId, selectedSectionId }) {
   return (

@@ -1,4 +1,4 @@
-// src/components/SectionContent.js
+/* SectionContent.js */
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
@@ -35,10 +35,16 @@ function SectionContent({ setSectionContent, setCrContent }) {
     <div className="section-details">
       <h2>{section.section_title}</h2>
       <h3>Section Number: {section.section_number}</h3>
-      <p>{section.section_content}</p>
+      <p>
+        {section.section_content.split('\n').map((line, index) => (
+          <span key={index}>
+            {line}
+            <br /><br /> {/* Two line breaks */}
+          </span>
+        ))}
+      </p>
     </div>
   );
 }
 
 export default SectionContent;
-
