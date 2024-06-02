@@ -17,7 +17,7 @@ const Graph = ({ elements }) => {
   return (
     <CytoscapeComponent
       elements={elements}
-      style={{ width: "800px", height: "600px" }}
+      style={{ width: "690px", height: "830px" }}
       layout={{ name: "cose" }}
       stylesheet={[
         {

@@ -1,40 +1,156 @@
 /* App.css */
-
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.top-bar {
+  background-color: #fff;
+  border-bottom: 0.125em solid lightblue;
+  padding: 0.625em 1.25em;
+}
+
+.top-bar-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.625em;
+  margin-right: 5em;
+}
+
+.logo {
+  height: 4em;
+  margin-right: 1em;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.top-bar-row:last-child {
+  margin-bottom: 0;
+}
+
+.filter-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  justify-content: flex-start;
+  width: 100%;
+  margin-left: 2.5em;
+}
+
+.filter-row > * {
+  min-width: 9em;
+  margin: 0;
+  padding: 0.5em;
+}
+
+.apply-button {
+  min-width: 7.5em;
+}
+
+.app-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
+  width: 200vh;
 }
 
-.App-link {
-  color: #61dafb;
+.main-content {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.left-section,
+.middle-section,
+.right-section {
+  flex: 1;
+  padding: 0.625em;
+  overflow-y: auto;
+}
+
+.left-section {
+  flex: 1;
+  border-right: 0.0625em solid #ccc;
+}
+
+.middle-section {
+  flex: 1;
+  border-right: 0.0625em solid #ccc;
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+}
+
+.right-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cr-list-container {
+  flex: 1;
+  overflow-y: auto;
+}
+
+select {
+  background-color: rgb(165, 208, 233);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 1em;
+  color: #333;
+}
+
+select option {
+  background-color: rgb(165, 208, 233);
+  color: #333;
+}
+
+button {
+  background-color: rgb(165, 208, 233);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #333;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(82, 125, 150);
+}
+
+.section-details {
+  margin: 1em;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.section-details h2 {
+  margin-top: 0;
+}
+
+.section-details h3 {
+  margin-top: 0.5em;
+}
+
+.section-details p {
+  margin: 0.5em 0;
+  line-height: 1.6;
 }
