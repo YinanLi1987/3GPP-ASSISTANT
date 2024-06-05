@@ -32,3 +32,4 @@ function SpecDropdown({ onSelect }) {
 }
 
 export default SpecDropdown;
+

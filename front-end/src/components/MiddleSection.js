@@ -57,3 +57,4 @@ return viewMode === 'crList' ? (
 };
   
 export default MiddleSection;
+

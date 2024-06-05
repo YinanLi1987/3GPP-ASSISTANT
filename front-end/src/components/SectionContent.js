@@ -48,3 +48,4 @@ function SectionContent({ setSectionContent, setCrContent }) {
 }
 
 export default SectionContent;
+

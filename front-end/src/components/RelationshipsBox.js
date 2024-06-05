@@ -33,3 +33,4 @@ const RelationshipsBox = ({ sectionId }) => {
 };
 
 export default RelationshipsBox;
+

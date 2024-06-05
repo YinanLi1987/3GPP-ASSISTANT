@@ -1,3 +1,4 @@
+//config.js
 module.exports = {
   host: "",
   user: "",

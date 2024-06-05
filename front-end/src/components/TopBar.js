@@ -24,3 +24,4 @@ function TopBar({ setSelectedSpecId, selectedSpecId, setSelectedVersionId, selec
 }
 
 export default TopBar;
+
