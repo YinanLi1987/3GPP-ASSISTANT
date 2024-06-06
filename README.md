@@ -130,9 +130,10 @@ The 3GPP Assistant is a web application designed to help users navigate and expl
 
 1. Open your browser and navigate to `http://localhost:3000` to access the frontend.
 2. Use the dropdowns in the top bar to select a specification, version, and section.
-3. Click "Apply" to load the content and associated CRs of the selected section.
-4. Switch between the CR list and relationships view using the provided button.
-5. Interact with the chatbot for assistance with 3GPP-related queries.
+3. Choose the "38.300", "18.1.0", "4.3.1.2" options as it has most content.
+4. Click "Apply" to load the content and associated CRs of the selected section.
+5. Switch between the CR list and relationships view using the provided button.
+6. Interact with the chatbot for assistance with 3GPP-related queries.
 
 ## Folder Structure:
 
