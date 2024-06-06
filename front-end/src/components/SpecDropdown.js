@@ -1,4 +1,5 @@
-// SpecDropdown.js
+/* SpecDropdown.js */
+
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -31,3 +32,4 @@ function SpecDropdown({ onSelect }) {
 }
 
 export default SpecDropdown;
+

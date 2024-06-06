@@ -1,4 +1,5 @@
-// Graph.js
+/* Graph.js */
+
 import React from "react";
 import CytoscapeComponent from "react-cytoscapejs";
 import { useNavigate } from "react-router-dom";
@@ -16,7 +17,7 @@ const Graph = ({ elements }) => {
   return (
     <CytoscapeComponent
       elements={elements}
-      style={{ width: "800px", height: "600px" }}
+      style={{ width: "690px", height: "830px" }}
       layout={{ name: "cose" }}
       stylesheet={[
         {
@@ -56,3 +57,4 @@ const Graph = ({ elements }) => {
 };
 
 export default Graph;
+

@@ -1,4 +1,5 @@
-// VersionDropdown.js
+/* VersionDropdown.js */
+
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -35,3 +36,4 @@ function VersionDropdown({ onSelect, selectedSpecId }) {
 }
 
 export default VersionDropdown;
+

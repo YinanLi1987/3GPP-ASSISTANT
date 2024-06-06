@@ -1,3 +1,4 @@
+/* ApplyButton.js */
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -16,3 +17,4 @@ function ApplyButton({ selectedSectionId }) {
 }
 
 export default ApplyButton;
+
