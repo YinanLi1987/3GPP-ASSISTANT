@@ -1,0 +1,4537 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>R4-1711978 TS 38.101-1 v0.2.0 (2017-10)_Clean</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<p>3GPP TS 38.101-1 V0.2.0 (2017-10)</p>
+<p>Technical Specification</p>
+<p>3rd Generation Partnership Project;</p>
+<p>Technical Specification Group Radio Access Network;</p>
+<p>NR;</p>
+<p>User Equipment (UE) radio transmission and reception;</p>
+<p>Part 1: Range 1 Standalone</p>
+<p>(Release 15)</p>
+<p><img src="media/image1.jpeg"
+style="width:1.32153in;height:0.91736in" /> <img src="media/image2.png"
+style="width:1.77708in;height:1.03889in" /></p>
+<p>The present document has been developed within the 3rd Generation
+Partnership Project (3GPP <sup>TM</sup>) and may be further elaborated
+for the purposes of 3GPP..<br />
+The present document has not been subject to any approval process by the
+3GPP Organizational Partners and shall not be implemented.<br />
+This Specification is provided for future development work within 3GPP
+only. The Organizational Partners accept no liability for any use of
+this Specification.<br />
+Specifications and Reports for implementation of the 3GPP <sup>TM</sup>
+system should be obtained via the 3GPP Organizational Partners'
+Publications Offices.</p>
+<blockquote>
+<p>Keywords</p>
+<p>&lt;keyword[, keyword, …]&gt;</p>
+<p><em><strong>3GPP</strong></em></p>
+<p>Postal address</p>
+<p>3GPP support office address</p>
+<p>650 Route des Lucioles - Sophia Antipolis</p>
+<p>Valbonne - FRANCE</p>
+<p>Tel.: +33 4 92 94 42 00 Fax: +33 4 93 65 47 16</p>
+<p>Internet</p>
+<p>http://www.3gpp.org</p>
+</blockquote>
+<h1 class="TT" id="section"><br />
+</h1>
+<p><em><strong>Copyright Notification</strong></em></p>
+<p>No part may be reproduced except as authorized by written
+permission.<br />
+The copyright and the foregoing restriction extend to reproduction in
+all media.</p>
+<p>© 2017, 3GPP Organizational Partners (ARIB, ATIS, CCSA, ETSI, TSDSI,
+TTA, TTC).</p>
+<p>All rights reserved.</p>
+<p>UMTS™ is a Trade Mark of ETSI registered for the benefit of its
+members</p>
+<p>3GPP™ is a Trade Mark of ETSI registered for the benefit of its
+Members and of the 3GPP Organizational Partners<br />
+LTE™ is a Trade Mark of ETSI registered for the benefit of its Members
+and of the 3GPP Organizational Partners</p>
+<p>GSM® and the GSM logo are registered and owned by the GSM
+Association</p>
+<h1 class="TT" id="contents">Contents</h1>
+<p>Foreword <a href="#foreword">5</a></p>
+<p>1 Scope <a href="#scope">6</a></p>
+<p>2 References <a href="#references">6</a></p>
+<p>3 Definitions, symbols and abbreviations <a
+href="#definitions-symbols-and-abbreviations">6</a></p>
+<p>3.1 Definitions <a href="#definitions">6</a></p>
+<p>3.2 Symbols <a href="#symbols">6</a></p>
+<p>3.3 Abbreviations <a href="#abbreviations">7</a></p>
+<p>4 General <a href="#general">7</a></p>
+<p>4.1 Relationship between minimum requirements and test requirements
+<a
+href="#relationship-between-minimum-requirements-and-test-requirements">7</a></p>
+<p>4.2 Applicability of minimum requirements <a
+href="#applicability-of-minimum-requirements">7</a></p>
+<p>5 Operating bands and channel arrangement <a
+href="#operating-bands-and-channel-arrangement">7</a></p>
+<p>5.1 General <a href="#general-1">7</a></p>
+<p>5.2 Operating bands <a href="#operating-bands">7</a></p>
+<p>5.3 Channel bandwidth <a href="#channel-bandwidth">8</a></p>
+<p>5.4 Channel Arrangement <a href="#channel-arrangement">8</a></p>
+<p>6 Transmitter characteristics <a
+href="#transmitter-characteristics">8</a></p>
+<p>6.1 General <a href="#general-2">8</a></p>
+<p>6.2 Transmitter power <a href="#transmitter-power">8</a></p>
+<p>6.2.1 UE maximum output power <a
+href="#ue-maximum-output-power">8</a></p>
+<p>6.2.2 UE maximum output power reduction <a
+href="#ue-maximum-output-power-reduction">9</a></p>
+<p>6.2.3 UE additional maximum output power reduction <a
+href="#ue-additional-maximum-output-power-reduction">9</a></p>
+<p>6.3 Output power dynamics <a href="#output-power-dynamics">10</a></p>
+<p>6.3.1 Minimum output power <a href="#minimum-output-power">10</a></p>
+<p>6.3.2 Transmit OFF power <a href="#transmit-off-power">10</a></p>
+<p>6.3.3 Transmit ON/OFF time mask <a
+href="#transmit-onoff-time-mask">10</a></p>
+<p>6.3.3.1 General <a href="#general-3">10</a></p>
+<p>6.3.3.2 General ON/OFF time mask <a
+href="#general-onoff-time-mask">11</a></p>
+<p>6.3.3.3 Transmit power time mask for slot and [mini-slot] boundaries
+<a
+href="#transmit-power-time-mask-for-slot-and-mini-slot-boundaries">11</a></p>
+<p>6.3.3.4 PRACH time mask <a href="#prach-time-mask">11</a></p>
+<p>6.3.3.4.1 Long PRACH time mask <a
+href="#long-prach-time-mask">11</a></p>
+<p>6.3.3.4.2 Short PRACH time mask <a
+href="#short-prach-time-mask">11</a></p>
+<p>6.3.3.5 PUCCH time mask <a href="#pucch-time-mask">11</a></p>
+<p>6.3.3.5.1 Long PUCCH time mask <a
+href="#long-pucch-time-mask">11</a></p>
+<p>6.3.3.5.2 Short PUCCH time mask <a
+href="#short-pucch-time-mask">11</a></p>
+<p>6.3.3.6 SRS time mask <a href="#srs-time-mask">11</a></p>
+<p>6.3.3.7 PUSCH-PUCCH and PUSCH-SRS time masks <a
+href="#pusch-pucch-and-pusch-srs-time-masks">11</a></p>
+<p>6.3.4 Power control <a href="#power-control">11</a></p>
+<p>6.3.4.1 General <a href="#general-4">11</a></p>
+<p>6.3.4.2 Absolute power tolerance <a
+href="#absolute-power-tolerance">11</a></p>
+<p>6.3.4.3 Relative power tolerance <a
+href="#relative-power-tolerance">12</a></p>
+<p>6.3.4.4 Aggregate power tolerance <a
+href="#aggregate-power-tolerance">12</a></p>
+<p>6.4 Transmit signal quality <a
+href="#transmit-signal-quality">12</a></p>
+<p>6.4.1 Frequency error <a href="#frequency-error">12</a></p>
+<p>6.4.2 Transmit modulation quality <a
+href="#transmit-modulation-quality">12</a></p>
+<p>6.4.2.1 Error Vector Magnitude <a
+href="#error-vector-magnitude">13</a></p>
+<p>6.4.2.1.1 Minimum requirement <a
+href="#minimum-requirement">13</a></p>
+<p>6.4.2.2 Carrier leakage <a href="#carrier-leakage">13</a></p>
+<p>6.4.2.3 In-band emissions <a
+href="#__RefHeading___Toc118_4228152257">13</a></p>
+<p>6.4.2.3.1 Minimum requirements <a
+href="#minimum-requirements">14</a></p>
+<p>6.4.2.4 EVM equalizer spectrum flatness <a
+href="#evm-equalizer-spectrum-flatness">14</a></p>
+<p>6.4.2.4.1 Minimum requirements <a
+href="#minimum-requirements-1">14</a></p>
+<p>6.5 Output RF spectrum emissions <a
+href="#output-rf-spectrum-emissions">16</a></p>
+<p>6.5.1 Occupied bandwidth <a href="#occupied-bandwidth">16</a></p>
+<p>6.5.2 Out of band emission <a href="#out-of-band-emission">16</a></p>
+<p>6.5.2.1 Spectrum emission mask <a
+href="#spectrum-emission-mask">16</a></p>
+<p>6.5.2.1.1 NR General spectrum emission mask <a
+href="#nr-general-spectrum-emission-mask">16</a></p>
+<p>6.5.2.1.2 Additional spectrum emission mask <a
+href="#additional-spectrum-emission-mask">17</a></p>
+<p>6.5.2.2 Adjacent channel leakage ratio <a
+href="#adjacent-channel-leakage-ratio">17</a></p>
+<p>6.5.2.1.1 NR ACLR <a href="#nr-aclr">17</a></p>
+<p>6.5.2.1.2 UTRA ACLR <a href="#utra-aclr">18</a></p>
+<p>6.5.3 Spurious emissions <a href="#spurious-emissions">18</a></p>
+<p>6.5.3.1 General spurious emissions <a
+href="#general-spurious-emissions">18</a></p>
+<p>6.5.3.2 Spurious emissions for UE co-existence <a
+href="#spurious-emissions-for-ue-co-existence">19</a></p>
+<p>6.5.4 Transmit intermodulation <a
+href="#transmit-intermodulation">19</a></p>
+<p>7 Receiver characteristics <a
+href="#receiver-characteristics">21</a></p>
+<p>7.1 General <a href="#general-5">21</a></p>
+<p>7.2 Diversity characteristics <a
+href="#diversity-characteristics">21</a></p>
+<p>7.3 Reference sensitivity power level <a
+href="#reference-sensitivity-power-level">21</a></p>
+<p>7.3.1 ΔR<sub>IB,c</sub> <a href="#δribc">22</a></p>
+<p>7.3.1.1 ΔR<sub>IB,c</sub> for two bands <a
+href="#δribc-for-two-bands">22</a></p>
+<p>7.3.1.2 ΔR<sub>IB,c</sub> for three bands <a
+href="#δribc-for-three-bands">22</a></p>
+<p>7.3A Reference sensitivity power level for CA <a
+href="#a-reference-sensitivity-power-level-for-ca">23</a></p>
+<p><a href="#section-1">23</a></p>
+<p>7.4 Maximum input level <a href="#maximum-input-level">23</a></p>
+<p>7.5 Adjacent Channel Selectivity (ACS) <a
+href="#adjacent-channel-selectivity-acs">23</a></p>
+<p>7.5.1 Minimum requirements <a
+href="#minimum-requirements-2">23</a></p>
+<p>7.6 Blocking characteristics <a
+href="#blocking-characteristics">26</a></p>
+<p>7.6.1 Inband Blocking <a href="#inband-blocking">26</a></p>
+<p>7.6.2 Out of Band Blocking <a href="#out-of-band-blocking">28</a></p>
+<p>7.6.3 Narrow Band Blocking <a href="#narrow-band-blocking">29</a></p>
+<p>7.7 Spurious response <a href="#spurious-response">30</a></p>
+<p>7.7.1 Minimum requirements <a
+href="#minimum-requirements-3">30</a></p>
+<p>7.8 Intermodulation characteristics <a
+href="#intermodulation-characteristics">31</a></p>
+<p>7.8.1 Wide band Intermodulation <a
+href="#wide-band-intermodulation">31</a></p>
+<p>7.8.1.1 Minimum requirements <a
+href="#minimum-requirements-4">31</a></p>
+<p>7.9 Spurious emissions <a href="#spurious-emissions-1">31</a></p>
+<p>7.9.1 Minimum requirements <a
+href="#minimum-requirements-5">32</a></p>
+<p>Annex &lt;A&gt; (normative): Measurement channels <a
+href="#annex-a-normative-measurement-channels">33</a></p>
+<p>A.1 General <a href="#a.1-general">33</a></p>
+<p>A.2 UL reference measurement channels <a
+href="#a.2-ul-reference-measurement-channels">33</a></p>
+<p>A.2.1 General <a href="#a.2.1-general">33</a></p>
+<p>A.2.2 Reference measurement channels for FDD <a
+href="#a.2.2-reference-measurement-channels-for-fdd">33</a></p>
+<p>A.2.3 Reference measurement channels for TDD <a
+href="#a.2.3-reference-measurement-channels-for-tdd">33</a></p>
+<p>A.3 DL reference measurement channels <a
+href="#a.3-dl-reference-measurement-channels">33</a></p>
+<p>A.3.1 General <a href="#a.3.1-general">33</a></p>
+<p>A.3.2 Reference measurement channel for receiver characteristics <a
+href="#a.3.2-reference-measurement-channel-for-receiver-characteristics">33</a></p>
+<p>A.4 CSI reference measurement channels <a
+href="#a.4-csi-reference-measurement-channels">33</a></p>
+<p>A.5 OFDMA Channel Noise Generator (OCNG) <a
+href="#a.5-ofdma-channel-noise-generator-ocng">33</a></p>
+<p>A.5.1 OCNG Patterns for FDD <a
+href="#a.5.1-ocng-patterns-for-fdd">33</a></p>
+<p>A.5.2 OCNG Patterns for TDD <a
+href="#a.5.2-ocng-patterns-for-tdd">33</a></p>
+<p>C.3 Connection <a href="#c.3-connection">34</a></p>
+<p>C.3.1 Measurement of Receiver Characteristics <a
+href="#c.3.1-measurement-of-receiver-characteristics">34</a></p>
+<p>Annex B (informative): Change history <a
+href="#annex-b-informative-change-history">35</a></p>
+<h1 id="foreword">Foreword</h1>
+<p>This Technical Specification has been produced by the 3rd Generation
+Partnership Project (3GPP).</p>
+<p>The contents of the present document are subject to continuing work
+within the TSG and may change following formal TSG approval. Should the
+TSG modify the contents of the present document, it will be re-released
+by the TSG with an identifying change of release date and an increase in
+version number as follows:</p>
+<p>Version x.y.z</p>
+<p>where:</p>
+<p>x the first digit:</p>
+<p>1 presented to TSG for information;</p>
+<p>2 presented to TSG for approval;</p>
+<p>3 or greater indicates TSG approved document under change
+control.</p>
+<p>y the second digit is incremented for all changes of substance, i.e.
+technical enhancements, corrections, updates, etc.</p>
+<p>z the third digit is incremented when editorial only changes have
+been incorporated in the document.</p>
+<h1 id="scope">1 Scope</h1>
+<p>The present document establishes the minimum RF characteristics [and
+minimum performance requirements] for NR User Equipment (UE) operating
+on frequency Range 1.</p>
+<h1 id="references">2 References</h1>
+<p>The following documents contain provisions which, through reference
+in this text, constitute provisions of the present document.</p>
+<p>- References are either specific (identified by date of publication,
+edition number, version number, etc.) or non‑specific.</p>
+<p>- For a specific reference, subsequent revisions do not apply.</p>
+<p>- For a non-specific reference, the latest version applies. In the
+case of a reference to a 3GPP document (including a GSM document), a
+non-specific reference implicitly refers to the latest version of that
+document <em>in the same Release as the present document</em>.</p>
+<p>[1] 3GPP TR 21.905: "Vocabulary for 3GPP Specifications".</p>
+<p>[2] 3GPP TS 38.101-2: “NR; User Equipment (UE) radio transmission and
+reception; Part 2: Range 2 Standalone”</p>
+<p>[3] 3GPP TS 38.101-3: “NR; User Equipment (UE) radio transmission and
+reception; Part 3: Range 1 and Range 2 Interworking operation with other
+radios”</p>
+<p>…</p>
+<p>[x] &lt;doctype&gt; &lt;#&gt;[ ([up to and
+including]{yyyy[-mm]|V&lt;a[.b[.c]]&gt;}[onwards])]:
+"&lt;Title&gt;".</p>
+<h1 id="definitions-symbols-and-abbreviations">3 Definitions, symbols
+and abbreviations</h1>
+<h2 id="definitions">3.1 Definitions</h2>
+<p>For the purposes of the present document, the terms and definitions
+given in 3GPP TR 21.905 [1] and the following apply. A term defined in
+the present document takes precedence over the definition of the same
+term, if any, in 3GPP TR 21.905 [1].</p>
+<p>Definition format (Normal)</p>
+<p><strong>&lt;defined term&gt;:</strong> &lt;definition&gt;.</p>
+<p><strong>example:</strong> text used to clarify abstract rules by
+applying them literally.</p>
+<h2 id="symbols">3.2 Symbols</h2>
+<p>For the purposes of the present document, the following symbols
+apply:</p>
+<p>Symbol format (EW)</p>
+<p>BW<sub>Channel</sub> Channel bandwidth</p>
+<p>&lt;symbol&gt; &lt;Explanation&gt;</p>
+<h2 id="abbreviations">3.3 Abbreviations</h2>
+<p>For the purposes of the present document, the abbreviations given in
+3GPP TR 21.905 [1] and the following apply. An abbreviation defined in
+the present document takes precedence over the definition of the same
+abbreviation, if any, in 3GPP TR 21.905 [1].</p>
+<p>Abbreviation format (EW)</p>
+<p>&lt;ACRONYM&gt; &lt;Explanation&gt;</p>
+<h1 id="general">4 General</h1>
+<h2
+id="relationship-between-minimum-requirements-and-test-requirements">4.1
+Relationship between minimum requirements and test requirements</h2>
+<p>Detailed structure of the subclause is TBD.</p>
+<h2 id="applicability-of-minimum-requirements">4.2 Applicability of
+minimum requirements</h2>
+<p>Detailed structure of the subclause is TBD.</p>
+<h1 id="operating-bands-and-channel-arrangement">5 Operating bands and
+channel arrangement</h1>
+<h2 id="general-1">5.1 General</h2>
+<p>The channel arrangements presented in this clause are based on the
+operating bands and channel bandwidths defined in the present release of
+specifications.</p>
+<p>NOTE: Other operating bands and channel bandwidths may be considered
+in future releases.</p>
+<p>Requirements throughout the RF specifications are in many cases
+defined separately for different frequency ranges (FR). The frequency
+ranges in which NR can operate according to this version of the
+specification are identified as described in Table 5.1-1.</p>
+<p>Table 5.1-1: Definition of frequency ranges</p>
+<table>
+<colgroup>
+<col style="width: 39%" />
+<col style="width: 60%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Frequency range designation</td>
+<td>Corresponding frequency range</td>
+</tr>
+<tr class="even">
+<td>FR1</td>
+<td>450 MHz – 6000 MHz</td>
+</tr>
+<tr class="odd">
+<td>FR2</td>
+<td>24250 MHz – 52600 MHz</td>
+</tr>
+</tbody>
+</table>
+<p>The present specification covers FR1 operating bands.</p>
+<h2 id="operating-bands">5.2 Operating bands</h2>
+<h2 id="channel-bandwidth">5.3 Channel bandwidth</h2>
+<p>Detailed structure of the subclause is TBD.</p>
+<h2 id="channel-arrangement">5.4 Channel Arrangement</h2>
+<p>Detailed structure of the subclause is TBD.</p>
+<h1 id="transmitter-characteristics">6 Transmitter characteristics</h1>
+<h2 id="general-2">6.1 General</h2>
+<p>Unless otherwise stated, the transmitter characteristics are
+specified at the antenna connector of the UE with a single or multiple
+transmit antenna(s). For UE with integral antenna only, a reference
+antenna with a gain of 0 dBi is assumed.</p>
+<h2 id="transmitter-power">6.2 Transmitter power</h2>
+<h3 id="ue-maximum-output-power">6.2.1 UE maximum output power</h3>
+<p>The following UE Power Classes define the maximum output power for
+any transmission bandwidth within the channel bandwidth of NR carrier
+unless otherwise stated. The period of measurement shall be at least one
+sub frame (1ms).</p>
+<p>Table 6.2.1-1: UE Power Class</p>
+<table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 13%" />
+<col style="width: 14%" />
+<col style="width: 13%" />
+<col style="width: 14%" />
+<col style="width: 12%" />
+<col style="width: 17%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>EUTRA band</td>
+<td>Class 1 (dBm)</td>
+<td>Tolerance (dB)</td>
+<td>Class 2 (dBm)</td>
+<td>Tolerance (dB)</td>
+<td>Class 3 (dBm)</td>
+<td>Tolerance (dB)</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td colspan="7"><p>NOTE 1: P<sub>PowerClass</sub> is the maximum UE
+power specified without taking into account the tolerance</p>
+<p>NOTE 2: Power class 3 is default power class unless otherwise
+stated</p></td>
+</tr>
+</tbody>
+</table>
+<p>If a UE supports a different power class than the default UE power
+class for the band and the supported power class enables the higher
+maximum output power than that of the default power class:</p>
+<p>- if the band is a TDD band and 50% or more slots in radio frame are
+used for UL transmission; or</p>
+<p>- if the IE <em>P-Max</em> as defined in TS 38.331 [?] is not
+provided; or</p>
+<p>- if the IE <em>P-Ma</em>x as defined in TS 38.331 [?] is provided
+and set to the maximum output power of the default power class or
+lower;</p>
+<p>- apply all requirements for the default power class to the supported
+power class and set the configured transmitted power as specified in
+sub-clause 6.2.5;</p>
+<p>- else (i.e the IE <em>P-Max</em> as defined in TS 38.331 [?] is
+provided and set to the higher value than the maximum output power of
+the default power class):</p>
+<p>- apply all requirements for the supported power class and set the
+configured transmitted power class as specified in sub-clause 6.2.5;</p>
+<h3 id="ue-maximum-output-power-reduction">6.2.2 UE maximum output power
+reduction</h3>
+<p>UE is allowed to reduce the maximum output power due to higher order
+modulations and transmit bandwidth configurations. For UE Power Class 3,
+the allowed maximum power reduction (MPR) is defined in Table
+6.2.2-1.</p>
+<p>Table 6.2.2-1 Maximum power reduction (MPR) for power class 3</p>
+<table>
+<colgroup>
+<col style="width: 35%" />
+<col style="width: 32%" />
+<col style="width: 31%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td rowspan="2">Modulation</td>
+<td colspan="2">MPR (dB)</td>
+</tr>
+<tr class="even">
+<td>Outer RB allocations</td>
+<td>Inner RB allocations</td>
+</tr>
+<tr class="odd">
+<td>DFT-s-OFDM PI/2 BPSK</td>
+<td>≤ TBD</td>
+<td>≤ TBD</td>
+</tr>
+<tr class="even">
+<td>DFT-s-OFDM QPSK</td>
+<td>≤ TBD</td>
+<td>≤ TBD</td>
+</tr>
+<tr class="odd">
+<td>DFT-s-OFDM 16 QAM</td>
+<td>≤ TBD</td>
+<td>≤ TBD</td>
+</tr>
+<tr class="even">
+<td>DFT-s-OFDM 64 QAM</td>
+<td colspan="2">≤ TBD</td>
+</tr>
+<tr class="odd">
+<td>DFT-s-OFDM 256 QAM</td>
+<td colspan="2">≤ TBD</td>
+</tr>
+<tr class="even">
+<td>CP-OFDM QPSK</td>
+<td>≤ TBD</td>
+<td>≤ TBD</td>
+</tr>
+<tr class="odd">
+<td>CP-OFDM 16 QAM</td>
+<td>≤ TBD</td>
+<td>≤ TBD</td>
+</tr>
+<tr class="even">
+<td>CP-OFDM 64 QAM</td>
+<td colspan="2">≤ TBD</td>
+</tr>
+<tr class="odd">
+<td>CP-OFDM 256 QAM</td>
+<td colspan="2">≤ TBD</td>
+</tr>
+</tbody>
+</table>
+<p>Where the following parameters are defined to specify valid RB
+allocation ranges for Outer and Inner RB allocations:</p>
+<blockquote>
+<p>L<sub>CRBmax</sub> is the maximum number of RB for a given Channel
+bandwidth and sub-carrier spacing derived from from spectrum
+utilization.</p>
+<p>RB<sub>startLow</sub> = L<sub>CRB</sub>/2 rounded down to next
+integer with floor at 1</p>
+<p>RB<sub>startHigh</sub> = L<sub>CRBmax</sub> – RBs<sub>tartLow</sub> –
+L<sub>CRB</sub></p>
+</blockquote>
+<p>Where Inner RB allocation range is specified as follows: Inner RB
+allocation are L<sub>CRB</sub>/2 away from each edge of the maximum RB
+allocation for all L<sub>CRB</sub> ≤ L<sub>CRBmax</sub>/2 rounded up to
+the next integer<sub>.</sub></p>
+<blockquote>
+<p>RB<sub>startInner</sub> : valid RB<sub>start</sub> values for Inner
+RB allocations</p>
+<p>For L<sub>CRB</sub> ≤ L<sub>CRBmax</sub>/2 rounded up to the next
+integer, RB<sub>startLow</sub> ≤ RB<sub>startInner</sub> ≤
+RB<sub>startHigh</sub></p>
+</blockquote>
+<p>Where Outer RB allocation range is all allocations which are not
+Inner RB allocation</p>
+<p>For the UE maximum output power modified by MPR, the power limits
+specified in subclause 6.2.5 apply.</p>
+<h3 id="ue-additional-maximum-output-power-reduction">6.2.3 UE
+additional maximum output power reduction</h3>
+<p>Additional emission requirements can be signalled by the network with
+network signalling value indicated by the field
+<em>additionalSpectrumEmission.</em> To meet these additional
+requirements, additional maximum power reduction (A-MPR) is allowed for
+the maximum output power as specified in Table 6.2.1-1. Unless stated
+otherwise, an A-MPR of 0 dB shall be used.</p>
+<p>Table 6.2.3-1 specifies for UE Power Class 3 the additional
+requirements and allowed A-MPR with corresponding network signalling
+value and operating band. The allowed A-MPR is in addition to the
+allowed MPR specified in subclause 6.2.2.</p>
+<p>Table 6.2.3-1: Additional maximum power reduction (A-MPR)</p>
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 11%" />
+<col style="width: 20%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Network Signalling value</td>
+<td>Requirements (subclause)</td>
+<td>NR Band</td>
+<td>Channel bandwidth (MHz)</td>
+<td>Resources Blocks (<em>N</em><sub>RB</sub>)</td>
+<td>A-MPR (dB)</td>
+<td>Value of additionalSpectrumEmission</td>
+</tr>
+<tr class="even">
+<td>NS_01</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>N/A</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>NS_02</td>
+<td>6.5.2.1.2</td>
+<td>NOTE 1</td>
+<td></td>
+<td></td>
+<td>TBD</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td colspan="7">NOTE 1: This NS can be signalled for NR bands that have
+UTRA services deployed</td>
+</tr>
+</tbody>
+</table>
+<h2 id="output-power-dynamics">6.3 Output power dynamics</h2>
+<p>Detailed structure of the subclause is TBD.</p>
+<h3 id="minimum-output-power">6.3.1 Minimum output power</h3>
+<p>The minimum controlled output power of the UE is defined as. the
+power in the channel bandwidth for all transmit bandwidth configurations
+(resource blocks), when the power is set to a minimum value.</p>
+<p>The minimum output power is defined as the mean power in [one
+sub-frame] [TBD ms]. The minimum output power shall not exceed the
+values specified in Table 6.3.1-1.</p>
+<p>Table 6.3.1.1-1: Minimum output power</p>
+<table>
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 34%" />
+<col style="width: 34%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><p>Channel bandwidth</p>
+<p>(MHz)</p></td>
+<td><p>Minimum output power</p>
+<p>(dBm)</p></td>
+<td><p>Measurement bandwidth</p>
+<p>(TBD)</p></td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>-40</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>10</td>
+<td>-40</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>15</td>
+<td>-40</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>20</td>
+<td>-40</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>25</td>
+<td>-39</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>40</td>
+<td>-37</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>50</td>
+<td>-36</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td>-35.2</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>80</td>
+<td>-34</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>100</td>
+<td>-33</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="transmit-off-power">6.3.2 Transmit OFF power</h3>
+<p>Transmit OFF power is defined as the mean power in the channel
+bandwidth when the transmitter is OFF. The transmitter is considered OFF
+when the UE is not allowed to transmit or during periods when the UE is
+not transmitting a sub-frame. During DTX and measurements gaps, the
+transmitter is not considered OFF.</p>
+<p>[The transmit OFF power is defined as the mean power in a duration of
+at least one sub-frame (1ms) excluding any transient periods.] The
+transmit OFF power shall not exceed the values specified in Table
+6.3.2-1.</p>
+<p>Table 6.3.2-1: Transmit OFF power</p>
+<table>
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 34%" />
+<col style="width: 34%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><p>Channel bandwidth</p>
+<p>(MHz)</p></td>
+<td><p>Transmit OFF power</p>
+<p>(dBm)</p></td>
+<td><p>Measurement bandwidth</p>
+<p>(TBD)</p></td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>-50</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>10</td>
+<td>-50</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>15</td>
+<td>-50</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>20</td>
+<td>-50</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>25</td>
+<td>-50</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>40</td>
+<td>-50</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>50</td>
+<td>-50</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td>-50</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>80</td>
+<td>-50</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>100</td>
+<td>-50</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="transmit-onoff-time-mask">6.3.3 Transmit ON/OFF time mask</h3>
+<h4 id="general-3">6.3.3.1 General</h4>
+<p>The transmit [power] time mask defines the transient period(s)
+allowed</p>
+<ul>
+<li><p>between transmit OFF power as defined in sub-clause 6.3.2 and
+transmit ON power symbols (transmit ON/OFF)</p></li>
+<li><p>between continuous ON-power transmissions […].</p></li>
+</ul>
+<p>Unless otherwise stated the minimum requirements in clause 6 apply
+also in transient periods.</p>
+<h4 id="general-onoff-time-mask">6.3.3.2 General ON/OFF time mask</h4>
+<p>The general ON/OFF time mask defines the transient period allowed
+between transmit OFF and ON power and that allowed between transmit ON
+and OFF power [for each SCS].</p>
+<h4
+id="transmit-power-time-mask-for-slot-and-mini-slot-boundaries">6.3.3.3
+Transmit power time mask for slot and [mini-slot] boundaries</h4>
+<p>[The transmit power time mask for slot and mini-slot boundaries
+defines the transient periods allowed between slot and mini-slot PUSCH
+transmissions. For PUSCH-PUCCH and PUSCH-SRS transitions and
+multiplexing the time masks in sub-clause 6.3.3.7 apply.]</p>
+<h4 id="prach-time-mask">6.3.3.4 PRACH time mask</h4>
+<h5 id="long-prach-time-mask">6.3.3.4.1 Long PRACH time mask</h5>
+<h5 id="short-prach-time-mask">6.3.3.4.2 Short PRACH time mask</h5>
+<h4 id="pucch-time-mask">6.3.3.5 PUCCH time mask</h4>
+<h5 id="long-pucch-time-mask">6.3.3.5.1 Long PUCCH time mask</h5>
+<h5 id="short-pucch-time-mask">6.3.3.5.2 Short PUCCH time mask</h5>
+<h4 id="srs-time-mask">6.3.3.6 SRS time mask</h4>
+<p>For [standalone] SRS transmission mapped to one OFDM symbol, the ON
+power is defined as the mean power over the symbol duration excluding
+any transient period […]</p>
+<p>For [standalone] SRS transmission mapped to two OFDM symbols […]</p>
+<h4 id="pusch-pucch-and-pusch-srs-time-masks">6.3.3.7 PUSCH-PUCCH and
+PUSCH-SRS time masks </h4>
+<h3 id="power-control">6.3.4 Power control</h3>
+<h4 id="general-4">6.3.4.1 General</h4>
+<p>The requirements on power control accuracy apply under normal
+conditions.</p>
+<h4 id="absolute-power-tolerance">6.3.4.2 Absolute power tolerance</h4>
+<p>The absolute power tolerance is the ability of the UE transmitter to
+set its initial output power to a specific value for the first
+[sub-frame] at the start of a contiguous transmission or non-contiguous
+transmission with a transmission gap larger than TBD. The tolerance
+includes the channel estimation error [RSRP estimate].</p>
+<p>The minimum requirement specified in Table 6.3.4.2-1 apply in the
+power range bounded by the minimum output power as specified in
+sub-clause 6.3.1 and the maximum output power as specified in sub-clause
+6.2.2.</p>
+<p>Table 6.3.4.2-1: Absolute power tolerance</p>
+<table>
+<colgroup>
+<col style="width: 39%" />
+<col style="width: 60%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="relative-power-tolerance">6.3.4.3 Relative power tolerance</h4>
+<p>The relative power tolerance is the ability of the UE transmitter to
+set its output power in a target [sub-frame] relatively to the power of
+the most recently transmitted reference [sub-frame] if the transmission
+gap between these sub-frames is TBD.</p>
+<p>The minimum requirements specified in Table 6.3.4.3-1 apply when the
+power of the target and reference sub-frames are within the power range
+bounded by the minimum output power as defined in sub-clause 6.3.1 and
+the measured [PUMAX] as defined in sub-clause [configured output
+power].</p>
+<p>Table 6.3.4.3-1: Relative power tolerance</p>
+<table>
+<colgroup>
+<col style="width: 39%" />
+<col style="width: 60%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="aggregate-power-tolerance">6.3.4.4 Aggregate power
+tolerance</h4>
+<p>The aggregate power control tolerance is the ability of the UE
+transmitter to maintain its power during non-contiguous transmissions
+within TBD in response to [0 dB] commands with respect to the first UE
+transmission and all other power control parameters [as specified in
+38.213] kept constant.</p>
+<p>The minimum requirement specified in Table 6.3.4.4-1 apply in the
+power range bounded by the minimum output power as specified in
+sub-clause 6.3.1 and the maximum output power as specified in sub-clause
+6.2.2.</p>
+<p>Table 6.3.4.4-1: Aggregate power tolerance</p>
+<table>
+<colgroup>
+<col style="width: 39%" />
+<col style="width: 60%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="transmit-signal-quality">6.4 Transmit signal quality</h2>
+<h3 id="frequency-error">6.4.1 Frequency error</h3>
+<p>The UE modulated carrier frequency shall be accurate to within ±0.1
+PPM observed over a period of [TBD] compared to the carrier frequency
+received from the NR Node B.</p>
+<h3 id="transmit-modulation-quality">6.4.2 Transmit modulation
+quality</h3>
+<p>Transmit modulation quality defines the modulation quality for
+expected in-channel RF transmissions from the UE. The transmit
+modulation quality is specified in terms of:</p>
+<p>- Error Vector Magnitude (EVM) for the allocated resource blocks
+(RBs)</p>
+<p>- EVM equalizer spectrum flatness derived from the equalizer
+coefficients generated by the EVM measurement process</p>
+<p>- Carrier leakage</p>
+<p>- In-band emissions for the non-allocated RB</p>
+<p>All the parameters defined in subclause 6.4.2 are defined using the
+measurement methodology specified in Annex F.</p>
+<h4 id="error-vector-magnitude">6.4.2.1 Error Vector Magnitude</h4>
+<p>The Error Vector Magnitude is a measure of the difference between the
+reference waveform and the measured waveform. This difference is called
+the error vector. Before calculating the EVM the measured waveform is
+corrected by the sample timing offset and RF frequency offset. Then the
+carrier leakage <mark>[]</mark> shall be removed from the measured
+waveform before calculating the EVM.</p>
+<p>The measured waveform is further modified by selecting the absolute
+phase and absolute amplitude of the Tx chain. The EVM result is defined
+after the front-end IDFT as the square root of the ratio of the mean
+error vector power to the mean reference power expressed as a %.</p>
+<p>The basic EVM measurement interval in the time domain is one preamble
+sequence for the PRACH and is one slot for the PUCCH and PUSCH in the
+time domain.. When the PUSCH or PUCCH transmission slot is shortened due
+to multiplexing with SRS, the EVM measurement interval is reduced by one
+symbol, accordingly. The PUSCH or PUCCH EVM measurement interval is also
+reduced when the mean power, modulation or allocation between slots is
+expected to change. In the case of PUSCH transmission, the measurement
+interval is reduced by a time interval equal to the sum of 5 μs and the
+applicable exclusion period defined in subclause <mark>6.3.X</mark>,
+adjacent to the boundary where the power change is expected to occur.
+<mark>For DFT-spread PUSCH, the</mark> exclusion period is applied to
+the signal obtained after the front-end IDFT. In the case of PUCCH
+transmission with power change, the PUCCH EVM measurement interval is
+reduced by one symbol adjacent to the boundary where the power change is
+expected to occur.</p>
+<h5 id="minimum-requirement">6.4.2.1.1 Minimum requirement</h5>
+<p>The RMS average of the basic EVM measurements for [10 sub-frames
+excluding any transient period for the average EVM case, and 60
+sub-frames excluding any transient period for the reference signal EVM
+case], for the different modulations schemes shall not exceed the values
+specified in Table 6.4.2.1.1-1 for the parameters defined in Table
+6.4.2.1.1-2. For EVM evaluation purposes, [all PRACH preamble formats
+0-4 and] all PUCCH formats 1, 1a, 1b, 2, 2a and 2b are considered to
+have the same EVM requirement as QPSK modulated.</p>
+<p>Table 6.4.2.1.1-1: Minimum requirements for Error Vector
+Magnitude</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 47%" />
+<col style="width: 16%" />
+<col style="width: 35%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Parameter</td>
+<td>Unit</td>
+<td>Average EVM Level</td>
+</tr>
+<tr class="even">
+<td>Pi/2-BPSK [or BPSK]</td>
+<td>%</td>
+<td>[25]</td>
+</tr>
+<tr class="odd">
+<td>[BPSK or] QPSK</td>
+<td>%</td>
+<td>17.5</td>
+</tr>
+<tr class="even">
+<td>16 QAM</td>
+<td>%</td>
+<td>12.5</td>
+</tr>
+<tr class="odd">
+<td>64 QAM</td>
+<td>%</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>256 QAM</td>
+<td>%</td>
+<td>3.5</td>
+</tr>
+</tbody>
+</table>
+<p>Table 6.4.2.1.1-2: Parameters for Error Vector Magnitude</p>
+<table>
+<colgroup>
+<col style="width: 45%" />
+<col style="width: 16%" />
+<col style="width: 37%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Parameter</td>
+<td>Unit</td>
+<td>Level</td>
+</tr>
+<tr class="even">
+<td>UE Output Power</td>
+<td>dBm</td>
+<td>≥ -40</td>
+</tr>
+<tr class="odd">
+<td>UE Output Power for 256 QAM</td>
+<td>dBm</td>
+<td>≥ -30</td>
+</tr>
+<tr class="even">
+<td>Operating conditions</td>
+<td></td>
+<td>Normal conditions</td>
+</tr>
+</tbody>
+</table>
+<h4 id="carrier-leakage">6.4.2.2 Carrier leakage</h4>
+
+<h4 id="in-band-emissions">6.4.2.3 In-band emissions</h4>
+<p>The in-band emission is defined as the average emission across 12
+sub-carriers and as a function of the RB offset from the edge of the
+allocated UL transmission bandwidth. The in-band emission is measured as
+the ratio of the UE output power in a non–allocated RB to the UE output
+power in an allocated RB.</p>
+<p>The basic in-band emissions measurement interval is defined over one
+slot in the time domain<mark>, however, the minimum requirement applies
+when the in-band emission measurement is averaged over 10
+sub-frames</mark>. When the PUSCH or PUCCH transmission slot is
+shortened due to multiplexing with SRS, the in-band emissions
+measurement interval is reduced by one <mark>or more</mark> symbols,
+accordingly.</p>
+<h5 id="minimum-requirements">6.4.2.3.1 Minimum requirements</h5>
+<p><mark>The</mark> <mark>average of the basic in-band emission
+measurement over 10 sub-frames</mark> shall not exceed the values
+specified in Table 6.4.2.3.1-1.</p>
+<p>Table 6.4.2.3.1-1: Minimum requirements for in-band emissions</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 43%" />
+<col style="width: 17%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Parameter description</td>
+<td>Unit</td>
+<td colspan="2">Limit (NOTE 1)</td>
+<td>Applicable Frequencies</td>
+</tr>
+<tr class="even">
+<td>General</td>
+<td>dB</td>
+<td colspan="2"><span class="math display">$$\begin{array}{r}
+\text{max} \\
+
+\end{array}$$</span></td>
+<td>Any non-allocated (NOTE 2)</td>
+</tr>
+<tr class="odd">
+<td rowspan="2">IQ Image</td>
+<td rowspan="2">dB</td>
+<td>-28</td>
+<td>Image frequencies when output power &gt; 10 dBm</td>
+<td rowspan="2">Image frequencies (NOTES 2, 3)</td>
+</tr>
+<tr class="even">
+<td>-25</td>
+<td>Image frequencies when output power ≤ 10 dBm</td>
+</tr>
+<tr class="odd">
+<td rowspan="4">Carrier leakage</td>
+<td rowspan="4">dBc</td>
+<td>-28</td>
+<td>Output power &gt; 10 dBm</td>
+<td rowspan="4">Carrier leakage frequency (NOTES 4, 5)</td>
+</tr>
+<tr class="even">
+<td>-25</td>
+<td>0 dBm ≤ Output power ≤10 dBm</td>
+</tr>
+<tr class="odd">
+<td>-20</td>
+<td>-30 dBm ≤ Output power ≤ 0 dBm</td>
+</tr>
+<tr class="even">
+<td>-10</td>
+<td>-40 dBm ≤ Output power &lt; -30 dBm</td>
+</tr>
+<tr class="odd">
+<td colspan="5"><p>NOTE 1: An in-band emissions combined limit is
+evaluated in each non-allocated RB. For each such RB, the minimum
+requirement is calculated as the higher of <em>P<sub>RB </sub></em>- 30
+dB and the power sum of all limit values (General, IQ Image or Carrier
+leakage) that apply. <em>P<sub>RB</sub></em> is defined in NOTE 10.</p>
+<p>NOTE 2: The measurement bandwidth is 1 RB and the limit is expressed
+as a ratio of measured power in one non-allocated RB to the measured
+average power per allocated RB, where the averaging is done across all
+allocated RBs.</p>
+<p>NOTE 3: The applicable frequencies for this limit are those that are
+enclosed in the reflection of the allocated bandwidth, based on symmetry
+<mark>with respect to the carrier leakage frequency</mark>, but
+excluding any allocated RBs.</p>
+<p>NOTE 4: The measurement bandwidth is 1 RB and the limit is expressed
+as a ratio of measured power in one non-allocated RB to the measured
+total power in all allocated RBs.</p>
+<p>NOTE 5: The applicable frequencies for this limit are those that are
+enclosed in the RBs containing the carrier leakage frequency if <span
+class="math inline"><em>N</em><sub>RB</sub></span> is odd, or in the two
+RBs immediately adjacent to the carrier leakage frequency if <span
+class="math inline"><em>N</em><sub>RB</sub></span> is even, but
+excluding any allocated RB.</p>
+<p>NOTE 6: <span class="math inline"><em>L</em><sub>CRB</sub></span> is
+the Transmission Bandwidth (see Figure 5.6-1).</p>
+<p>NOTE 7: <span class="math inline"><em>N</em><sub>RB</sub></span> is
+the Transmission Bandwidth Configuration (see Figure 5.6-1).</p>
+<p>NOTE 8: <span class="math inline">EVM</span> is the limit specified
+in Table 6.4.2.1.1-1 for the modulation format used in the allocated
+RBs.</p>
+<p>NOTE 9: <span class="math inline"><em>Δ</em><sub>RB</sub></span> is
+the starting frequency offset between the allocated RB and the measured
+non-allocated RB (e.g. <span
+class="math inline"><em>Δ</em><sub>RB</sub> = 1</span> or <span
+class="math inline"><em>Δ</em><sub>RB</sub> = −1</span> for the first
+adjacent RB outside of the allocated bandwidth.</p>
+<p>NOTE 10: <span class="math inline"><em>P</em><sub>RB</sub></span> is
+the transmitted power <mark>normalized by the number of allocated
+RBs</mark>, measured in dBm.</p></td>
+</tr>
+</tbody>
+</table>
+<h4 id="evm-equalizer-spectrum-flatness">6.4.2.4 EVM equalizer spectrum
+flatness</h4>
+<p>The zero-forcing equalizer correction applied in the EVM measurement
+process (as described in Annex F) must meet a spectral flatness
+requirement for the EVM measurement to be valid. The EVM equalizer
+spectrum flatness is defined in terms of the maximum peak-to-peak ripple
+of the equalizer coefficients (dB) across the allocated uplink block.
+The basic measurement interval is the same as for EVM.</p>
+<h5 id="minimum-requirements-1">6.4.2.4.1 Minimum requirements</h5>
+<p><mark>For shaped Pi/2-BPSK modulated waveforms, the minimum
+requirements are TBD.</mark></p>
+<p><mark>For unshaped modulated waveforms</mark>, the peak-to-peak
+variation of the EVM equalizer coefficients contained within the
+frequency range of the uplink allocation shall not exceed the maximum
+ripple specified in Table 6.4.2.4.1-1 for normal conditions. For uplink
+allocations contained within both Range 1 and Range 2, the coefficients
+evaluated within each of these frequency ranges shall meet the
+corresponding ripple requirement and the following additional
+requirement: the relative difference between the maximum coefficient in
+Range 1 and the minimum coefficient in Range 2 must not be larger than
+<mark>[5]</mark> dB, and the relative difference between the maximum
+coefficient in Range 2 and the minimum coefficient in Range 1 must not
+be larger than <mark>[7]</mark> dB (see Figure 6.4.2.4.1-1).</p>
+<p>The EVM equalizer spectral flatness shall not exceed the values
+specified in Table 6.4.2.4.1-2 for extreme conditions. For uplink
+allocations contained within both Range 1 and Range 2, the coefficients
+evaluated within each of these frequency ranges shall meet the
+corresponding ripple requirement and the following additional
+requirement: the relative difference between the maximum coefficient in
+Range 1 and the minimum coefficient in Range 2 must not be larger than
+<mark>[6]</mark> dB, and the relative difference between the maximum
+coefficient in Range 2 and the minimum coefficient in Range 1 must not
+be larger than <mark>[10]</mark> dB (see Figure 6.4.2.4.1-1).</p>
+<p>Table 6.4.2.4.1-1: Minimum requirements for EVM equalizer spectrum
+flatness <mark>for unshaped modulations</mark> (normal conditions)</p>
+<table>
+<colgroup>
+<col style="width: 69%" />
+<col style="width: 30%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Frequency range</td>
+<td>Maximum ripple [dB]</td>
+</tr>
+<tr class="even">
+<td><p>F<sub>UL_Meas</sub> – F<sub>UL_Low</sub> ≥ <mark>[3]</mark> MHz
+and F<sub>UL_High</sub> – F<sub>UL_Meas</sub> ≥ <mark>[3]</mark> MHz</p>
+<p>(Range 1)</p></td>
+<td><mark>[4]</mark> (p-p)</td>
+</tr>
+<tr class="odd">
+<td><p>F<sub>UL_Meas</sub> – F<sub>UL_Low</sub> &lt; <mark>[3]</mark>
+MHz or F<sub>UL_High</sub> – F<sub>UL_Meas</sub> &lt; <mark>[3]</mark>
+MHz</p>
+<p>(Range 2)</p></td>
+<td><mark>[8]</mark> (p-p)</td>
+</tr>
+<tr class="even">
+<td colspan="2"><p>NOTE 1: F<sub>UL_Meas</sub> refers to the sub-carrier
+frequency for which the equalizer coefficient is evaluated</p>
+<p>NOTE 2: F<sub>UL_Low</sub> and F<sub>UL_High</sub> refer to each
+E-UTRA frequency band specified in Table 5.5-1</p></td>
+</tr>
+</tbody>
+</table>
+<p>Table 6.4.2.4.1-2: Minimum requirements for EVM equalizer spectrum
+flatness <mark>for unshaped modulations</mark> (extreme conditions)</p>
+<table>
+<colgroup>
+<col style="width: 69%" />
+<col style="width: 30%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Frequency range</td>
+<td>Maximum Ripple [dB]</td>
+</tr>
+<tr class="even">
+<td><p>F<sub>UL_Meas</sub> – F<sub>UL_Low</sub> ≥ <mark>[5]</mark> MHz
+and F<sub>UL_High</sub> – F<sub>UL_Meas</sub> ≥ <mark>[5]</mark> MHz</p>
+<p>(Range 1)</p></td>
+<td><mark>[4]</mark> (p-p)</td>
+</tr>
+<tr class="odd">
+<td><p>F<sub>UL_Meas</sub> – F<sub>UL_Low</sub> &lt; <mark>[5]</mark>
+MHz or F<sub>UL_High</sub> – F<sub>UL_Meas</sub> &lt; <mark>[5]</mark>
+MHz</p>
+<p>(Range 2)</p></td>
+<td><mark>[12]</mark> (p-p)</td>
+</tr>
+<tr class="even">
+<td colspan="2"><p>NOTE 1: F<sub>UL_Meas</sub> refers to the sub-carrier
+frequency for which the equalizer coefficient is evaluated</p>
+<p>NOTE 2: F<sub>UL_Low</sub> and F<sub>UL_High</sub> refer to each
+E-UTRA frequency band specified in Table 5.5-1</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>f</strong></p>
+<p><strong>F<sub>UL_High</sub></strong></p>
+<p><strong>F<sub>UL_High</sub> – 3(5) MHz</strong></p>
+<p><strong>&lt; 4(4) dB<sub>p-p </sub></strong></p>
+<p><strong>Range 1</strong></p>
+<p><strong>Range 2</strong></p>
+<p><strong>max(Range 1)-min(Range 2) &lt; 5(6) dB</strong></p>
+<p><strong>max(Range 2)-min(Range 1) &lt; 7(10) dB</strong></p>
+<p><strong>&lt; 8(12) dB<sub>p-p </sub></strong></p>
+<p>Figure 6.4.2.4.1-1: The limits for EVM equalizer spectral flatness
+with the maximum allowed variation of the coefficients indicated
+<mark>for unshaped modulations</mark> (the ETC minimum requirement are
+within brackets).</p>
+<h2 id="output-rf-spectrum-emissions">6.5 Output RF spectrum
+emissions</h2>
+<h3 id="occupied-bandwidth">6.5.1 Occupied bandwidth</h3>
+<p>Occupied bandwidth is defined as the bandwidth containing 99 % of the
+total integrated mean power of the transmitted spectrum on the assigned
+channel. The occupied bandwidth for all transmission bandwidth
+configurations (Resources Blocks) shall be less than the channel
+bandwidth specified in Table 6.5.1-1</p>
+<p>Table 6.5.1-1: Occupied channel bandwidth</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 8%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td rowspan="2"></td>
+<td colspan="10">Occupied channel bandwidth / NR Channel bandwidth</td>
+</tr>
+<tr class="even">
+<td>5 MHz</td>
+<td>10 MHz</td>
+<td>15 MHz</td>
+<td>20 MHz</td>
+<td>25 MHz</td>
+<td>40 MHz</td>
+<td>50 MHz</td>
+<td>60 MHz</td>
+<td>80 MHz</td>
+<td>100 MHz</td>
+</tr>
+<tr class="odd">
+<td>Channel bandwidth [MHz]</td>
+<td>5</td>
+<td>10</td>
+<td>15</td>
+<td>20</td>
+<td>25</td>
+<td>40</td>
+<td>50</td>
+<td>60</td>
+<td>80</td>
+<td>100</td>
+</tr>
+</tbody>
+</table>
+<h3 id="out-of-band-emission">6.5.2 Out of band emission</h3>
+<p>The Out of band emissions are unwanted emissions immediately outside
+the assigned channel bandwidth resulting from the modulation process and
+non-linearity in the transmitter but excluding spurious emissions. This
+out of band emission limit is specified in terms of a spectrum emission
+mask and an adjacent channel leakage power ratio.</p>
+<p>To improve measurement accuracy, sensitivity and efficiency, the
+resolution bandwidth may be smaller than the measurement bandwidth. When
+the resolution bandwidth is smaller than the measurement bandwidth, the
+result should be integrated over the measurement bandwidth in order to
+obtain the equivalent noise bandwidth of the measurement bandwidth.</p>
+<h4 id="spectrum-emission-mask">6.5.2.1 Spectrum emission mask</h4>
+<p>The spectrum emission mask of the UE applies to frequencies
+(Δf<sub>OOB</sub>) starting from the ± edge of the assigned NR channel
+bandwidth. For frequencies greater than (Δf<sub>OOB</sub>) the spurious
+requirements in subclause 6.5.3 are applicable.</p>
+<p>NOTE: For measurement conditions at the edge of each frequency range,
+the lowest frequency of the measurement position in each frequency range
+should be set at the lowest boundary of the frequency range plus MBW/2.
+The highest frequency of the measurement position in each frequency
+range should be set at the highest boundary of the frequency range minus
+MBW/2. MBW denotes the measurement bandwidth defined for the protected
+band.</p>
+<h5 id="nr-general-spectrum-emission-mask">6.5.2.1.1 NR General spectrum
+emission mask</h5>
+<p>The power of any UE emission shall not exceed the levels specified in
+Table 6.5.2.1.1-1 for the specified channel bandwidth.</p>
+<p>Table 6.5.2.1.1-1: NR General spectrum emission mask</p>
+<table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 16%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><p>Δf<sub>OOB</sub></p>
+<p>(MHz)</p></td>
+<td><p>5</p>
+<p>MHz</p></td>
+<td><p>10</p>
+<p>MHz</p></td>
+<td><p>15</p>
+<p>MHz</p></td>
+<td><p>20</p>
+<p>MHz</p></td>
+<td><p>25</p>
+<p>MHz</p></td>
+<td><p>40</p>
+<p>MHz</p></td>
+<td><p>50</p>
+<p>MHz</p></td>
+<td><p>60</p>
+<p>MHz</p></td>
+<td><p>80</p>
+<p>MHz</p></td>
+<td><p>100</p>
+<p>MHz</p></td>
+<td>Measurement bandwidth</td>
+</tr>
+<tr class="even">
+<td>± 0-1</td>
+<td>-15</td>
+<td>-18</td>
+<td>-20</td>
+<td>-21</td>
+<td>-22</td>
+<td>-24</td>
+<td>-24</td>
+<td>-24</td>
+<td>-24</td>
+<td>-24</td>
+<td>30 kHz</td>
+</tr>
+<tr class="odd">
+<td>± 1-5</td>
+<td>-10</td>
+<td>-10</td>
+<td>-10</td>
+<td>-10</td>
+<td>-10</td>
+<td>-10</td>
+<td>-10</td>
+<td>-10</td>
+<td>-10</td>
+<td>-10</td>
+<td rowspan="16">1 MHz</td>
+</tr>
+<tr class="even">
+<td>± 5-6</td>
+<td>-13</td>
+<td rowspan="2">-13</td>
+<td rowspan="3">-13</td>
+<td rowspan="4">-13</td>
+<td rowspan="5">-13</td>
+<td rowspan="7">-13</td>
+<td rowspan="9">-13</td>
+<td rowspan="10">-13</td>
+<td rowspan="12">-13</td>
+<td rowspan="14">-13</td>
+</tr>
+<tr class="odd">
+<td>± 6-10</td>
+<td>-25</td>
+</tr>
+<tr class="even">
+<td>± 10-15</td>
+<td></td>
+<td>-25</td>
+</tr>
+<tr class="odd">
+<td>± 15-20</td>
+<td></td>
+<td></td>
+<td>-25</td>
+</tr>
+<tr class="even">
+<td>± 20-25</td>
+<td></td>
+<td></td>
+<td></td>
+<td>-25</td>
+</tr>
+<tr class="odd">
+<td>± 25-30</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>-25</td>
+</tr>
+<tr class="even">
+<td>± 30-40</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>± 40-45</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>-25</td>
+</tr>
+<tr class="even">
+<td>± 45-50</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>± 55-60</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>-25</td>
+</tr>
+<tr class="even">
+<td>± 60-65</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>-25</td>
+</tr>
+<tr class="odd">
+<td>± 65-80</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>± 80-85</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>-25</td>
+</tr>
+<tr class="odd">
+<td>± 85-100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>± 100-105</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>-25</td>
+</tr>
+</tbody>
+</table>
+<h5 id="additional-spectrum-emission-mask">6.5.2.1.2 Additional spectrum
+emission mask</h5>
+<p>Additional spectrum emission requirements are signalled by the
+network with network signalling value indicated by the field
+<em>additionalSpectrumEmission</em>.</p>
+<h4 id="adjacent-channel-leakage-ratio">6.5.2.2 Adjacent channel leakage
+ratio</h4>
+<p>Adjacent channel leakage power Ratio (ACLR) is the ratio of the
+filtered mean power centred on the assigned channel frequency to the
+filtered mean power centred on an adjacent channel frequency.</p>
+<h5 id="nr-aclr">6.5.2.1.1 NR ACLR</h5>
+<p>NR adjacent channel leakage power ratio (NR<sub>ACLR</sub>) is the
+ratio of the filtered mean power centred on the assigned NR channel
+frequency to the filtered mean power centred on an adjacent NR channel
+frequency at nominal channel spacing.</p>
+<p>The assigned NR channel power and adjacent NR channel power are
+measured with rectangular filters with measurement bandwidths specified
+in Table 6.5.2.1.1-1.</p>
+<p>If the measured adjacent channel power is greater than [–50dBm] then
+the NR<sub>ACLR</sub> shall be higher than the value specified in
+Table 6.5.2.1.1-2.</p>
+<p>Table 6.5.2.1.1-1: NR ACLR measurement bandwidth</p>
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 8%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td colspan="11">NR channel bandwidth / NR ACLR measurement
+bandwidth</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>5 MHz</td>
+<td>10 MHz</td>
+<td>15 MHz</td>
+<td>20 MHz</td>
+<td>25 MHz</td>
+<td>40 MHz</td>
+<td>50 MHz</td>
+<td>60 MHz</td>
+<td>80 MHz</td>
+<td>100 MHz</td>
+</tr>
+<tr class="odd">
+<td>NR ACLR measurement bandwidth</td>
+<td>4.515</td>
+<td>9.375</td>
+<td>14.235</td>
+<td>19.095</td>
+<td>23.955</td>
+<td>38.895</td>
+<td>48.615</td>
+<td>58.35</td>
+<td>78.15</td>
+<td>98.31</td>
+</tr>
+</tbody>
+</table>
+<p>Table 6.5.2.1.1-2: NR ACLR requirement</p>
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 27%" />
+<col style="width: 27%" />
+<col style="width: 27%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td></td>
+<td>Power class 1</td>
+<td>Power class 2</td>
+<td>Power class 3</td>
+</tr>
+<tr class="even">
+<td>NR<sub>ACLR</sub></td>
+<td></td>
+<td>31 dB</td>
+<td>30 dB</td>
+</tr>
+</tbody>
+</table>
+<h5 id="utra-aclr">6.5.2.1.2 UTRA ACLR</h5>
+<p>UTRA adjacent channel leakage power ratio (UTRA<sub>ACLR</sub>) is
+the ratio of the filtered mean power centred on the assigned NR channel
+frequency to the filtered mean power centred on an adjacent(s) UTRA
+channel frequency.</p>
+<p>UTRA<sub>ACLR</sub> is specified for the first adjacent UTRA channel
+(UTRA<sub>ACLR1</sub>) which center frequency is ± 2.5 MHz from NR
+channel edge and for the 2<sup>nd</sup> adjacent UTRA channel
+(UTRA<sub>ACLR2</sub>) which center frequency is ± 7.5 MHz from NR
+channel edge.</p>
+<p>The UTRA channel power is measured with a RRC filter with roll-off
+factor α =0.22 and bandwidth of 3.84 MHz. The assigned NR channel power
+is measured with a rectangular filter with measurement bandwidth
+specified in Table 6.5.2.1.1-1.</p>
+<p>If the measured adjacent channel power is greater than [–50dBm] then
+the UTRA<sub>ACLR1</sub> and UTRA<sub>ACLR2</sub> shall be higher than
+the value specified in Table 6.5.2.2.2-1.</p>
+<p>Table 6.5.2.2.1-1: UTRA ACLR requirement</p>
+<table>
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 55%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td></td>
+<td>Power class 3</td>
+</tr>
+<tr class="even">
+<td>UTRA<sub>ACLR1</sub></td>
+<td>33 dB</td>
+</tr>
+<tr class="odd">
+<td>UTRA<sub>ACLR2</sub></td>
+<td>36 dB</td>
+</tr>
+</tbody>
+</table>
+<p>UTRA ACLR requirement is applicable when signalled by the network
+with network signalling value indicated by the field
+<em>additionalSpectrumEmission</em>.</p>
+<h3 id="spurious-emissions">6.5.3 Spurious emissions</h3>
+<p>Spurious emissions are emissions which are caused by unwanted
+transmitter effects such as harmonics emission, parasitic emissions,
+intermodulation products and frequency conversion products, but exclude
+out of band emissions unless otherwise stated. The spurious emission
+limits are specified in terms of general requirements in line with
+SM.329 and NR operating band requirement to address UE co-existence.</p>
+<p>To improve measurement accuracy, sensitivity and efficiency, the
+resolution bandwidth may be smaller than the measurement bandwidth. When
+the resolution bandwidth is smaller than the measurement bandwidth, the
+result should be integrated over the measurement bandwidth in order to
+obtain the equivalent noise bandwidth of the measurement bandwidth.</p>
+<p>NOTE: For measurement conditions at the edge of each frequency range,
+the lowest frequency of the measurement position in each frequency range
+should be set at the lowest boundary of the frequency range plus MBW/2.
+The highest frequency of the measurement position in each frequency
+range should be set at the highest boundary of the frequency range minus
+MBW/2. MBW denotes the measurement bandwidth defined for the protected
+band.</p>
+<h4 id="general-spurious-emissions">6.5.3.1 General spurious
+emissions</h4>
+<p>Unless otherwise stated, the spurious emission limits apply for the
+frequency ranges that are more than FOOB (MHz) in Table 6.5.3.1-1 from
+the edge of the channel bandwidth. The spurious emission limits in Table
+6.5.3.1-2 apply for all transmitter band configurations (NRB) and
+channel bandwidths.</p>
+<p>NOTE: For measurement conditions at the edge of each frequency range,
+the lowest frequency of the measurement position in each frequency range
+should be set at the lowest boundary of the frequency range plus MBW/2.
+The highest frequency of the measurement position in each frequency
+range should be set at the highest boundary of the frequency range minus
+MBW/2. MBW denotes the measurement bandwidth defined for the protected
+band.</p>
+<p>Table 6.5.3.1-1: Boundary between NR out of band and general spurious
+emission domain</p>
+<table>
+<colgroup>
+<col style="width: 28%" />
+<col style="width: 71%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Channel bandwidth</td>
+<td>OOB boundary FOOB (MHz)</td>
+</tr>
+<tr class="even">
+<td>BWChannel</td>
+<td>BWChannel + 5</td>
+</tr>
+</tbody>
+</table>
+<p>Table 6.5.3.1-2: Requirement for general spurious emissions
+limits</p>
+<table>
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 22%" />
+<col style="width: 33%" />
+<col style="width: 12%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Frequency Range</td>
+<td>Maximum Level</td>
+<td>Measurement bandwidth</td>
+<td>NOTE</td>
+</tr>
+<tr class="even">
+<td>9 kHz ≤ f &lt; 150 kHz</td>
+<td>-36 dBm</td>
+<td>1 kHz</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>150 kHz ≤ f &lt; 30 MHz</td>
+<td>-36 dBm</td>
+<td>10 kHz</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>30 MHz ≤ f &lt; 1000 MHz</td>
+<td>-36 dBm</td>
+<td>100 kHz</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>1 GHz ≤ f &lt; 12.75 GHz</td>
+<td>-30 dBm</td>
+<td>1 MHz</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>12.75 GHz ≤ f &lt; 5th harmonic of the upper frequency edge of the
+UL operating band in GHz</td>
+<td>-30 dBm</td>
+<td>1 MHz</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>12.75 GHz &lt; f &lt; 26 GHz</td>
+<td>-30 dBm</td>
+<td>1 MHz</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td colspan="4"><p>NOTE 1: Applies for Band that the upper frequency
+edge of the UL Band more than [2.69] GHz</p>
+<p>NOTE 2: Applies for Band that the upper frequency edge of the UL Band
+more than [5.2] GHz</p></td>
+</tr>
+</tbody>
+</table>
+<h4 id="spurious-emissions-for-ue-co-existence">6.5.3.2 Spurious
+emissions for UE co-existence</h4>
+<p>This clause specifies the requirements for NR bands for coexistence
+with protected bands.</p>
+<p>Table 6.6.3.2-1: Requirements for spurious emissions for UE
+co-existence</p>
+<table>
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 35%" />
+<col style="width: 8%" />
+<col style="width: 4%" />
+<col style="width: 8%" />
+<col style="width: 12%" />
+<col style="width: 9%" />
+<col style="width: 10%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td rowspan="2">NR Band</td>
+<td colspan="7">Spurious emission for UE co-existence</td>
+</tr>
+<tr class="even">
+<td>Protected band</td>
+<td colspan="3">Frequency range (MHz)</td>
+<td>Maximum Level (dBm)</td>
+<td>MBW (MHz)</td>
+<td>NOTE</td>
+</tr>
+<tr class="odd">
+<td rowspan="5"></td>
+<td></td>
+<td>F<sub>DL_low</sub></td>
+<td>-</td>
+<td>F<sub>DL_high</sub></td>
+<td>-50</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="transmit-intermodulation">6.5.4 Transmit intermodulation</h3>
+<p>The transmit intermodulation performance is a measure of the
+capability of the transmitter to inhibit the generation of signals in
+its non linear elements caused by presence of the wanted signal and an
+interfering signal reaching the transmitter via the antenna.</p>
+<p>UE transmit intermodulation is defined by the ratio of the mean power
+of the wanted signal to the mean power of the intermodulation product
+when an interfering CW signal is added at a level below the wanted
+signal at each transmitter antenna port with the other antenna port(s)
+if any terminated. Both the wanted signal power and the intermodulation
+product power are measured through NR rectangular filter with
+measurement bandwidth shown in Table 6.6.1-1.</p>
+<p>The requirement of transmit intermodulation is specified in Table
+6.6.1-1.</p>
+<p>Table 6.6.1-1: Transmit Intermodulation</p>
+<table>
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 34%" />
+<col style="width: 36%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><p>Wanted signal</p>
+<p>channel bandwidth</p></td>
+<td colspan="2">BW<sub>Channel</sub></td>
+</tr>
+<tr class="even">
+<td><p>Interference signal</p>
+<p>frequency offset from channel center</p></td>
+<td>BW<sub>Channel</sub></td>
+<td>2*BW<sub>Channel</sub></td>
+</tr>
+<tr class="odd">
+<td>Interference CW signal level</td>
+<td colspan="2">-40dBc</td>
+</tr>
+<tr class="even">
+<td>Intermodulation product</td>
+<td>&lt; -29dBc</td>
+<td>&lt; -35dBc</td>
+</tr>
+<tr class="odd">
+<td>Measurement bandwidth</td>
+<td colspan="2">The maximum transmission bandwidth configuration among
+the different SCSs for the channel BW as defined in Table
+6.5.2.1.1-1</td>
+</tr>
+<tr class="even">
+<td>Measurement offset from channel center</td>
+<td>BW<sub>Channel</sub> and 2*BW<sub>Channel</sub></td>
+<td>2*BW<sub>Channel</sub> and 4*BW<sub>Channel</sub></td>
+</tr>
+</tbody>
+</table>
+<h1 id="receiver-characteristics">7 Receiver characteristics</h1>
+<h2 id="general-5">7.1 General</h2>
+<p>Unless otherwise stated the receiver characteristics are specified at
+the antenna connector(s) of the UE. For UE(s) with an integral antenna
+only, a reference antenna(s) with a gain of 0 dBi is assumed for each
+antenna port(s). UE with an integral antenna(s) may be taken into
+account by converting these power levels into field strength
+requirements, assuming a 0 dBi gain antenna. For UEs with more than one
+receiver antenna connector, identical interfering signals shall be
+applied to each receiver antenna port if more than one of these is used
+(diversity).</p>
+<p>The levels of the test signal applied to each of the antenna
+connectors shall be as defined in the respective sections below.</p>
+<p>With the exception of subclause 7.3, the requirements shall be
+verified with the network signalling value NS_01 configured (Table
+6.2.3-1).</p>
+<p>All the parameters in clause 7 are defined using the UL reference
+measurement channels specified in Annexes A.2.2 and A.2.3, the DL
+reference measurement channels specified in Annex A.3.2 and using the
+set-up specified in Annex C.3.1.</p>
+<h2 id="diversity-characteristics">7.2 Diversity characteristics</h2>
+<p>Detailed structure of the subclause is TBD.</p>
+<h2 id="reference-sensitivity-power-level">7.3 Reference sensitivity
+power level</h2>
+<p>The reference sensitivity power level REFSENS is the minimum mean
+power applied to each one of the UE antenna ports for all UE categories,
+at which the throughput shall meet or exceed the requirements for the
+specified reference measurement channel.</p>
+<p>The throughput shall be ≥ 95% of the maximum throughput of the
+reference measurement channels as specified in Annexes A.2.2, A.2.3 and
+A.3.2 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the
+DL-signal as described in Annex A.5.1.1/A.5.2.1) with parameters
+specified in Table 7.3-1 and Table 7.3-2</p>
+<p>Table 7.3-1: Reference sensitivity QPSK P<sub>REFSENS</sub></p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 6%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 8%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td colspan="13">Operating band / SCS / Channel bandwidth /
+Duplex-mode</td>
+</tr>
+<tr class="even">
+<td>Operating Band</td>
+<td>SCS kHz</td>
+<td><p>5</p>
+<p>MHz<br />
+(dBm)</p></td>
+<td><p>10</p>
+<p>MHz<br />
+(dBm)</p></td>
+<td><p>15</p>
+<p>MHz<br />
+(dBm)</p></td>
+<td><p>20</p>
+<p>MHz<br />
+(dBm)</p></td>
+<td><p>25</p>
+<p>MHz<br />
+(dBm)</p></td>
+<td><p>40</p>
+<p>MHz<br />
+(dBm)</p></td>
+<td><p>50</p>
+<p>MHz<br />
+(dBm)</p></td>
+<td><p>60</p>
+<p>MHz<br />
+(dBm)</p></td>
+<td><p>80</p>
+<p>MHz<br />
+(dBm)</p></td>
+<td>100 MHz<br />
+(dBm)</td>
+<td>Duplex Mode</td>
+</tr>
+<tr class="odd">
+<td rowspan="3"></td>
+<td>15</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td colspan="3">-</td>
+<td rowspan="3"></td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td>-</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td rowspan="3"></td>
+<td>15</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td colspan="3">-</td>
+<td rowspan="3"></td>
+</tr>
+<tr class="odd">
+<td>30</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>60</td>
+<td>-</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td rowspan="3"></td>
+<td>15</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td colspan="3">-</td>
+<td rowspan="3"></td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td>-</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td colspan="13"><p>[NOTE 1: Four Rx antenna ports shall be the baseline
+for this operating band.]</p>
+<p>NOTE 2: The transmitter shall be set to P<sub>UMAX</sub> as defined
+in subclause 6.2.4</p></td>
+</tr>
+</tbody>
+</table>
+<p>3.</p>
+<p>Table 7.3-3: Uplink configuration for reference sensitivity</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 6%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 8%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td colspan="13">Operating band / SCS / Channel bandwidth / Duplex
+mode</td>
+</tr>
+<tr class="even">
+<td>Operating Band</td>
+<td>SCS kHz</td>
+<td><p>5</p>
+<p>MHz<br />
+(dBm)</p></td>
+<td><p>10</p>
+<p>MHz<br />
+(dBm)</p></td>
+<td><p>15</p>
+<p>MHz<br />
+(dBm)</p></td>
+<td><p>20</p>
+<p>MHz<br />
+(dBm)</p></td>
+<td><p>25</p>
+<p>MHz<br />
+(dBm)</p></td>
+<td><p>40</p>
+<p>MHz<br />
+(dBm)</p></td>
+<td><p>50</p>
+<p>MHz<br />
+(dBm)</p></td>
+<td><p>60</p>
+<p>MHz<br />
+(dBm)</p></td>
+<td><p>80</p>
+<p>MHz<br />
+(dBm)</p></td>
+<td>100 MHz<br />
+(dBm)</td>
+<td>Duplex Mode</td>
+</tr>
+<tr class="odd">
+<td rowspan="3"></td>
+<td>15</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td colspan="3">-</td>
+<td rowspan="3"></td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td>-</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td rowspan="3"></td>
+<td>15</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td colspan="3">-</td>
+<td rowspan="3"></td>
+</tr>
+<tr class="odd">
+<td>30</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>60</td>
+<td>-</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td rowspan="3"></td>
+<td>15</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td colspan="3">-</td>
+<td rowspan="3"></td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td>-</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td colspan="13"></td>
+</tr>
+</tbody>
+</table>
+<p>Unless given by Table 7.3-4, the minimum requirements specified in
+Tables 7.3-1, 7.3-2 and 7.3-3 shall be verified with the network
+signalling value NS_01 (Table 6.2.3-1) configured.</p>
+<p>Table 7.3-4: Network signalling value for reference sensitivity</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Operating band</td>
+<td>Network Signalling value</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>For the UE which supports inter-band carrier aggregation, the minimum
+requirement for reference sensitivity in Table 7.3-1 and Table 7.3-2
+shall be increased by the amount given in ΔR<sub>IB,c</sub> defined in
+subclause 7.3.1 for the applicable operating bands.</p>
+<h3 id="δribc">7.3.1 ΔR<sub>IB,c</sub></h3>
+<h4 id="δribc-for-two-bands">7.3.1.1 ΔR<sub>IB,c</sub> for two
+bands</h4>
+<p>Table 7.3.1.1-1: ΔR<sub>IB,c</sub> due to CA (two bands)</p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 39%" />
+<col style="width: 39%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Inter-band CA configuration</td>
+<td>E-UTRA Band</td>
+<td>ΔR<sub>IB,c</sub> [dB]</td>
+</tr>
+<tr class="even">
+<td rowspan="2"></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="δribc-for-three-bands">7.3.1.2 ΔR<sub>IB,c</sub> for three
+bands</h4>
+<p>Table 7.3.1.2-1: ΔR<sub>IB,c</sub> due to CA (three bands)</p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 39%" />
+<col style="width: 39%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Inter-band CA configuration</td>
+<td>E-UTRA Band</td>
+<td>ΔR<sub>IB,c</sub> [dB]</td>
+</tr>
+<tr class="even">
+<td rowspan="3"></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="a-reference-sensitivity-power-level-for-ca">7.3A Reference
+sensitivity power level for CA</h2>
+<p>Detailed structure of the subclause is TBD.</p>
+<h2 id="section-1"></h2>
+<p>Detailed structure of the subclause is TBD.</p>
+<h2 id="maximum-input-level">7.4 Maximum input level</h2>
+<p>Maximum input level is defined as the maximum mean power received at
+the UE antenna port, at which the specified relative throughput shall
+meet or exceed the minimum requirements for the specified reference
+measurement channel. The throughput shall be ≥ 95% of the maximum
+throughput of the reference measurement channels as specified in Annex
+A.3.2 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD as described in
+Annex A.5.1.1/A.5.2.1) with parameters specified in Table 7.4-1.</p>
+<p>Table 7.4-1: Maximum input level</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 7%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 3%" />
+<col style="width: 3%" />
+<col style="width: 3%" />
+<col style="width: 3%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td rowspan="2">Rx Parameter</td>
+<td rowspan="2">Units</td>
+<td colspan="12">Channel bandwidth</td>
+</tr>
+<tr class="even">
+<td>5<br />
+MHz</td>
+<td>10<br />
+MHz</td>
+<td>15<br />
+MHz</td>
+<td colspan="2">20<br />
+MHz</td>
+<td colspan="2">25<br />
+MHz</td>
+<td>40<br />
+MHz</td>
+<td>50<br />
+MHz</td>
+<td>60<br />
+MHz</td>
+<td>80<br />
+MHz</td>
+<td>100<br />
+MHz</td>
+</tr>
+<tr class="odd">
+<td rowspan="2">Power in Transmission Bandwidth Configuration</td>
+<td rowspan="2">dBm</td>
+<td colspan="4">-25<sup>2</sup></td>
+<td colspan="2">-24<sup>2</sup></td>
+<td colspan="2">-22<sup>2</sup></td>
+<td>-21<sup>2</sup></td>
+<td colspan="3">-20<sup>2</sup></td>
+</tr>
+<tr class="even">
+<td colspan="4">-27<sup>3</sup></td>
+<td colspan="2">-26<sup>3</sup></td>
+<td colspan="2">-24<sup>3</sup></td>
+<td>-23<sup>3</sup></td>
+<td colspan="3">-22<sup>3</sup></td>
+</tr>
+<tr class="odd">
+<td colspan="14"><p>NOTE 1: The transmitter shall be set to 4dB below
+PCMAX_L at the minimum uplink configuration specified in Table 7.3-3
+with PCMAX_L as defined in subclause 6.2.4.</p>
+<p>NOTE 2: Reference measurement channel is FFS for 64-QAM.</p>
+<p>NOTE 3: Reference measurement channel is FFS for 256-QAM.</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="adjacent-channel-selectivity-acs">7.5 Adjacent Channel
+Selectivity (ACS)</h2>
+<p>Adjacent Channel Selectivity (ACS) is a measure of a receiver's
+ability to receive a NR signal at its assigned channel frequency in the
+presence of an adjacent channel signal at a given frequency offset from
+the centre frequency of the assigned channel. ACS is the ratio of the
+receive filter attenuation on the assigned channel frequency to the
+receive filter attenuation on the adjacent channel(s).</p>
+<h3 id="minimum-requirements-2">7.5.1 Minimum requirements</h3>
+<p>The UE share fulfil minimum requirements in sub-clause 7.5.1.1 and
+7.5.1.2. However it is not possible to directly measure the ACS, instead
+the lower and upper range of test parameters are chosen in Table
+7.5.1.1-3, Table 7.5.1.1-4, Table 7.5.1.2-3, and Table 7.5.1.2-4 where
+the throughput shall be ≥ 95% of the maximum throughput of the reference
+measurement channels as specified in Annexes A.2.2, A.2.3 and A.3.2
+(with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as
+described in Annex A.5.1.1/A.5.2.1). For operating bands with an
+unpaired DL part (as noted in Table 5.5-1), the requirements only apply
+for carriers assigned in the paired part.</p>
+<p>Table 7.5.1-1: Adjacent channel selectivity</p>
+<table>
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 14%" />
+<col style="width: 8%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 8%" />
+<col style="width: 6%" />
+<col style="width: 7%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td colspan="9">Channel bandwidth</td>
+</tr>
+<tr class="even">
+<td>NR band</td>
+<td>Rx Parameter</td>
+<td>Units</td>
+<td>5<br />
+MHz</td>
+<td>10<br />
+MHz</td>
+<td>15<br />
+MHz</td>
+<td>20<br />
+MHz</td>
+<td>25 MHz</td>
+<td><p>40</p>
+<p>MHz</p></td>
+<td>50<br />
+MHz</td>
+<td><p>60</p>
+<p>MHz</p></td>
+<td>100<br />
+MHz</td>
+</tr>
+<tr class="odd">
+<td>n77, n78, n79</td>
+<td>ACS</td>
+<td>dB</td>
+<td>33.0</td>
+<td>33.0</td>
+<td>33.0</td>
+<td>33.0</td>
+<td>NA</td>
+<td>NA</td>
+<td>33.0</td>
+<td>NA</td>
+<td>33.0</td>
+</tr>
+<tr class="even">
+<td>n1, n3, n7, n8, n20, n28, n41, n70, n71</td>
+<td>ACS</td>
+<td>dB</td>
+<td>33.0</td>
+<td>33.0</td>
+<td>30.0</td>
+<td>27.0</td>
+<td>[26.0]</td>
+<td>[24.0]</td>
+<td>[23.0]</td>
+<td>[22.5]</td>
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+<p>Table 7.5.1-2: Test parameters for Adjacent channel selectivity, Case
+1</p>
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 6%" />
+<col style="width: 8%" />
+<col style="width: 10%" />
+<col style="width: 13%" />
+<col style="width: 15%" />
+<col style="width: 11%" />
+<col style="width: 10%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td rowspan="2">NR band</td>
+<td rowspan="2">Rx Parameter</td>
+<td rowspan="2">Units</td>
+<td colspan="6">Channel bandwidth</td>
+</tr>
+<tr class="even">
+<td>5 MHz</td>
+<td>10 MHz</td>
+<td>15 MHz</td>
+<td>20 MHz</td>
+<td>50 MHz</td>
+<td>100 MHz</td>
+</tr>
+<tr class="odd">
+<td rowspan="6">n77, n78, n79</td>
+<td>Power in Transmission Bandwidth Configuration</td>
+<td>dBm</td>
+<td colspan="6">REFSENS + 14 dB</td>
+</tr>
+<tr class="even">
+<td>PInterferer</td>
+<td>dBm</td>
+<td>REFSENS +45.5dB</td>
+<td>REFSENS +45.5dB</td>
+<td>REFSENS +45.5dB</td>
+<td>REFSENS +45.5dB</td>
+<td>REFSENS +45.5dB</td>
+<td>REFSENS +45.5dB</td>
+</tr>
+<tr class="odd">
+<td>BWInterferer</td>
+<td>MHz</td>
+<td>5</td>
+<td>10</td>
+<td>15</td>
+<td>20</td>
+<td>50</td>
+<td>100</td>
+</tr>
+<tr class="even">
+<td><p>FInterferer (offset)</p>
+<p>For SCS of 15kHz</p></td>
+<td>MHz</td>
+<td><p>5+0.0025</p>
+<p>/</p>
+<p>-5-0.0025</p></td>
+<td><p>10+0.0125</p>
+<p>/</p>
+<p>-10-0.0125</p></td>
+<td><p>15+0.0075</p>
+<p>/</p>
+<p>-15-0.0075</p></td>
+<td><p>20+0.0025</p>
+<p>/</p>
+<p>-20-0.0025</p></td>
+<td><p>50+0.0025</p>
+<p>/</p>
+<p>-50-0.0025</p></td>
+<td><p>100+0.0125</p>
+<p>/</p>
+<p>-100-0.0125</p></td>
+</tr>
+<tr class="odd">
+<td><p>FInterferer (offset)</p>
+<p>For SCS of 30kHz</p></td>
+<td>MHz</td>
+<td><p>5+0.025</p>
+<p>/</p>
+<p>-5-0.025</p></td>
+<td><p>10+0.005</p>
+<p>/</p>
+<p>-10-0.005</p></td>
+<td><p>15+0.015</p>
+<p>/</p>
+<p>-15-0.015</p></td>
+<td><p>20+0.025</p>
+<p>/</p>
+<p>-20-0.025</p></td>
+<td><p>50+0.025</p>
+<p>/</p>
+<p>-50-0.025</p></td>
+<td><p>100+0.005</p>
+<p>/</p>
+<p>-100-0.005</p></td>
+</tr>
+<tr class="even">
+<td><p>FInterferer (offset)</p>
+<p>For SCS of 60kHz</p></td>
+<td>MHz</td>
+<td><p>5+0.010</p>
+<p>/</p>
+<p>-5-0.010</p></td>
+<td><p>10+0.050</p>
+<p>/</p>
+<p>-10-0.050</p></td>
+<td><p>15+0.030</p>
+<p>/</p>
+<p>-15-0.030</p></td>
+<td><p>20+0.010</p>
+<p>/</p>
+<p>-20-0.010</p></td>
+<td><p>50+0.010</p>
+<p>/</p>
+<p>-50-0.010</p></td>
+<td><p>100+0.050</p>
+<p>/</p>
+<p>-100-0.050</p></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td colspan="8"></td>
+</tr>
+</tbody>
+</table>
+<p>Table 7.5.1-3: Test parameters for Adjacent channel selectivity, Case
+1</p>
+<table>
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 5%" />
+<col style="width: 8%" />
+<col style="width: 9%" />
+<col style="width: 8%" />
+<col style="width: 9%" />
+<col style="width: 8%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 8%" />
+<col style="width: 0%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td rowspan="2">NR band</td>
+<td rowspan="2">Rx Parameter</td>
+<td rowspan="2">Units</td>
+<td colspan="8">Channel bandwidth</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>5 MHz</td>
+<td>10 MHz</td>
+<td>15 MHz</td>
+<td>20 MHz</td>
+<td>25 MHz</td>
+<td>40MHz</td>
+<td>50MHz</td>
+<td colspan="2">60MHz</td>
+</tr>
+<tr class="odd">
+<td rowspan="6">n1, n3, n7, n8, n20, n28, n41, n70, n71</td>
+<td>Power in Transmission Bandwidth Configuration</td>
+<td>dBm</td>
+<td colspan="8">REFSENS + 14 dB</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>P<sub>Interferer</sub></td>
+<td>dBm</td>
+<td>REFSENS +45.5dB</td>
+<td>REFSENS +45.5dB</td>
+<td>REFSENS +42.5dB</td>
+<td>REFSENS +39.5dB</td>
+<td>REFSENS [+38.5dB]</td>
+<td>REFSENS [+36.5dB]</td>
+<td>REFSENS [+35.5dB]</td>
+<td colspan="2">REFSENS [+35dB]</td>
+</tr>
+<tr class="odd">
+<td>BW<sub>Interferer</sub></td>
+<td>MHz</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td colspan="2">5</td>
+</tr>
+<tr class="even">
+<td>FInterferer (offset)<br />
+SCS=15kHz</td>
+<td>MHz</td>
+<td>5+0.0025<br />
+/<br />
+-5-0.0025</td>
+<td>7.5+0.0075<br />
+/<br />
+-7.5-0.0075</td>
+<td>10+0.0025<br />
+/<br />
+-10-0.0025</td>
+<td>12.5+0.0025<br />
+/<br />
+-12.5-0.0025</td>
+<td>15+0.0075<br />
+/<br />
+-15-0.0075</td>
+<td>22.5+0.0075<br />
+/<br />
+-22.5-0.0075</td>
+<td>NA</td>
+<td colspan="2">NA</td>
+</tr>
+<tr class="odd">
+<td>FInterferer (offset)<br />
+SCS=30kHz</td>
+<td>MHz</td>
+<td>NA</td>
+<td>7.5+0.015<br />
+/<br />
+-7.5-0.015</td>
+<td>10+0.005<br />
+/<br />
+-10-0.005</td>
+<td>12.5+0.005<br />
+/<br />
+-12.5-0.005</td>
+<td>15+0.015<br />
+/<br />
+-15-0.015</td>
+<td>22.5+0.015<br />
+/<br />
+-22.5-0.015</td>
+<td>27.5+0.005<br />
+/<br />
+-27.5-0.005</td>
+<td colspan="2">32.5+0.005<br />
+/<br />
+-32.5-0.005</td>
+</tr>
+<tr class="even">
+<td>FInterferer (offset)<br />
+SCS=60kHz</td>
+<td>MHz</td>
+<td>NA</td>
+<td>7.5+0.030<br />
+/<br />
+-7.5-0.030</td>
+<td>10+0.010<br />
+/<br />
+-10-0.010</td>
+<td>12.5+0.010<br />
+/<br />
+-12.5-0.010</td>
+<td>15+0.030<br />
+/<br />
+-15-0.030</td>
+<td>22.5+0.030<br />
+/<br />
+-22.5-0.030</td>
+<td>27.5+0.010<br />
+/<br />
+-27.5-0.010</td>
+<td colspan="2">32.5+0.010<br />
+/<br />
+-32.5-0.010</td>
+</tr>
+</tbody>
+</table>
+<p>Table 7.5.1-4: Test parameters for Adjacent channel selectivity, Case
+2</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 6%" />
+<col style="width: 9%" />
+<col style="width: 10%" />
+<col style="width: 12%" />
+<col style="width: 0%" />
+<col style="width: 13%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td rowspan="2">NR band</td>
+<td rowspan="2">Rx Parameter</td>
+<td rowspan="2">Units</td>
+<td colspan="7">Channel bandwidth</td>
+</tr>
+<tr class="even">
+<td>5 MHz</td>
+<td>10 MHz</td>
+<td colspan="2">15 MHz</td>
+<td>20 MHz</td>
+<td>50 MHz</td>
+<td>100 MHz</td>
+</tr>
+<tr class="odd">
+<td rowspan="6">n77, n78, n79</td>
+<td>Power in Transmission Bandwidth Configuration</td>
+<td>dBm</td>
+<td>-56.5</td>
+<td>-56.5</td>
+<td colspan="2">-56.5</td>
+<td>-56.5</td>
+<td>-56.5</td>
+<td>-56.5</td>
+</tr>
+<tr class="even">
+<td>PInterferer</td>
+<td>dBm</td>
+<td colspan="7">-25</td>
+</tr>
+<tr class="odd">
+<td>BWInterferer</td>
+<td>MHz</td>
+<td>5</td>
+<td>10</td>
+<td>15</td>
+<td colspan="2">20</td>
+<td>50</td>
+<td>100</td>
+</tr>
+<tr class="even">
+<td><p>FInterferer (offset)</p>
+<p>For SCS of 15kHz</p></td>
+<td>MHz</td>
+<td><p>5+0.0025</p>
+<p>/</p>
+<p>-5-0.0025</p></td>
+<td><p>10+0.0125</p>
+<p>/</p>
+<p>-10-0.0125</p></td>
+<td><p>15+0.0075</p>
+<p>/</p>
+<p>-15-0.0075</p></td>
+<td colspan="2"><p>20+0.0025</p>
+<p>/</p>
+<p>-20-0.0025</p></td>
+<td><p>50+0.0025</p>
+<p>/</p>
+<p>-50-0.0025</p></td>
+<td><p>100+0.0125</p>
+<p>/</p>
+<p>-100-0.0125</p></td>
+</tr>
+<tr class="odd">
+<td><p>FInterferer (offset)</p>
+<p>For SCS of 30kHz</p></td>
+<td>MHz</td>
+<td><p>5+0.025</p>
+<p>/</p>
+<p>-5-0.025</p></td>
+<td><p>10+0.005</p>
+<p>/</p>
+<p>-10-0.005</p></td>
+<td><p>15+0.015</p>
+<p>/</p>
+<p>-15-0.015</p></td>
+<td colspan="2"><p>20+0.025</p>
+<p>/</p>
+<p>-20-0.025</p></td>
+<td><p>50+0.025</p>
+<p>/</p>
+<p>-50-0.025</p></td>
+<td><p>100+0.005</p>
+<p>/</p>
+<p>-100-0.005</p></td>
+</tr>
+<tr class="even">
+<td><p>FInterferer (offset)</p>
+<p>For SCS of 60kHz</p></td>
+<td>MHz</td>
+<td><p>5+0.010</p>
+<p>/</p>
+<p>-5-0.010</p></td>
+<td><p>10+0.050</p>
+<p>/</p>
+<p>-10-0.050</p></td>
+<td><p>15+0.030</p>
+<p>/</p>
+<p>-15-0.030</p></td>
+<td colspan="2"><p>20+0.010</p>
+<p>/</p>
+<p>-20-0.010</p></td>
+<td><p>50+0.010</p>
+<p>/</p>
+<p>-50-0.010</p></td>
+<td><p>100+0.050</p>
+<p>/</p>
+<p>-100-0.050</p></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td colspan="9"></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Table 7.5.1-5: Test parameters for Adjacent channel
+selectivity, Case 2</strong></p>
+</blockquote>
+<table>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 6%" />
+<col style="width: 8%" />
+<col style="width: 9%" />
+<col style="width: 8%" />
+<col style="width: 10%" />
+<col style="width: 8%" />
+<col style="width: 10%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>NR band</td>
+<td rowspan="2">Rx Parameter</td>
+<td rowspan="2">Units</td>
+<td colspan="8">Channel bandwidth</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>5 MHz</td>
+<td>10 MHz</td>
+<td>15 MHz</td>
+<td>20 MHz</td>
+<td>25 MHz</td>
+<td>40MHz</td>
+<td>50MHz</td>
+<td>60MHz</td>
+</tr>
+<tr class="odd">
+<td rowspan="6">n1, n3, n7, n8, n20, n28, n41, n70, n71</td>
+<td>Power in Transmission Bandwidth Configuration</td>
+<td>dBm</td>
+<td>-56.5</td>
+<td>-56.5</td>
+<td>-53.5</td>
+<td>-50.5</td>
+<td>[-49.5]</td>
+<td>[-47.5]</td>
+<td>[-46.5]</td>
+<td>[-46]</td>
+</tr>
+<tr class="even">
+<td>PInterferer</td>
+<td></td>
+<td>-25</td>
+<td>-25</td>
+<td>-25</td>
+<td>-25</td>
+<td>-25</td>
+<td>-25</td>
+<td>-25</td>
+<td>-25</td>
+</tr>
+<tr class="odd">
+<td>BWInterferer</td>
+<td>MHz</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td>FInterferer (offset)<br />
+SCS=15kHz</td>
+<td>MHz</td>
+<td>5+0.0025<br />
+/<br />
+-5-0.0025</td>
+<td>7.5+0.0075<br />
+/<br />
+-7.5-0.0075</td>
+<td>10+0.0025<br />
+/<br />
+-10-0.0025</td>
+<td>12.5+0.0025<br />
+/<br />
+-12.5-0.0025</td>
+<td>15+0.0075<br />
+/<br />
+-15-0.0075</td>
+<td>22.5+0.0075<br />
+/<br />
+-22.5-0.0075</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<tr class="odd">
+<td>FInterferer (offset)<br />
+SCS=30kHz</td>
+<td>MHz</td>
+<td>NA</td>
+<td>7.5+0.015<br />
+/<br />
+-7.5-0.015</td>
+<td>10+0.005<br />
+/<br />
+-10-0.005</td>
+<td>12.5+0.005<br />
+/<br />
+-12.5-0.005</td>
+<td>15+0.015<br />
+/<br />
+-15-0.015</td>
+<td>22.5+0.015<br />
+/<br />
+-22.5-0.015</td>
+<td>27.5+0.005<br />
+/<br />
+-27.5-0.005</td>
+<td>32.5+0.005<br />
+/<br />
+-32.5-0.005</td>
+</tr>
+<tr class="even">
+<td>FInterferer (offset)<br />
+SCS=60kHz</td>
+<td>MHz</td>
+<td>NA</td>
+<td>7.5+0.030<br />
+/<br />
+-7.5-0.030</td>
+<td>10+0.010<br />
+/<br />
+-10-0.010</td>
+<td>12.5+0.010<br />
+/<br />
+-12.5-0.010</td>
+<td>15+0.030<br />
+/<br />
+-15-0.030</td>
+<td>22.5+0.030<br />
+/<br />
+-22.5-0.030</td>
+<td>27.5+0.010<br />
+/<br />
+-27.5-0.010</td>
+<td>32.5+0.010<br />
+/<br />
+-32.5-0.010</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td colspan="10"><p>NOTE 1: In a band capable of unplink operation, the
+transmitter shall be set to 24dB below PCMAX_L at the minimum uplink
+configuration specified in TBD with PCMAX_L as defined in subclause
+6.2.5.</p>
+<p>NOTE 2: The interferer consists of the Reference measurement channel
+specified in TBD</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="blocking-characteristics">7.6 Blocking characteristics</h2>
+<p>The blocking characteristic is a measure of the receiver's ability to
+receive a wanted signal at its assigned channel frequency in the
+presence of an unwanted interferer on frequencies other than those of
+the spurious response or the adjacent channels, without this unwanted
+input signal causing a degradation of the performance of the receiver
+beyond a specified limit. The blocking performance shall apply at all
+frequencies except those at which a spurious response occur.</p>
+<h3 id="inband-blocking">7.6.1 Inband Blocking</h3>
+<p>In-band blocking (IBB)is defined for an unwanted interfering signal
+falling into the UE receive band or into an offset region (defined in
+Table 7.6.1-2 and Table 7.6.2-2) below or above the UE receive band at
+which the relative throughput shall meet or exceed the minimum
+requirement for the specified measurement channels. The throughput shall
+be ≥ 95% of the maximum throughput of the reference measurement channels
+as specified in Annexes A.2.2, A.2.3 and A.3.2 (with one sided dynamic
+OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex
+A.5.1.1/A.5.2.1) with parameters specified in Tables 7.6.1-1 and
+7.6.1-2. For operating bands with an unpaired DL part (as noted in Table
+5.5-1), the requirements only apply for carriers assigned in the paired
+part.</p>
+<p>Table 7.6.1-1: Inband Blocking Parameters</p>
+<table>
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 6%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 8%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td rowspan="2">NR band</td>
+<td rowspan="2">Rx parameter</td>
+<td rowspan="2">Units</td>
+<td colspan="10">Channel bandwidth</td>
+</tr>
+<tr class="even">
+<td>5 MHz</td>
+<td>10 MHz</td>
+<td>15 MHz</td>
+<td>20 MHz</td>
+<td>25 MHz</td>
+<td>40 MHz</td>
+<td>50MHz</td>
+<td>60 MHz</td>
+<td>80 MHz</td>
+<td>100 MHz</td>
+</tr>
+<tr class="odd">
+<td rowspan="9">n1, n3, n7, n8, n20, n28, n41, n70</td>
+<td rowspan="2">Power in Transmission Bandwidth Configuration</td>
+<td rowspan="2">dBm</td>
+<td colspan="10">REFSENS + channel bandwidth specific value below</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>6</td>
+<td>7</td>
+<td>9</td>
+<td>10</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>BW<sub>Interferer</sub></td>
+<td>MHz</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>FIoffset, case 1<br />
+SCS=15kHz</td>
+<td> </td>
+<td><p>7.5+</p>
+<p>0.0025</p></td>
+<td><p>7.5+</p>
+<p>0.0025</p></td>
+<td><p>7.5+</p>
+<p>0.0075</p></td>
+<td><p>7.5+</p>
+<p>0.0025</p></td>
+<td><p>7.5+</p>
+<p>0.0025</p></td>
+<td><p>7.5+</p>
+<p>0.0025</p></td>
+<td>NA</td>
+<td>NA</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>FIoffset, case 1<br />
+SCS=30kHz</td>
+<td> </td>
+<td>NA</td>
+<td><p>7.5+</p>
+<p>0.005</p></td>
+<td><p>7.5+</p>
+<p>0.015</p></td>
+<td><p>7.5+</p>
+<p>0.005</p></td>
+<td><p>7.5+</p>
+<p>0.005</p></td>
+<td><p>7.5+</p>
+<p>0.005</p></td>
+<td><p>7.5+</p>
+<p>0.005</p></td>
+<td><p>7.5+</p>
+<p>0.015</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>FIoffset, case 1<br />
+SCS=60kHz</td>
+<td> </td>
+<td>NA</td>
+<td><p>7.5+</p>
+<p>0.010</p></td>
+<td><p>7.5+</p>
+<p>0.030</p></td>
+<td><p>7.5+</p>
+<p>0.010</p></td>
+<td><p>7.5+</p>
+<p>0.010</p></td>
+<td><p>7.5+</p>
+<p>0.010</p></td>
+<td><p>7.5+</p>
+<p>0.010</p></td>
+<td><p>7.5+</p>
+<p>0.030</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>FIoffset, case 2<br />
+SCS=15kHz</td>
+<td> </td>
+<td><p>12.5+</p>
+<p>0.0075</p></td>
+<td><p>12.5+</p>
+<p>0.0025</p></td>
+<td><p>12.5+</p>
+<p>0.0025</p></td>
+<td><p>12.5+</p>
+<p>0.0075</p></td>
+<td><p>12.5+</p>
+<p>0.0025</p></td>
+<td><p>12.5+</p>
+<p>0.0025</p></td>
+<td>NA</td>
+<td>NA</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>FIoffset, case 2<br />
+SCS=30kHz</td>
+<td> </td>
+<td>NA</td>
+<td><p>12.5+</p>
+<p>0.005</p></td>
+<td><p>12.5+</p>
+<p>0.005</p></td>
+<td><p>12.5+</p>
+<p>0.015</p></td>
+<td><p>12.5+</p>
+<p>0.005</p></td>
+<td><p>12.5+</p>
+<p>0.005</p></td>
+<td><p>12.5+</p>
+<p>0.015</p></td>
+<td><p>12.5+</p>
+<p>0.005</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>FIoffset, case 2<br />
+SCS=60kHz</td>
+<td> </td>
+<td>NA</td>
+<td><p>12.5+</p>
+<p>0.010</p></td>
+<td><p>12.5+</p>
+<p>0.010</p></td>
+<td><p>12.5+</p>
+<p>0.030</p></td>
+<td><p>12.5+</p>
+<p>0.010</p></td>
+<td><p>12.5+</p>
+<p>0.010</p></td>
+<td><p>12.5+</p>
+<p>0.030</p></td>
+<td><p>12.5+</p>
+<p>0.010</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td rowspan="6"></td>
+<td>Case 3-6 if needed</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td colspan="13"><p>NOTE 1: The transmitter shall be set to 4dB below
+PCMAX_L at the minimum uplink configuration specified in TBD with
+PCMAX_L as defined in subclause 6.2.5.</p>
+<p>NOTE 2: The interferer consists of the Reference measurement channel
+specified in TBD</p>
+<p>NOTE 3: The REFSENS power level is specified in TBD for two and four
+antenna ports, respectively.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Table 7.6.1-2: Inband Blocking</p>
+<table>
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 13%" />
+<col style="width: 8%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 12%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td rowspan="3"><p>NR band</p>
+<p> </p></td>
+<td>Parameter</td>
+<td>Unit</td>
+<td>Case 1</td>
+<td>Case 2</td>
+<td>Case 3</td>
+<td>Case 4</td>
+<td>Case 6</td>
+</tr>
+<tr class="even">
+<td>P<sub>Interferer</sub></td>
+<td>dBm</td>
+<td>-56</td>
+<td>-44</td>
+<td></td>
+<td></td>
+<td>TDB</td>
+</tr>
+<tr class="odd">
+<td>F<sub>Interferer</sub> (offset)</td>
+<td>MHz</td>
+<td><p>=-BW/2 – F<sub>Ioffset,case 1</sub></p>
+<p>&amp;</p>
+<p>=+BW/2 + F<sub>Ioffset,case 1</sub></p></td>
+<td><p>≤-BW/2 – F<sub>Ioffset,case 2</sub></p>
+<p>&amp;</p>
+<p>≥+BW/2 + F<sub>Ioffset,case 2</sub></p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>n1, n3, n7, n8, n20, n28, n41, n70</td>
+<td>F<sub>Interferer</sub></td>
+<td>MHz</td>
+<td>(NOTE 2)</td>
+<td><p>F<sub>DL_low</sub> – 15</p>
+<p>to</p>
+<p>F<sub>DL_high</sub> + 15</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>F<sub>Interferer</sub></td>
+<td>MHz</td>
+<td>TBD</td>
+<td>TBD</td>
+<td></td>
+<td></td>
+<td>TBD</td>
+</tr>
+<tr class="even">
+<td colspan="8"><p>NOTE 1: For certain bands, the unwanted modulated
+interfering signal may not fall inside the UE receive band, but within
+the first 15 MHz below or above the UE receive band</p>
+<p>NOTE 2: For each carrier frequency the requirement is valid for two
+frequencies:</p>
+<p>a. the carrier frequency -BW/2 - FIoffset, case 1 and</p>
+<p>b. the carrier frequency +BW/2 + FIoffset, case 1</p>
+<p>NOTE 3: F<sub>Interferer</sub> range values for unwanted modulated
+interfering signal are interferer center frequencies</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="out-of-band-blocking">7.6.2 Out of Band Blocking</h3>
+<p>Out-of-band band blocking is defined for an unwanted CW interfering
+signal falling outside the UE receive band by an offset region (defined
+in Table 7.6.2.1-2 and Table 7.6.2.2-2) below or above the UE receive
+band at which the relative throughput shall meet or exceed the minimum
+requirement for the specified measurement channels. In the offset region
+below or above the UE receive band the appropriate in-band blocking or
+adjacent channel selectivity in sub-clause 7.5.1 and sub-clause 7.6.1
+shall apply.</p>
+<p>Table 7.6.2-1: Out of Band Blocking Parameters</p>
+<table>
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 13%" />
+<col style="width: 6%" />
+<col style="width: 7%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 9%" />
+<col style="width: 10%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td rowspan="2">Operating band</td>
+<td rowspan="2">Rx Parameter</td>
+<td rowspan="2">Units</td>
+<td colspan="8">Channel bandwidth</td>
+</tr>
+<tr class="even">
+<td>5MHz</td>
+<td>10MHz</td>
+<td>15MHz</td>
+<td>20MHz</td>
+<td>25 MHz</td>
+<td>40 MHz</td>
+<td>50MHz</td>
+<td>60 MHz</td>
+</tr>
+<tr class="odd">
+<td rowspan="5">n1, n3, n7, n8, n20, n28, n41, n70, n71</td>
+<td rowspan="2">Power in Transmission Bandwidth Configuration</td>
+<td rowspan="2">dBm</td>
+<td colspan="8">REFSENS + channel bandwidth specific value below</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>6</td>
+<td>7</td>
+<td>9</td>
+<td>10</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+</tr>
+<tr class="odd">
+<td>SCS=15kHz</td>
+<td> </td>
+<td>5</td>
+<td>10</td>
+<td>15</td>
+<td>20</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<tr class="even">
+<td>SCS=30kHz</td>
+<td> </td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>25</td>
+<td>40</td>
+<td>50</td>
+<td>NA</td>
+</tr>
+<tr class="odd">
+<td>SCS=60kHz</td>
+<td> </td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>60</td>
+</tr>
+<tr class="even">
+<td colspan="11"><p>NOTE 1: The transmitter shall be set to 4dB below
+PCMAX_L at the minimum uplink configuration specified TBD with PCMAX_L
+as defined in subclause 6.2.5.</p>
+<p>NOTE 2: Reference measurement channel is specified TBD</p>
+<p>NOTE 3: The REFSENS power level is specified in TBD for two and four
+antenna ports, respectively.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Table 7.6.2-2: Out of Band Blocking</p>
+<table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 10%" />
+<col style="width: 9%" />
+<col style="width: 14%" />
+<col style="width: 16%" />
+<col style="width: 18%" />
+<col style="width: 17%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td rowspan="2">NR band</td>
+<td rowspan="2">Parameter</td>
+<td rowspan="2">Units</td>
+<td colspan="4">Frequency</td>
+</tr>
+<tr class="even">
+<td>Range 1</td>
+<td>Range 2</td>
+<td>Range 3</td>
+<td>Range 4</td>
+</tr>
+<tr class="odd">
+<td rowspan="5"><p>n1, n3, n7, n8, n20, n28, n41, n70, n71</p>
+<p> </p></td>
+<td>P<sub>Interferer</sub></td>
+<td>dBm</td>
+<td>-44</td>
+<td>-30</td>
+<td>-15</td>
+<td></td>
+</tr>
+<tr class="even">
+<td rowspan="4">F<sub>Interferer</sub> (CW)</td>
+<td rowspan="4">MHz</td>
+<td>F<sub>DL_low</sub> -15 to</td>
+<td>F<sub>DL_low</sub> -60 to</td>
+<td>F<sub>DL_low</sub> -85 to</td>
+<td rowspan="2"></td>
+</tr>
+<tr class="odd">
+<td>F<sub>DL_low</sub> -60</td>
+<td>F<sub>DL_low</sub> -85</td>
+<td>1 MHz</td>
+</tr>
+<tr class="even">
+<td>F<sub>DL_high</sub> +15 to</td>
+<td>F<sub>DL_high</sub> +60 to</td>
+<td>F<sub>DL_high</sub> +85 to</td>
+<td rowspan="2"></td>
+</tr>
+<tr class="odd">
+<td>F<sub>DL_high</sub> + 60</td>
+<td>F<sub>DL_high</sub> +85</td>
+<td>+12750 MHz</td>
+</tr>
+<tr class="even">
+<td colspan="7"><p>NOTE 1: For the UE which supports both Band 11 and
+Band 21 the out of blocking is FFS.</p>
+<p>NOTE 2: The power level of the interferer (PInterferer) for Range 3
+shall be modified to -20 dBm for FInterferer &gt; 2800 MHz and
+FInterferer &lt; 4400 MHz.</p>
+<p>NOTE 3: For the UE that supports both Band 4 and Band 66, the
+out-of-blocking frequency range for Band 4 is defined relative to
+FDL_low and FDL_high of Band 66.</p>
+<p>NOTE 4: For a UE supporting CA_20A-28A the requirements for Band 20
+and Band 28 apply with FDL_low given by the lower limit of the
+restricted operating frequency range in Band 28 and FDL_high by Band 20
+(Table 5.5A-2).</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="narrow-band-blocking">7.6.3 Narrow Band Blocking</h3>
+<p>This requirement is measure of a receiver's ability to receive a NR
+signal at its assigned channel frequency in the presence of an unwanted
+narrow band CW interferer at a frequency, which is less than the nominal
+channel spacing.</p>
+<p>The relative throughput shall be ≥ 95% of the maximum throughput of
+the reference measurement channels as specified in Annexes A.2.2, A.2.3
+and A.3.2 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the
+DL-signal as described in Annex A.5.1.1/A.5.2.1) with parameters
+specified in Table 7.6.3.1-1. For operating bands with an unpaired DL
+part (as noted in Table 5.5-1), the requirements only apply for carriers
+assigned in the paired part.</p>
+<p>Table 7.6.3.2-1: Narrow Band Blocking</p>
+<table>
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 9%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 8%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td rowspan="2">NR band</td>
+<td rowspan="2">Parameter</td>
+<td rowspan="2">Unit</td>
+<td colspan="10">Channel Bandwidth</td>
+</tr>
+<tr class="even">
+<td>5 MHz</td>
+<td>10 MHz</td>
+<td>15 MHz</td>
+<td>20 MHz</td>
+<td>25 MHz</td>
+<td>40 MHz</td>
+<td>50 MHz</td>
+<td>60 MHz</td>
+<td>80 MHz</td>
+<td>100 MHz</td>
+</tr>
+<tr class="odd">
+<td rowspan="5"></td>
+<td rowspan="2">P<sub>w</sub></td>
+<td rowspan="2">dBm</td>
+<td colspan="8">P<sub>REFSENS</sub> + channel-bandwidth specific value
+below</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>16</td>
+<td>13</td>
+<td>14</td>
+<td>16</td>
+<td>16</td>
+<td>16</td>
+<td>16</td>
+<td>16</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>P<sub>uw</sub> (CW)</td>
+<td>dBm</td>
+<td>-55</td>
+<td>-55</td>
+<td>-55</td>
+<td>-55</td>
+<td>-55</td>
+<td>-55</td>
+<td>-55</td>
+<td>-55</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Fuw (offset SCS= 15 kHz)</td>
+<td>MHz</td>
+<td>2.7075</td>
+<td>5.2125</td>
+<td>7.7025</td>
+<td>10.2075</td>
+<td>TBD</td>
+<td>TDB</td>
+<td>NA</td>
+<td>NA</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Fuw (offset SCS= 30 kHz)</td>
+<td>MHz</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td></td>
+<td></td>
+<td>TBD</td>
+<td>TBD</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td rowspan="2"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td colspan="11"><p>NOTE 1: The transmitter shall be set a 4 dB below
+PCMAX_L at the minimum uplink configuration specified in Table 7.3.1-2
+with PCMAX_L as defined in subclause 6.2.5.</p>
+<p>NOTE 2: Reference measurement channel is specified in Annex A.3.2
+with one sided dynamic OCNG Pattern OP.1 FDD/TDD as described in Annex
+A.5.1.1/A.5.2.1.</p>
+<p>NOTE 3: The PREFSENS power level is specified in Table 7.3.1-1 and
+Table 7.3.1-1a for two and four antenna ports, respectively.</p></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="spurious-response">7.7 Spurious response</h2>
+<p>Spurious response is a measure of the receiver's ability to receive a
+wanted signal on its assigned channel frequency without exceeding a
+given degradation due to the presence of an unwanted CW interfering
+signal at any other frequency at which a response is obtained i.e. for
+which the out of band blocking limit as specified in subclause 7.6.2 is
+not met.</p>
+<h3 id="minimum-requirements-3">7.7.1 Minimum requirements</h3>
+<p>The throughput shall be ≥ 95% of the maximum throughput of the
+reference measurement channels as specified in Annexes A.2.2, A.2.3 and
+A.3.2 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the
+DL-signal as described in Annex A.5.1.1/A.5.2.1) with parameters
+specified in Tables 7.7.1-1 and 7.7.1-2. For operating bands with an
+unpaired DL part (as noted in Table 5.5-1), the requirements only apply
+for carriers assigned in the paired part. Although the spurious
+rejection is only measured on OBB exceptions, far out of band and not
+dependent on SCS, the SCS does need to be defined in Table 1.</p>
+<p>Table 7.7.1-1: Spurious response parameters</p>
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 9%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td rowspan="2">Rx parameter</td>
+<td rowspan="2">Units</td>
+<td colspan="10">Channel bandwidth</td>
+</tr>
+<tr class="even">
+<td>5MHz</td>
+<td>10 MHz</td>
+<td>15 MHz</td>
+<td>20 MHz</td>
+<td>25 MHz</td>
+<td>40 MHz</td>
+<td>50 MHz</td>
+<td>60MHz</td>
+<td>80 MHz</td>
+<td>100 MHz</td>
+</tr>
+<tr class="odd">
+<td rowspan="2">Power in Transmission Bandwidth Configuration</td>
+<td rowspan="2">dBm</td>
+<td colspan="10">REFSENS + channel bandwidth specific value below</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>6</td>
+<td>7</td>
+<td>9</td>
+<td>10</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+<td>15</td>
+<td>16</td>
+</tr>
+<tr class="odd">
+<td>SCS=15kHz</td>
+<td> </td>
+<td>5</td>
+<td>10</td>
+<td>15</td>
+<td>20</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<tr class="even">
+<td>SCS=30kHz</td>
+<td> </td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>25</td>
+<td>40</td>
+<td>50</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<tr class="odd">
+<td>SCS=60kHz</td>
+<td> </td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>60</td>
+<td>80</td>
+<td>100</td>
+</tr>
+<tr class="even">
+<td colspan="12">NOTE 1: The transmitter shall be set to 4dB below
+PCMAX_L at the minimum uplink configuration specified in Table
+7.3.1-2.</td>
+</tr>
+<tr class="odd">
+<td colspan="12">NOTE 2: Reference measurement channel is specified
+inTBD</td>
+</tr>
+<tr class="even">
+<td colspan="12">NOTE 3: The REFSENS power level is specified inTBD for
+two and four antenna ports, respectively.</td>
+</tr>
+</tbody>
+</table>
+<p>Table 7.7.1-2: Spurious response</p>
+<table>
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 31%" />
+<col style="width: 37%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Parameter</td>
+<td>Unit</td>
+<td>Level</td>
+</tr>
+<tr class="even">
+<td><p>P<sub>Interferer</sub></p>
+<p>(CW)</p></td>
+<td>dBm</td>
+<td>-44</td>
+</tr>
+<tr class="odd">
+<td>F<sub>Interferer</sub></td>
+<td>MHz</td>
+<td>Spurious response frequencies</td>
+</tr>
+</tbody>
+</table>
+<p>For the UE which supports inter-band DC configuration in Table
+7.3.1-1A, P<sub>interferer</sub> power defined in Table 7.7.1-2 is
+increased by the amount given by ΔR<sub>IB,c</sub> in Table
+7.3.1-1A.</p>
+<h2 id="intermodulation-characteristics">7.8 Intermodulation
+characteristics</h2>
+<p>Intermodulation response rejection is a measure of the capability of
+the receiver to receiver a wanted signal on its assigned channel
+frequency in the presence of two or more interfering signals which have
+a specific frequency relationship to the wanted signal</p>
+<h3 id="wide-band-intermodulation">7.8.1 Wide band Intermodulation</h3>
+<p>The wide band intermodulation requirement is defined using a CW
+carrier and modulated NR signal as interferer 1 and interferer 2
+respectively.</p>
+<h4 id="minimum-requirements-4">7.8.1.1 Minimum requirements</h4>
+<p>The throughput shall be ≥ 95% of the maximum throughput of the
+reference measurement channels as specified in Annexes A.2.2, A.2.3 and
+A.3.2 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the
+DL-signal as described in Annex A.5.1.1/A.5.2.1) with parameters
+specified in Table 7.8.1.1 for the specified wanted signal mean power in
+the presence of two interfering signals. For operating bands with an
+unpaired DL part (as noted in Table 5.5-1), the requirements only apply
+for carriers assigned in the paired part.</p>
+<p>Table 7.8.1.1-1: Wide band Intermodulation</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 0%" />
+<col style="width: 6%" />
+<col style="width: 0%" />
+<col style="width: 8%" />
+<col style="width: 0%" />
+<col style="width: 8%" />
+<col style="width: 0%" />
+<col style="width: 8%" />
+<col style="width: 0%" />
+<col style="width: 8%" />
+<col style="width: 0%" />
+<col style="width: 8%" />
+<col style="width: 0%" />
+<col style="width: 8%" />
+<col style="width: 0%" />
+<col style="width: 8%" />
+<col style="width: 0%" />
+<col style="width: 8%" />
+<col style="width: 0%" />
+<col style="width: 8%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td colspan="2" rowspan="2">Rx parameter</td>
+<td colspan="2" rowspan="2">Units</td>
+<td colspan="17">Channel bandwidth</td>
+</tr>
+<tr class="even">
+<td colspan="2">5<br />
+MHz</td>
+<td colspan="2">10<br />
+MHz</td>
+<td colspan="2">15<br />
+MHz</td>
+<td colspan="2">20<br />
+MHz</td>
+<td colspan="2">40<br />
+MHz</td>
+<td colspan="2">50<br />
+MHz</td>
+<td colspan="2">60<br />
+MHz</td>
+<td colspan="2">80<br />
+MHz</td>
+<td>100<br />
+MHz</td>
+</tr>
+<tr class="odd">
+<td colspan="2" rowspan="2">P<sub>w</sub> in Transmission Bandwidth
+Configuration, per CC</td>
+<td colspan="2" rowspan="2">dBm</td>
+<td colspan="17">REFSENS + channel bandwidth specific value below</td>
+</tr>
+<tr class="even">
+<td colspan="2">TBD</td>
+<td colspan="2">TBD</td>
+<td colspan="2">TBD</td>
+<td colspan="2">TBD</td>
+<td colspan="2">TBD</td>
+<td colspan="2">TBD</td>
+<td colspan="2">TBD</td>
+<td colspan="2">TBD</td>
+<td>TBD</td>
+</tr>
+<tr class="odd">
+<td><p>P<sub>Interferer 1</sub></p>
+<p>(CW)</p></td>
+<td colspan="2">dBm</td>
+<td colspan="18">TBD</td>
+</tr>
+<tr class="even">
+<td><p>P<sub>Interferer 2</sub></p>
+<p>(Modulated)</p></td>
+<td colspan="2">dBm</td>
+<td colspan="18">TBD</td>
+</tr>
+<tr class="odd">
+<td>BW<sub>Interferer 2</sub></td>
+<td colspan="2">MHz</td>
+<td colspan="18">TBD</td>
+</tr>
+<tr class="even">
+<td><p>F<sub>Interferer 1</sub></p>
+<p>(Offset, SCS = 15 kHz)</p></td>
+<td colspan="2">MHz</td>
+<td colspan="2">TBD</td>
+<td colspan="2">TBD</td>
+<td colspan="2">TBD</td>
+<td colspan="2">TBD</td>
+<td colspan="2"></td>
+<td colspan="2"></td>
+<td colspan="2"></td>
+<td colspan="2"></td>
+<td colspan="2"></td>
+</tr>
+<tr class="odd">
+<td><p>F<sub>Interferer 2</sub></p>
+<p>(Offset, SCS = 15 kHz)</p></td>
+<td colspan="2">MHz</td>
+<td colspan="2">TBD</td>
+<td colspan="2">TBD</td>
+<td colspan="2">TBD</td>
+<td colspan="2">TBD</td>
+<td colspan="2"></td>
+<td colspan="2"></td>
+<td colspan="2"></td>
+<td colspan="2"></td>
+<td colspan="2"></td>
+</tr>
+<tr class="even">
+<td><p>F<sub>Interferer 1</sub></p>
+<p>(Offset, SCS = 30 kHz)</p></td>
+<td colspan="2">MHz</td>
+<td colspan="2"></td>
+<td colspan="2"></td>
+<td colspan="2"></td>
+<td colspan="2"></td>
+<td colspan="2">TBD</td>
+<td colspan="2">TBD</td>
+<td colspan="2">TBD</td>
+<td colspan="2"></td>
+<td colspan="2"></td>
+</tr>
+<tr class="odd">
+<td><p>F<sub>Interferer 2</sub></p>
+<p>(Offset, SCS = 30 kHz)</p></td>
+<td colspan="2">MHz</td>
+<td colspan="2"></td>
+<td colspan="2"></td>
+<td colspan="2"></td>
+<td colspan="2"></td>
+<td colspan="2">TBD</td>
+<td colspan="2">TBD</td>
+<td colspan="2">TBD</td>
+<td colspan="2"></td>
+<td colspan="2"></td>
+</tr>
+<tr class="even">
+<td><p>F<sub>Interferer 1</sub></p>
+<p>(Offset, SCS = 60 kHz)</p></td>
+<td colspan="2">MHz</td>
+<td colspan="2"></td>
+<td colspan="2"></td>
+<td colspan="2"></td>
+<td colspan="2"></td>
+<td colspan="2"></td>
+<td colspan="2"></td>
+<td colspan="2"></td>
+<td colspan="2">TBD</td>
+<td colspan="2">TBD</td>
+</tr>
+<tr class="odd">
+<td><p>F<sub>Interferer 2</sub></p>
+<p>(Offset, SCS = 60 kHz)</p></td>
+<td colspan="2">MHz</td>
+<td colspan="2"></td>
+<td colspan="2"></td>
+<td colspan="2"></td>
+<td colspan="2"></td>
+<td colspan="2"></td>
+<td colspan="2"></td>
+<td colspan="2"></td>
+<td colspan="2">TBD</td>
+<td colspan="2">TBD</td>
+</tr>
+<tr class="even">
+<td colspan="21"><p>NOTE 1: The transmitter shall be set to 4dB below
+PCMAX_L,c or PCMAX_L as defined in TBD.</p>
+<p>NOTE 2: Reference measurement channel is TBD.</p>
+<p>NOTE 3: The modulated interferer consists of the Reference
+measurement channel specified in TBD.</p>
+<p>NOTE 4: The interfering modulated signal is TBD;</p>
+<p>NOTE 5: The F<sub>interferer 1</sub> (offset) is the frequency
+separation of the center frequency of the carrier closest to the
+interferer and the center frequency of the CW interferer and
+F<sub>interferer</sub> <sub>2</sub> (offset) is the frequency separation
+of the center frequency of the carrier closest to the interferer and the
+center frequency of the modulated interferer.</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="spurious-emissions-1">7.9 Spurious emissions</h2>
+<p>The spurious emissions power is the power of emissions generated or
+amplified in a receiver that appear at the UE antenna connector.</p>
+<h3 id="minimum-requirements-5">7.9.1 Minimum requirements</h3>
+<p>The power of any narrow band CW spurious emission shall not exceed
+the maximum level specified in Table 7.9.1-1</p>
+<p>Table 7.8.1.1-1: General receiver spurious emission requirements</p>
+<table>
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 16%" />
+<col style="width: 13%" />
+<col style="width: 39%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Frequency band</td>
+<td><p>Measurement</p>
+<p>bandwidth</p></td>
+<td>Maximum level</td>
+<td>NOTE</td>
+</tr>
+<tr class="even">
+<td>30MHz ≤ f &lt; 1GHz</td>
+<td>100 kHz</td>
+<td>[-57 dBm]</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>1GHz ≤ f ≤ 12.75 GHz</td>
+<td>1 MHz</td>
+<td>[-47 dBm]</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>12.75 GHz ≤ f ≤ 5<sup>th</sup> harmonic of the upper frequency edge
+of the DL operating band in GHz</td>
+<td>1 MHz</td>
+<td>[-47 dBm]</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>12.75 GHz – 26GHz</td>
+<td>1 MHz</td>
+<td>[-47dBm]</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td colspan="4"><p>NOTE 1: Applies only for Band 22, Band 42, Band 43
+and Band 48</p>
+<p>NOTE 2: Unused PDCCH resources are padded with resource element
+groups with power level given by PDCCH_RA/RB as defined in Annex
+C.3.1.</p>
+<p>NOTE 3: Applies for Band 47</p></td>
+</tr>
+</tbody>
+</table>
+<p class="heading" id="annex-a-normative-measurement-channels">Annex
+&lt;A&gt; (normative):<br />
+Measurement channels </p>
+<h1 id="a.1-general">A.1 General</h1>
+<p>The throughput values defined in the measurement channels specified
+in Annex A, are calculated and are valid per datastream (codeword). For
+multi-stream (more than one codeword) transmissions, the throughput
+referenced in the minimum requirements is the sum of throughputs of all
+datastreams (codewords).</p>
+<p>The UE category entry in the definition of the reference measurement
+channel in Annex A is only informative and reveals the UE categories,
+which can support the corresponding measurement channel. Whether the
+measurement channel is used for testing a certain UE category or not is
+specified in the individual minimum requirements.</p>
+<h1 id="a.2-ul-reference-measurement-channels">A.2 UL reference
+measurement channels</h1>
+<h2 id="a.2.1-general">A.2.1 General </h2>
+<p>The measurement channels in the following subclauses are defined to
+derive the requirements in clause 6 (Transmitter Characteristics) and
+clause 7 (Receiver Characteristics). The measurement channels represent
+example configurations of physical channels for different data
+rates.</p>
+<h2 id="a.2.2-reference-measurement-channels-for-fdd">A.2.2 Reference
+measurement channels for FDD</h2>
+<h2 id="a.2.3-reference-measurement-channels-for-tdd">A.2.3 Reference
+measurement channels for TDD</h2>
+<h1 id="a.3-dl-reference-measurement-channels">A.3 DL reference
+measurement channels</h1>
+<h2 id="a.3.1-general">A.3.1 General</h2>
+<h2
+id="a.3.2-reference-measurement-channel-for-receiver-characteristics">A.3.2
+Reference measurement channel for receiver characteristics</h2>
+<h1 id="a.4-csi-reference-measurement-channels">A.4 CSI reference
+measurement channels</h1>
+<h1 id="a.5-ofdma-channel-noise-generator-ocng">A.5 OFDMA Channel Noise
+Generator (OCNG)</h1>
+<h2 id="a.5.1-ocng-patterns-for-fdd">A.5.1 OCNG Patterns for FDD</h2>
+<h2 id="a.5.2-ocng-patterns-for-tdd">A.5.2 OCNG Patterns for TDD</h2>
+<h1 id="c.3-connection">C.3 Connection </h1>
+<p>The following clauses, describes the downlink Physical Channels that
+are transmitted during a connection i.e., when measurements are
+done.</p>
+<h2 id="c.3.1-measurement-of-receiver-characteristics">C.3.1 Measurement
+of Receiver Characteristics</h2>
+<p class="heading" id="annex-b-informative-change-history">Annex B
+(informative):<br />
+Change history</p>
+<table>
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 11%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 51%" />
+<col style="width: 7%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td colspan="8"><strong>Change history</strong></td>
+</tr>
+<tr class="even">
+<td><strong>Date</strong></td>
+<td><strong>Meeting</strong></td>
+<td><strong>TDoc</strong></td>
+<td><strong>CR</strong></td>
+<td><strong>Rev</strong></td>
+<td><strong>Cat</strong></td>
+<td><strong>Subject/Comment</strong></td>
+<td><strong>New version</strong></td>
+</tr>
+<tr class="odd">
+<td>08/2017</td>
+<td>R4-84</td>
+<td>R4-1708909</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Initial Skeleton</td>
+<td>0.0.1</td>
+</tr>
+<tr class="even">
+<td>10/2017</td>
+<td>R4-84Bis</td>
+<td>R4-1709958</td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>Added approved TPs in RAN4-NR-AH#3</p>
+<p>R4-1709948, TP for TS 38.101-1: minimum output power, Huawei</p>
+<p>R4-1709454, TP for TS 38.101-1:UE Tx spurious emission for range 1,
+ZTE Corporation</p></td>
+<td>0.1.0</td>
+</tr>
+<tr class="odd">
+<td>10/2017</td>
+<td>R4-85</td>
+<td>R4-17X</td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>Embedded approved TPs in RAN4#84Bis</p>
+<p>R4-1711556, “TP to TS 38.101: Draft CR to Transmitter power clause”,
+Nokia</p>
+<p>R4-1710962, “TP to TS 38.101-1: Draft CR to Output RF spectrum
+emissions” Nokia</p>
+<p>R4-1711608, “TP for TS38.101-1 on conducted UE transmitter
+intermodulation for FR1(section 6.5)” ZTE Corporation</p>
+<p>Number of TPs by editors</p></td>
+<td>0.2.0</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

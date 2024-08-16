@@ -1,0 +1,5972 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>38101-1-fp0_s00-05</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<h1 id="foreword">Foreword</h1>
+<p>This Technical Specification has been produced by the 3rd Generation
+Partnership Project (3GPP).</p>
+<p>The contents of the present document are subject to continuing work
+within the TSG and may change following formal TSG approval. Should the
+TSG modify the contents of the present document, it will be re-released
+by the TSG with an identifying change of release date and an increase in
+version number as follows:</p>
+<p>Version x.y.z</p>
+<p>where:</p>
+<p>x the first digit:</p>
+<p>1 presented to TSG for information;</p>
+<p>2 presented to TSG for approval;</p>
+<p>3 or greater indicates TSG approved document under change
+control.</p>
+<p>y the second digit is incremented for all changes of substance, i.e.
+technical enhancements, corrections, updates, etc.</p>
+<p>z the third digit is incremented when editorial only changes have
+been incorporated in the document.</p>
+<h1 id="section"><br />
+</h1>
+<h1 id="scope">1 Scope</h1>
+<p>The present document establishes the minimum RF requirements for NR
+User Equipment (UE) operating on frequency Range 1.</p>
+<h1 id="references">2 References</h1>
+<p>The following documents contain provisions which, through reference
+in this text, constitute provisions of the present document.</p>
+<p>References are either specific (identified by date of publication,
+edition number, version number, etc.) or non‑specific.</p>
+<p>For a specific reference, subsequent revisions do not apply.</p>
+<p>For a non-specific reference, the latest version applies. In the case
+of a reference to a 3GPP document (including a GSM document), a
+non-specific reference implicitly refers to the latest version of that
+document in the same Release as the present document.</p>
+<p>[1] 3GPP TR 21.905: "Vocabulary for 3GPP Specifications".</p>
+<p>[2] 3GPP TS 38.101-2: "NR; User Equipment (UE) radio transmission and
+reception; Part 2: Range 2 Standalone".</p>
+<p>[3] 3GPP TS 38.101-3: "NR; User Equipment (UE) radio transmission and
+reception; Part 3: Range 1 and Range 2 Interworking operation with other
+radios".</p>
+<p>[4] 3GPP TS 38.521-1: "NR; User Equipment (UE) conformance
+specification; Radio transmission and reception; Part 1: Range 1
+Standalone".</p>
+<p>[5] Recommendation ITU-R M.1545: "Measurement uncertainty as it
+applies to test limits for the terrestrial component of International
+Mobile Telecommunications-2000".</p>
+<p>[6] 3GPP TS 38.211: "NR; Physical channels and modulation".</p>
+<p>[7] 3GPP TS 38.331: "Radio Resource Control (RRC) protocol
+specification".</p>
+<p>[8] 3GPP TS 38.213: "NR; Physical layer procedures for control".</p>
+<p>[9] ITU-R Recommendation SM.329-10, "Unwanted emissions in the
+spurious domain".</p>
+<p>[10] 3GPP TS 38.214: "NR; Physical layer procedures for data".</p>
+<h1 id="definitions-symbols-and-abbreviations">3 Definitions, symbols
+and abbreviations</h1>
+<h2 id="definitions">3.1 Definitions</h2>
+<p>For the purposes of the present document, the terms and definitions
+given in 3GPP TR 21.905 [1] and the following apply. A term defined in
+the present document takes precedence over the definition of the same
+term, if any, in 3GPP TR 21.905 [1].</p>
+<p><strong>Aggregated Channel Bandwidth</strong>: The RF bandwidth in
+which a UE transmits and receives multiple contiguously aggregated
+carriers.</p>
+<p><strong>Carrier aggregation</strong>: Aggregation of two or more
+component carriers in order to support wider transmission
+bandwidths.</p>
+<p><strong>Carrier aggregation band</strong>: A set of one or more
+operating bands across which multiple carriers are aggregated with a
+specific set of technical requirements.</p>
+<p><strong>Carrier aggregation bandwidth class</strong>: A class defined
+by the aggregated transmission bandwidth configuration and maximum
+number of component carriers supported by a UE.</p>
+<p><strong>Carrier aggregation configuration</strong>: A combination of
+CA operating band(s) and CA bandwidth class(es) supported by a UE.</p>
+<p><strong>Contiguous carriers</strong>: A set of two or more carriers
+configured in a spectrum block where there are no RF requirements based
+on co-existence for un-coordinated operation within the spectrum
+block.</p>
+<p><strong>Contiguous resource allocation</strong>: A resource
+allocation of consecutive resource blocks within one carrier or across
+contiguously aggregated carriers. The gap between contiguously
+aggregated carriers due to the nominal channel spacing is allowed.</p>
+<p><strong>Contiguous spectrum</strong>: Spectrum consisting of a
+contiguous block of spectrum with no sub-block gaps.</p>
+<p><strong>Inter-band carrier aggregation:</strong> Carrier aggregation
+of component carriers in different operating bands.</p>
+<p>NOTE: Carriers aggregated in each band can be contiguous or
+non-contiguous.</p>
+<p><strong>Intra-band contiguous carrier aggregation</strong>:
+Contiguous carriers aggregated in the same operating band.</p>
+<p><strong>Intra-band non-contiguous carrier aggregation</strong>:
+Non-contiguous carriers aggregated in the same operating band.</p>
+<p><strong>Sub-block</strong>: This is one contiguous allocated block of
+spectrum for transmission and reception by the same UE. There may be
+multiple instances of sub-blocks within an RF bandwidth.</p>
+<p><strong>Sub-block bandwidth</strong>: The bandwidth of one
+sub-block.</p>
+<p><strong>Sub-block gap</strong>: A frequency gap between two
+consecutive sub-blocks within an RF bandwidth, where the RF requirements
+in the gap are based on co-existence for un-coordinated operation.</p>
+<p><strong>UE transmission bandwidth configuration</strong>: Set of
+resource blocks located within the UE channel bandwidth which may be
+used for transmitting or receiving by the UE.</p>
+<p><strong>Vehicular UE:</strong> A UE embedded in a vehicle,
+permanently connected to an embedded antenna system that radiates
+externally for NR operating bands.</p>
+<p>NOTE: Vehicular UE does not refer to other UE form factors placed
+inside the vehicle.</p>
+<h2 id="symbols">3.2 Symbols</h2>
+<p>For the purposes of the present document, the following symbols
+apply:</p>
+<p>ΔF<sub>Global</sub> Granularity of the global frequency raster</p>
+<p>ΔF<sub>Raster</sub> Band dependent channel raster granularity</p>
+<p>Δf<sub>OOB</sub> Δ Frequency of Out Of Band emission</p>
+<p>ΔF<sub>TX-RX</sub> Δ Frequency of default TX-RX separation of the FDD
+<em>operating band</em></p>
+<p>ΔP<sub>PowerClass</sub> Adjustment to maximum output power for a
+given power class</p>
+<p>∆<sub>RB</sub> The starting frequency offset between the allocated RB
+and the measured non-allocated RB</p>
+<p>ΔR<sub>IB,c</sub> Allowed reference sensitivity relaxation due to
+support for inter-band CA operation, for serving cell <em>c</em></p>
+<p>ΔR<sub>IB,4R</sub> Reference sensitivity adjustment due to support
+for 4 antenna ports</p>
+<p>Δ<sub>Shift</sub> Channel raster offset</p>
+<p>∆T<sub>C</sub> Allowed operating band edge transmission power
+relaxation</p>
+<p>∆T<sub>C,<em>c</em></sub> Allowed operating band edge transmission
+power relaxation for serving cell <em>c</em></p>
+<p>ΔT<sub>IB,c</sub> Allowed maximum configured output power relaxation
+due to support for inter-band CA operation and due to support for SUL
+operations, for serving cell <em>c</em></p>
+<p>BW<sub>Channel</sub> Channel bandwidth</p>
+<p>BW<sub>Channel,block</sub> Sub-block bandwidth, expressed in MHz.
+BW<sub>Channel,block</sub>= F<sub>edge,block,high</sub>-
+F<sub>edge,block,low</sub></p>
+<p>BW<sub>Channel_CA</sub> Aggregated channel bandwidth, expressed in
+MHz</p>
+<p>BW<sub>Channel,max</sub> Maximum channel bandwidth supported among
+all bands in a release</p>
+<p>BW<sub>GB</sub> max( BW<sub>GB,Channel(<em>k</em>)</sub> )</p>
+<p>BW<sub>GB,Channel(k)</sub> Minimum guard band defined in clause
+5.3A.1 of carrier <em>k</em></p>
+<p>BW<sub>DL</sub> Channel bandwidth for DL</p>
+<p>BW<sub>UL</sub> Channel bandwidth for UL</p>
+<p>BW<sub>interferer</sub> Bandwidth of the interferer</p>
+<p>Ceil(x) Rounding upwards; ceil(x) is the smallest integer such that
+ceil(x) ≥ x</p>
+<p>Floor(x) Rounding downwards; floor(x) is the greatest integer such
+that floor(x) ≤ x</p>
+<p>F<sub>C</sub> Center frequency of a carrier for a numerology defined
+by the <em>RF reference frequency</em> on the channel raster mapped to
+the carrier according to sub-clause 5.4.2.2</p>
+<p>F<sub>C,block, high</sub> Fc of the highest transmitted/received
+carrier in a <em>sub-block</em></p>
+<p>F<sub>C,block, low</sub> Fc of the lowest transmitted/received
+carrier in a <em>sub-block</em></p>
+<p>F<sub>C,low</sub> The Fc of the lowest carrier, expressed in MHz</p>
+<p>F<sub>C,high</sub> The Fc of the highest carrier, expressed in
+MHz</p>
+<p>F<sub>DL_low</sub> The lowest frequency of the downlink <em>operating
+band</em></p>
+<p>F<sub>DL_high</sub> The highest frequency of the downlink
+<em>operating band</em></p>
+<p>F<sub>UL_low</sub> The lowest frequency of the uplink <em>operating
+band</em></p>
+<p>F<sub>UL_high</sub> The highest frequency of the uplink <em>operating
+band</em></p>
+<p>F<sub>edge,block,low</sub> The lower <em>sub-block</em> edge, where
+F<sub>edge,block,low</sub> = F<sub>C,block,low</sub> - F<sub>offset,
+low.</sub></p>
+<p>F<sub>edge,block,high</sub> The upper <em>sub-block</em> edge, where
+F<sub>edge,block,high</sub> = F<sub>C,block,high</sub> + F<sub>offset,
+high.</sub></p>
+<p>F<sub>edge , low</sub> The <em>lower edge</em> of <em>aggregated
+channel bandwidth</em>, expressed in MHz. F<sub>edge,low</sub> =
+F<sub>C,low</sub> - F<sub>offset,low.</sub></p>
+<p>F<sub>edge, high</sub> The <em>higher edge</em> of <em>aggregated
+channel bandwidth</em>, expressed in MHz. F<sub>edge,high</sub> =
+F<sub>C,high</sub> + F<sub>offset,high.</sub></p>
+<p>F<sub>Interferer</sub> (offset) Frequency offset of the interferer
+(between the center frequency of the interferer and the carrier
+frequency of the carrier measured). For intra-band contiguous CA, the
+F<sub>Interferer</sub> (offset) is the frequency separation of the
+center frequency of the carrier closest to the interferer and the center
+frequency of the interferer</p>
+<p>F<sub>Interferer</sub> Frequency of the interferer</p>
+<p>F<sub>Ioffset</sub> Frequency offset of the interferer (between the
+center frequency of the interferer and the closest edge of the carrier
+measured)</p>
+<p>F<sub>offset</sub> Frequency offset from F<sub>C_high</sub> to the
+<em>higher edge</em> or F<sub>C_low</sub> to the <em>lower
+edge.</em></p>
+<p>F<sub>offset,high</sub> Frequency offset from F<sub>C,high</sub> to
+the upper <em>UE RF Bandwidth edge</em>, or from F<sub>C,block,
+high</sub> to the upper sub-block edge</p>
+<p>F<sub>offset,low</sub> Frequency offset from F<sub>C,low</sub> to the
+lower <em>UE RF Bandwidth edge</em>, or from F<sub>C,block, low</sub> to
+the lower sub-block edge</p>
+<p>F<sub>OOB</sub> The boundary between the NR out of band emission and
+spurious emission domains</p>
+<p>F<sub>REF</sub> RF reference frequency</p>
+<p>F<sub>REF-Offs</sub> Offset used for calculating F<sub>REF</sub></p>
+<p>F<sub>REF, shift</sub> RF reference frequency for Supplementary
+Uplink (SUL) bands, the uplink of all FDD bands, and TDD bands</p>
+<p>F<sub>uw</sub> (offset) The frequency separation of the center
+frequency of the carrier closest to the interferer and the center
+frequency of the interferer</p>
+<p>GB<sub>Channel</sub> Minimum guard band defined in clause 5.3.3,
+expressed in kHz</p>
+<p>L<sub>CRB</sub> Transmission bandwidth which represents the length of
+a contiguous resource block allocation expressed in units of resources
+blocks</p>
+<p>Max() The largest of given numbers</p>
+<p>Min() The smallest of given numbers</p>
+<p><img src="media/image1.wmf" /> Physical resource block number</p>
+<p>NR<sub>ACLR</sub> NR ACLR</p>
+<p>N<sub>RB</sub> Transmission bandwidth configuration, expressed in
+units of resource blocks</p>
+<p>N<sub>RB_agg</sub> The number of the aggregated RBs within the fully
+allocated aggregated channel bandwidth</p>
+<p>N<sub>RB_agg</sub> The number of the aggregated RBs within the fully
+allocated aggregated channel bandwidth</p>
+<p><span class="math inline">$N_{RB_{\_ agg}} =
+\sum_{1}^{j}{N_{RB_{j}}*2^{\mu_{j}}}$</span> for carrier 1 to j, where μ
+is defined in TS 38.211 [6]</p>
+<p>N<sub>RB,c</sub> The transmission bandwidth configuration of
+component carrier c, expressed in units of resource blocks</p>
+<p><span
+class="math inline"><em>N</em><sub><em>R</em><em>B</em>, <em>c</em><em>j</em></sub> = <em>N</em><sub><em>R</em><em>B</em><sub><em>j</em></sub></sub> * 2<sup><em>μ</em><sub><em>j</em></sub></sup></span>
+for carrier j, where <em>μ</em> is defined in TS 38.211 [6]</p>
+<p>N<sub>RB,low</sub> The transmission bandwidth configurations
+according to Table 5.3.2-1 for the lowest assigned component carrier in
+section 5.3A.1</p>
+<p>N<sub>RB,high</sub> The transmission bandwidth configurations
+according to Table 5.3.2-1 for the highest assigned component carrier in
+section 5.3A.1</p>
+<p>N<sub>REF</sub> NR Absolute Radio Frequency Channel Number
+(NR-ARFCN)</p>
+<p>N<sub>REF-Offs</sub> Offset used for calculating N<sub>REF</sub></p>
+<p>P<sub>CMAX</sub> The configured maximum UE output power</p>
+<p>P<sub>CMAX</sub>, <em><sub>c</sub></em> The configured maximum UE
+output power for serving cell <em>c</em></p>
+<p>P<sub>CMAX</sub>, <em><sub>f</sub></em>, <em><sub>c</sub></em> The
+configured maximum UE output power for carrier <em>f</em> of serving
+cell <em>c</em> in each slot</p>
+<p>P<sub>EMAX</sub> Maximum allowed UE output power signalled by higher
+layers</p>
+<p>P<sub>EMAX, <em>c</em></sub> Maximum allowed UE output power
+signalled by higher layers for serving cell <em>c</em></p>
+<p>P<sub>Interferer</sub> Modulated mean power of the interferer</p>
+<p>P<sub>largest BW</sub> Power of the largest transmission bandwidth
+configuration of the component carriers in the bandwidth combination</p>
+<p>P<sub>PowerClass</sub> The nominal UE power (i.e., no tolerance)</p>
+<p>P-MPR<em><sub>c</sub></em> Power Management Maximum Power Reduction
+for serving cell <em>c</em></p>
+<p>P<sub>RB</sub> The transmitted power per allocated RB, measured in
+dBm</p>
+<p>P<sub>UMAX</sub> The measured configured maximum UE output power</p>
+<p>Puw Power of an unwanted DL signal</p>
+<p>Pw Power of a wanted DL signal</p>
+<p>RB<sub>start</sub> The lowest RB index of transmitted resource
+blocks</p>
+<p>SCS<sub>c</sub> SCS for the component carrier c, expressed in kHz</p>
+<p>SCS<sub>largest BW</sub> SCS for the largest transmission bandwidth
+configuration of the component carriers in the bandwidth combination,
+expressed in kHz</p>
+<p>SCS<sub>low</sub> SCS for the lowest assigned component carrier in
+section 5.3A.1, expressed in kHz</p>
+<p>SCS<sub>high</sub> SCS for the highest assigned component carrier in
+section 5.3A.1, expressed in kHz</p>
+<p>T(P<sub>CMAX</sub>, <em><sub>f</sub></em>, <em><sub>c</sub></em>)
+Tolerance for applicable values of P<sub>CMAX</sub>,
+<em><sub>f</sub></em>, <em><sub>c</sub></em> for configured maximum UE
+output power for carrier <em>f</em> of serving cell <em>c</em></p>
+<p>T<sub>L,c</sub> Absolute value of the lower tolerance for the
+applicable <em>operating band</em> as specified in section 6.2.1</p>
+<p>SS<sub>REF</sub> SS block reference frequency position</p>
+<p>UTRA<sub>ACLR</sub> UTRA ACLR</p>
+<h2 id="abbreviations">3.3 Abbreviations</h2>
+<p>For the purposes of the present document, the abbreviations given in
+3GPP TR 21.905 [1] and the following apply. An abbreviation defined in
+the present document takes precedence over the definition of the same
+abbreviation, if any, in 3GPP TR 21.905 [1].</p>
+<p>ACLR Adjacent Channel Leakage Ratio</p>
+<p>ACS Adjacent Channel Selectivity</p>
+<p>A-MPR Additional Maximum Power Reduction</p>
+<p>BS Base Station</p>
+<p>BW Bandwidth</p>
+<p>BWP Bandwidth Part</p>
+<p>CA Carrier Aggregation</p>
+<p>CA_nX-nY Inter-band CA of component carrier(s) in one sub-block
+within Band nX and component carrier(s) in one sub-block within Band nY
+where nX and nY are the applicable NR <em>operating bands</em></p>
+<p>CC Component Carriers</p>
+<p>CP-OFDM Cyclic Prefix-OFDM</p>
+<p>CW Continuous Wave</p>
+<p>DC Dual Connectivity</p>
+<p>DFT-s-OFDM Discrete Fourier Transform-spread-OFDM</p>
+<p>DM-RS Demodulation Reference Signal</p>
+<p>DTX Discontinuous TransmissionE-UTRA Evolved UTRA</p>
+<p>EVM Error Vector Magnitude</p>
+<p>FR Frequency Range</p>
+<p>FRC Fixed Reference Channel</p>
+<p>GSCN Global Synchronization Channel Number</p>
+<p>IBB In-band Blocking</p>
+<p>IDFT Inverse Discrete Fourier Transformation</p>
+<p>ITU‑R Radiocommunication Sector of the International
+Telecommunication Union</p>
+<p>MBW Measurement bandwidth defined for the protected band</p>
+<p>MOP Maximum Output Power</p>
+<p>MPR Allowed maximum power reduction</p>
+<p>MSD Maximum Sensitivity Degradation</p>
+<p>NR New Radio</p>
+<p>NR-ARFCN NR Absolute Radio Frequency Channel Number</p>
+<p>NS Network Signalling</p>
+<p>OCNG OFDMA Channel Noise Generator</p>
+<p>OOB Out-of-band</p>
+<p>P-MPR Power Management Maximum Power Reduction</p>
+<p>PRB Physical Resource Block</p>
+<p>QAM Quadrature Amplitude Modulation</p>
+<p>RE Resource Element</p>
+<p>REFSENS Reference Sensitivity</p>
+<p>RF Radio Frequency</p>
+<p>RMS Root Mean Square (value)</p>
+<p>RSRP Reference Signal Receiving PowerRx Receiver</p>
+<p>Rx Receiver</p>
+<p>SC Single Carrier</p>
+<p>SCS Subcarrier spacing</p>
+<p>SDL Supplementary Downlink</p>
+<p>SEM Spectrum Emission Mask</p>
+<p>SNR Signal-to-Noise Ratio</p>
+<p>SRS Sounding Reference SymbolSUL Supplementary uplink</p>
+<p>SS Synchronization Symbol</p>
+<p>SUL Supplementary uplink</p>
+<p>TAE Time Alignment Error</p>
+<p>Tx Transmitter</p>
+<p>UL MIMO Uplink Multiple Antenna transmission</p>
+<h1 id="general">4 General</h1>
+<h2
+id="relationship-between-minimum-requirements-and-test-requirements">4.1
+Relationship between minimum requirements and test requirements</h2>
+<p>The present document is a Single-RAT specification for NR UE,
+covering RF characteristics and minimum performance requirements.
+Conformance to the present specification is demonstrated by fulfilling
+the test requirements specified in the conformance specification 3GPP TS
+38.521-1 [4].</p>
+<p>The Minimum Requirements given in this specification make no
+allowance for measurement uncertainty. The test specification TS
+38.521-1 [4] defines test tolerances. These test tolerances are
+individually calculated for each test. The test tolerances are used to
+relax the minimum requirements in this specification to create test
+requirements. For some requirements, including regulatory requirements,
+the test tolerance is set to zero.</p>
+<p>The measurement results returned by the test system are compared -
+without any modification - against the test requirements as defined by
+the shared risk principle.</p>
+<p>The shared risk principle is defined in Recommendation ITU‑R M.1545
+[5].</p>
+<h2 id="applicability-of-minimum-requirements">4.2 Applicability of
+minimum requirements</h2>
+<p>a) In this specification the Minimum Requirements are specified as
+general requirements and additional requirements. Where the Requirement
+is specified as a general requirement, the requirement is mandated to be
+met in all scenarios</p>
+<p>b) For specific scenarios for which an additional requirement is
+specified, in addition to meeting the general requirement, the UE is
+mandated to meet the additional requirements.</p>
+<p>c) The spurious emissions power requirements are for the long-term
+average of the power. For the purpose of reducing measurement
+uncertainty it is acceptable to average the measured power over a period
+of time sufficient to reduce the uncertainty due to the statistical
+nature of the signal</p>
+<p>d) All the requirements for intra-band contiguous and non-contiguous
+CA apply under the assumption of the same slot format indicated by
+<em>TDD-UL-DL-ConfigurationCommon</em> and
+<em>TDD-UL-DL-ConfigurationDedicated</em> in the PCell and SCells for NR
+SA.</p>
+<h2 id="specification-suffix-information">4.3 Specification suffix
+information</h2>
+<p>Unless stated otherwise the following suffixes are used for
+indicating at 2<sup>nd</sup> level clause, shown in Table 4.3-1.</p>
+<p>Table 4.3-1: Definition of suffixes</p>
+<table>
+<colgroup>
+<col style="width: 39%" />
+<col style="width: 60%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Clause suffix</th>
+<th>Variant</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>None</td>
+<td>Single Carrier</td>
+</tr>
+<tr class="even">
+<td>A</td>
+<td>Carrier Aggregation (CA)</td>
+</tr>
+<tr class="odd">
+<td>B</td>
+<td>Dual-Connectivity (DC)</td>
+</tr>
+<tr class="even">
+<td>C</td>
+<td>Supplementary Uplink (SUL)</td>
+</tr>
+<tr class="odd">
+<td>D</td>
+<td>UL MIMO</td>
+</tr>
+</tbody>
+</table>
+<p>A terminal which supports the above features needs to meet both the
+general requirements and the additional requirement applicable to the
+additional clause (suffix A, B, C and D) in clauses 5, 6 and 7. Where
+there is a difference in requirement between the general requirements
+and the additional clause requirements (suffix A, B, C and D) in clauses
+5, 6 and 7, the tighter requirements are applicable unless stated
+otherwise in the additional clause.</p>
+<p>A terminal which supports more than one feature in clauses 5, 6 and 7
+shall meet all of the separate corresponding requirements.</p>
+<p>For a terminal that supports SUL for the band combination specified
+in Table 5.2C-1, the current version of the specification assumes the
+terminal is configured with active transmission either on UL carrier or
+SUL carrier at any time in one serving cell and the UE requirements for
+single carrier shall apply for the active UL or SUL carrier accordingly.
+For a terminal that supports SUL, the current version of the
+specification assumes the terminal is not configured with UL MIMO on SUL
+carrier.</p>
+<h1 id="operating-bands-and-channel-arrangement">5 Operating bands and
+channel arrangement</h1>
+<h2 id="general-1">5.1 General</h2>
+<p>The channel arrangements presented in this clause are based on the
+operating bands and channel bandwidths defined in the present release of
+specifications.</p>
+<p>NOTE: Other operating bands and channel bandwidths may be considered
+in future releases.</p>
+<p>Requirements throughout the RF specifications are in many cases
+defined separately for different frequency ranges (FR). The frequency
+ranges in which NR can operate according to this version of the
+specification are identified as described in Table 5.1-1.</p>
+<p>Table 5.1-1: Definition of frequency ranges</p>
+<table>
+<colgroup>
+<col style="width: 39%" />
+<col style="width: 60%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Frequency range designation</th>
+<th>Corresponding frequency range</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FR1</td>
+<td>410 MHz – 7125 MHz</td>
+</tr>
+<tr class="even">
+<td>FR2</td>
+<td>24250 MHz – 52600 MHz</td>
+</tr>
+</tbody>
+</table>
+<p>The present specification covers FR1 operating bands.</p>
+<h2 id="operating-bands">5.2 Operating bands</h2>
+<p>NR is designed to operate in the FR1 operating bands defined in
+Table 5.2-1.</p>
+<p>Table 5.2-1: NR operating bands in FR1</p>
+<table>
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 35%" />
+<col style="width: 38%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>NR operating band</th>
+<th><p>Uplink (UL) <em>operating band</em><br />
+BS receive / UE transmit</p>
+<p>F<sub>UL_low</sub> – F<sub>UL_high</sub></p></th>
+<th><p>Downlink (DL) <em>operating band</em><br />
+BS transmit / UE receive</p>
+<p>F<sub>DL_low</sub> – F<sub>DL_high</sub></p></th>
+<th>Duplex Mode</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>n1</td>
+<td>1920 MHz – 1980 MHz</td>
+<td>2110 MHz – 2170 MHz</td>
+<td>FDD</td>
+</tr>
+<tr class="even">
+<td>n2</td>
+<td>1850 MHz – 1910 MHz</td>
+<td>1930 MHz – 1990 MHz</td>
+<td>FDD</td>
+</tr>
+<tr class="odd">
+<td>n3</td>
+<td>1710 MHz – 1785 MHz</td>
+<td>1805 MHz – 1880 MHz</td>
+<td>FDD</td>
+</tr>
+<tr class="even">
+<td>n5</td>
+<td>824 MHz – 849 MHz</td>
+<td>869 MHz – 894 MHz</td>
+<td>FDD</td>
+</tr>
+<tr class="odd">
+<td>n7</td>
+<td>2500 MHz – 2570 MHz</td>
+<td>2620 MHz – 2690 MHz</td>
+<td>FDD</td>
+</tr>
+<tr class="even">
+<td>n8</td>
+<td>880 MHz – 915 MHz</td>
+<td>925 MHz – 960 MHz</td>
+<td>FDD</td>
+</tr>
+<tr class="odd">
+<td>n12</td>
+<td>699 MHz – 716 MHz</td>
+<td>729 MHz – 746 MHz</td>
+<td>FDD</td>
+</tr>
+<tr class="even">
+<td>n20</td>
+<td>832 MHz – 862 MHz</td>
+<td>791 MHz – 821 MHz</td>
+<td>FDD</td>
+</tr>
+<tr class="odd">
+<td>n25</td>
+<td>1850 MHz – 1915 MHz</td>
+<td>1930 MHz – 1995 MHz</td>
+<td>FDD</td>
+</tr>
+<tr class="even">
+<td>n28</td>
+<td>703 MHz – 748 MHz</td>
+<td>758 MHz – 803 MHz</td>
+<td>FDD</td>
+</tr>
+<tr class="odd">
+<td>n34</td>
+<td>2010 MHz – 2025 MHz</td>
+<td>2010 MHz – 2025 MHz</td>
+<td>TDD</td>
+</tr>
+<tr class="even">
+<td>n38</td>
+<td>2570 MHz – 2620 MHz</td>
+<td>2570 MHz – 2620 MHz</td>
+<td>TDD</td>
+</tr>
+<tr class="odd">
+<td>n39</td>
+<td>1880 MHz – 1920 MHz</td>
+<td>1880 MHz – 1920 MHz</td>
+<td>TDD</td>
+</tr>
+<tr class="even">
+<td>n40</td>
+<td>2300 MHz – 2400 MHz</td>
+<td>2300 MHz – 2400 MHz</td>
+<td>TDD</td>
+</tr>
+<tr class="odd">
+<td>n41</td>
+<td>2496 MHz – 2690 MHz</td>
+<td>2496 MHz – 2690 MHz</td>
+<td>TDD</td>
+</tr>
+<tr class="even">
+<td>n50</td>
+<td>1432 MHz – 1517 MHz</td>
+<td>1432 MHz – 1517 MHz</td>
+<td>TDD<sup>1</sup></td>
+</tr>
+<tr class="odd">
+<td>n51</td>
+<td>1427 MHz – 1432 MHz</td>
+<td>1427 MHz – 1432 MHz</td>
+<td>TDD</td>
+</tr>
+<tr class="even">
+<td>n66</td>
+<td>1710 MHz – 1780 MHz</td>
+<td>2110 MHz – 2200 MHz</td>
+<td>FDD</td>
+</tr>
+<tr class="odd">
+<td>n70</td>
+<td>1695 MHz – 1710 MHz</td>
+<td>1995 MHz – 2020 MHz</td>
+<td>FDD</td>
+</tr>
+<tr class="even">
+<td>n71</td>
+<td>663 MHz – 698 MHz</td>
+<td>617 MHz – 652 MHz</td>
+<td>FDD</td>
+</tr>
+<tr class="odd">
+<td>n74</td>
+<td>1427 MHz – 1470 MHz</td>
+<td>1475 MHz – 1518 MHz</td>
+<td>FDD</td>
+</tr>
+<tr class="even">
+<td>n75</td>
+<td>N/A</td>
+<td>1432 MHz – 1517 MHz</td>
+<td>SDL<sup>3</sup></td>
+</tr>
+<tr class="odd">
+<td>n76</td>
+<td>N/A</td>
+<td>1427 MHz – 1432 MHz</td>
+<td>SDL<sup>3</sup></td>
+</tr>
+<tr class="even">
+<td>n77</td>
+<td>3300 MHz – 4200 MHz</td>
+<td>3300 MHz – 4200 MHz</td>
+<td>TDD</td>
+</tr>
+<tr class="odd">
+<td>n78</td>
+<td>3300 MHz – 3800 MHz</td>
+<td>3300 MHz – 3800 MHz</td>
+<td>TDD</td>
+</tr>
+<tr class="even">
+<td>n79</td>
+<td>4400 MHz – 5000 MHz</td>
+<td>4400 MHz – 5000 MHz</td>
+<td>TDD</td>
+</tr>
+<tr class="odd">
+<td>n80</td>
+<td>1710 MHz – 1785 MHz</td>
+<td>N/A</td>
+<td>SUL</td>
+</tr>
+<tr class="even">
+<td>n81</td>
+<td>880 MHz – 915 MHz</td>
+<td>N/A</td>
+<td>SUL</td>
+</tr>
+<tr class="odd">
+<td>n82</td>
+<td>832 MHz – 862 MHz</td>
+<td>N/A</td>
+<td>SUL</td>
+</tr>
+<tr class="even">
+<td>n83</td>
+<td>703 MHz – 748 MHz</td>
+<td>N/A</td>
+<td>SUL</td>
+</tr>
+<tr class="odd">
+<td>n84</td>
+<td>1920 MHz – 1980 MHz</td>
+<td>N/A</td>
+<td>SUL</td>
+</tr>
+<tr class="even">
+<td>n86</td>
+<td>1710 MHz – 1780 MHz</td>
+<td>N/A</td>
+<td>SUL</td>
+</tr>
+<tr class="odd">
+<td colspan="4"><p>NOTE 1: UE that complies with the NR Band n50 minimum
+requirements in this specification shall also comply with the NR Band
+n51 minimum requirements.</p>
+<p>NOTE 2: UE that complies with the NR Band n75 minimum requirements in
+this specification shall also comply with the NR Band n76 minimum
+requirements.</p>
+<p>NOTE 3: For SDL bands, downlink configuration for RRM performance
+testing is same as FDD.</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="a-operating-bands-for-ca">5.2A Operating bands for CA</h2>
+<h3 id="a.1-intra-band-ca">5.2A.1 Intra-band CA</h3>
+<p>NR intra-band contiguous carrier aggregation is designed to operate
+in the operating bands defined in Table 5.2A.1-1, where all operating
+bands are within FR1.</p>
+<p>Table 5.2A.1-1: Intra-band contiguous CA operating bands in FR1</p>
+<table>
+<colgroup>
+<col style="width: 48%" />
+<col style="width: 51%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>NR CA Band</th>
+<th><p>NR Band</p>
+<p>(Table 5.2-1)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CA_n41<sup>1</sup></td>
+<td>n41</td>
+</tr>
+<tr class="even">
+<td>CA_n77<sup>1</sup></td>
+<td>n77</td>
+</tr>
+<tr class="odd">
+<td>CA_n78<sup>1</sup></td>
+<td>n78</td>
+</tr>
+<tr class="even">
+<td>CA_n79<sup>1</sup></td>
+<td>n79</td>
+</tr>
+<tr class="odd">
+<td colspan="2">NOTE 1: The minimum requirements only apply for
+non‑simultaneous Tx/Rx between all carriers.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="a.2-inter-band-ca">5.2A.2 Inter-band CA</h3>
+<p>NR inter-band carrier aggregation is designed to operate in the
+operating bands defined in Table 5.2A.2.1-1, where all operating bands
+are within FR1.</p>
+<p>If the mandatory simultaneous Rx/Tx capability applies for a lower
+order band combination, when the applicable lower order band combination
+is a band pair in a higher order band combination, the mandatory
+simultaneous Rx/Tx capability also applies for the band pair in the
+higher order band combination.</p>
+<p>Table 5.2A.2-1: Void</p>
+<h4 id="a.2.1-inter-band-ca-two-bands">5.2A.2.1 Inter-band CA (two
+bands)</h4>
+<p>Table 5.2A.2.1-1: Inter-band CA operating bands involving FR1 (two
+bands)</p>
+<table>
+<colgroup>
+<col style="width: 48%" />
+<col style="width: 51%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>NR CA Band</th>
+<th><p>NR Band</p>
+<p>(Table 5.2-1)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CA_n3-n77<sup>1</sup></td>
+<td>n3, n77</td>
+</tr>
+<tr class="even">
+<td>CA_n3-n78<sup>1</sup></td>
+<td>n3, n78</td>
+</tr>
+<tr class="odd">
+<td>CA_n3-n79<sup>1</sup></td>
+<td>n3, n79</td>
+</tr>
+<tr class="even">
+<td>CA_n8-n75<sup>1</sup></td>
+<td>n8, n75</td>
+</tr>
+<tr class="odd">
+<td>CA n8-n78<sup>1</sup></td>
+<td>n8, n78</td>
+</tr>
+<tr class="even">
+<td>CA_n8-n79<sup>1</sup></td>
+<td>n8, n79</td>
+</tr>
+<tr class="odd">
+<td>CA_n28-n75<sup>2</sup></td>
+<td>n28, n75</td>
+</tr>
+<tr class="even">
+<td>CA_n28-n78<sup>1</sup></td>
+<td>n28, n78</td>
+</tr>
+<tr class="odd">
+<td>CA_n41-n78</td>
+<td>n41, n78</td>
+</tr>
+<tr class="even">
+<td>CA_n75-n78<sup>1</sup></td>
+<td>n75, n78</td>
+</tr>
+<tr class="odd">
+<td>CA_n76-n78<sup>1</sup></td>
+<td>n76, n78</td>
+</tr>
+<tr class="even">
+<td>CA_n77-n79<sup>4</sup></td>
+<td>n77, n79</td>
+</tr>
+<tr class="odd">
+<td>CA_n78-n79<sup>3</sup></td>
+<td>n78, n79</td>
+</tr>
+<tr class="even">
+<td colspan="2"><p>NOTE 1: Applicable for UE supporting inter-band
+carrier aggregation with mandatory simultaneous Rx/Tx capability.</p>
+<p>NOTE 2: The frequency range in band n28 is restricted for this band
+combination to 703-733 MHz for the UL and 758-788 MHz for the DL.</p>
+<p>NOTE 3: For UEs supporting band n77, the minimum requirements apply
+only when there is non-simultaneous Rx/Tx operation between n78-n79 NR
+carriers. This restriction applies also for these carriers when
+applicable NR CA configuration is part of a higher order
+configuration.</p>
+<p>NOTE 4: The minimum requirements apply only when there is
+non-simultaneous Rx/Tx operation between n77-n79 NR carriers. This
+restriction applies also for these carriers when applicable NR CA
+configuration is part of a higher order configuration.</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="b-void">5.2B Void</h2>
+<h2 id="c-operating-band-combination-for-sul">5.2C Operating band
+combination for SUL</h2>
+<p>NR operation is designed to operate in the operating band combination
+defined in Table 5.2C-1, where all operating bands are within FR1.</p>
+<p>If the mandatory simultaneous Rx/Tx capability applies for a lower
+order band combination, when the applicable lower order band combination
+is a band pair in a higher order band combination, the mandatory
+simultaneous Rx/Tx capability also applies for the band pair in the
+higher order band combination.</p>
+<p>Table 5.2C-1: Operating band combination for SUL in FR1</p>
+<table>
+<colgroup>
+<col style="width: 48%" />
+<col style="width: 51%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>NR Band combination for SUL</th>
+<th><p>NR Band</p>
+<p>(Table 5.2-1)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>SUL_n78-n80<sup>2</sup></td>
+<td>n78, n80</td>
+</tr>
+<tr class="even">
+<td>SUL_n78-n81<sup>2</sup></td>
+<td>n78, n81</td>
+</tr>
+<tr class="odd">
+<td>SUL_n78-n82<sup>2</sup></td>
+<td>n78, n82</td>
+</tr>
+<tr class="even">
+<td>SUL_n78-n83<sup>2</sup></td>
+<td>n78, n83</td>
+</tr>
+<tr class="odd">
+<td>SUL_n78-n84<sup>2</sup></td>
+<td>n78, n84</td>
+</tr>
+<tr class="even">
+<td>SUL_n78-n86<sup>2</sup></td>
+<td>n78, n86</td>
+</tr>
+<tr class="odd">
+<td>SUL_n79-n80<sup>2</sup></td>
+<td>n79, n80</td>
+</tr>
+<tr class="even">
+<td>SUL_n79-n81<sup>2</sup></td>
+<td>n79, n81</td>
+</tr>
+<tr class="odd">
+<td colspan="2"><p>NOTE 1: If a UE is configured with both NR UL and NR
+SUL carriers in a cell, the switching time between NR UL carrier and NR
+SUL carrier is 0 us.</p>
+<p>NOTE 2: For UE supporting SUL band combination simultaneous Rx/Tx
+capability is mandatory.</p>
+<p>NOTE 3: For UE supporting SUL band combination, UL MIMO is not
+configured on SUL carrier.</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="ue-channel-bandwidth">5.3 UE channel bandwidth</h2>
+<h3 id="general-2">5.3.1 General</h3>
+<p>The UE channel bandwidth supports a single NR RF carrier in the
+uplink or downlink at the UE. From a BS perspective, different UE
+channel bandwidths may be supported within the same spectrum for
+transmitting to and receiving from UEs connected to the BS. Transmission
+of multiple carriers to the same UE (CA) or multiple carriers to
+different UEs within the BS channel bandwidth can be supported.</p>
+<p>From a UE perspective, the UE is configured with one or more BWP /
+carriers, each with its own UE channel bandwidth. The UE does not need
+to be aware of the BS channel bandwidth or how the BS allocates
+bandwidth to different UEs.</p>
+<p>The placement of the UE channel bandwidth for each UE carrier is
+flexible but can only be completely within the BS channel bandwidth.</p>
+<p>The relationship between the channel bandwidth, the guardband and the
+maximum transmission bandwidth configuration is shown in Figure
+5.3.1-1.</p>
+<p><img src="media/image2.emf" style="width:6.04306in;height:3in" /></p>
+<p>Figure 5.3.1-1: Definition of the channel bandwidth and the maximum
+transmission bandwidth configuration for one NR channel</p>
+<h3 id="maximum-transmission-bandwidth-configuration">5.3.2 Maximum
+transmission bandwidth configuration</h3>
+<p>The maximum transmission bandwidth configuration N<sub>RB</sub> for
+each UE channel bandwidth and subcarrier spacing is specified in Table
+5.3.2-1.</p>
+<p>Table 5.3.2-1: Maximum transmission bandwidth configuration
+N<sub>RB</sub></p>
+<table>
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td rowspan="2">SCS (kHz)</td>
+<td>5 MHz</td>
+<td>10 MHz</td>
+<td>15 MHz</td>
+<td>20 MHz</td>
+<td>25 MHz</td>
+<td>30 MHz</td>
+<td>40 MHz</td>
+<td>50 MHz</td>
+<td>60 MHz</td>
+<td>80 MHz</td>
+<td>90 MHz</td>
+<td>100 MHz</td>
+</tr>
+<tr class="even">
+<td>N<sub>RB</sub></td>
+<td>N<sub>RB</sub></td>
+<td>N<sub>RB</sub></td>
+<td>N<sub>RB</sub></td>
+<td>N<sub>RB</sub></td>
+<td>N<sub>RB</sub></td>
+<td>N<sub>RB</sub></td>
+<td>N<sub>RB</sub></td>
+<td>N<sub>RB</sub></td>
+<td>N<sub>RB</sub></td>
+<td>N<sub>RB</sub></td>
+<td>N<sub>RB</sub></td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td>25</td>
+<td>52</td>
+<td>79</td>
+<td>106</td>
+<td>133</td>
+<td>160</td>
+<td>216</td>
+<td>270</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td>11</td>
+<td>24</td>
+<td>38</td>
+<td>51</td>
+<td>65</td>
+<td>78</td>
+<td>106</td>
+<td>133</td>
+<td>162</td>
+<td>217</td>
+<td>245</td>
+<td>273</td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td>N/A</td>
+<td>11</td>
+<td>18</td>
+<td>24</td>
+<td>31</td>
+<td>38</td>
+<td>51</td>
+<td>65</td>
+<td>79</td>
+<td>107</td>
+<td>121</td>
+<td>135</td>
+</tr>
+</tbody>
+</table>
+<h3
+id="minimum-guardband-and-transmission-bandwidth-configuration">5.3.3
+Minimum guardband and transmission bandwidth configuration</h3>
+<p>The minimum guardband for each UE channel bandwidth and SCS is
+specified in Table 5.3.3-1,</p>
+<p>Table 5.3.3-1: Minimum guardband for each UE channel bandwidth and
+SCS (kHz)</p>
+<table>
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>SCS (kHz)</td>
+<td>5 MHz</td>
+<td>10 MHz</td>
+<td>15 MHz</td>
+<td>20 MHz</td>
+<td>25 MHz</td>
+<td>30 MHz</td>
+<td>40 MHz</td>
+<td>50 MHz</td>
+<td>60 MHz</td>
+<td>80 MHz</td>
+<td>90 MHz</td>
+<td>100 MHz</td>
+</tr>
+<tr class="even">
+<td>15</td>
+<td>242.5</td>
+<td>312.5</td>
+<td>382.5</td>
+<td>452.5</td>
+<td>522.5</td>
+<td>592.5</td>
+<td>552.5</td>
+<td>692.5</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td>30</td>
+<td>505</td>
+<td>665</td>
+<td>645</td>
+<td>805</td>
+<td>785</td>
+<td>945</td>
+<td>905</td>
+<td>1045</td>
+<td>825</td>
+<td>925</td>
+<td>885</td>
+<td>845</td>
+</tr>
+<tr class="even">
+<td>60</td>
+<td>N/A</td>
+<td>1010</td>
+<td>990</td>
+<td>1330</td>
+<td>1310</td>
+<td>1290</td>
+<td>1610</td>
+<td>1570</td>
+<td>1530</td>
+<td>1450</td>
+<td>1410</td>
+<td>1370</td>
+</tr>
+</tbody>
+</table>
+<p>NOTE: The minimum guardbands have been calculated using the following
+equation: GB<sub>channel</sub> = (BW<sub>Channel</sub> x 1000 (kHz) -
+N<sub>RB</sub> x SCS x 12) / 2 - SCS/2, where N<sub>RB</sub> are from
+Table 5.3.2-1 and GB<sub>channel</sub> expressed in kHz.</p>
+<p>Figure 5.3.3-1: Void</p>
+<p>The number of RBs configured in any channel bandwidth shall ensure
+that the minimum guardband specified in this clause is met.</p>
+<p><img src="media/image3.png"
+style="width:4.2in;height:2.27986in" /></p>
+<p>Figure 5.3.3-2: UE PRB utilization</p>
+<p>In the case that multiple numerologies are multiplexed in the same
+symbol due to BS transmission of SSB, the minimum guardband on each side
+of the carrier is the guardband applied at the configured channel
+bandwidth for the numerology that is received immediately adjacent to
+the guard.</p>
+<p>If multiple numerologies are multiplexed in the same symbol and the
+UE channel bandwidth is &gt;50 MHz, the minimum guardband applied
+adjacent to 15 kHz SCS shall be the same as the minimum guardband
+defined for 30 kHz SCS for the same UE channel bandwidth.</p>
+<p><img src="media/image4.png"
+style="width:4.55972in;height:1.89583in" /></p>
+<p>Figure 5.3.3-3 Guard band definition when transmitting multiple
+numerologies</p>
+<p>NOTE: Figure 5.3.3-3 is not intended to imply the size of any guard
+between the two numerologies. Inter-numerology guard band within the
+carrier is implementation dependent.</p>
+<h3 id="rb-alignment">5.3.4 RB alignment</h3>
+<p>For each numerology, its common resource blocks are specified in
+Clause 4.4.4.3 in TS 38.211 [6], and the starting point of its
+transmission bandwidth configuration on the common resource block grid
+for a given channel bandwidth is indicated by an offset to "Reference
+point A" in the unit of the numerology. The <em>UE transmission
+bandwidth configuration</em> is indicated by the higher layer parameter
+<em>carrierBandwidth</em> [7] and will fulfil the minimum UE guardband
+requirement specified in Clause 5.3.3.</p>
+<h3 id="ue-channel-bandwidth-per-operating-band">5.3.5 UE channel
+bandwidth per operating band</h3>
+<p>The requirements in this specification apply to the combination of
+channel bandwidths, SCS and operating bands shown in Table 5.3.5-1. The
+transmission bandwidth configuration in Table 5.3.2-1 shall be supported
+for each of the specified channel bandwidths. The channel bandwidths are
+specified for both the TX and RX path.</p>
+<p>Table 5.3.5-1 Channel bandwidths for each NR band</p>
+<table>
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th colspan="13">NR band / SCS / UE Channel bandwidth</th>
+</tr>
+<tr class="odd">
+<th>NR Band</th>
+<th><p>SCS</p>
+<p>kHz</p></th>
+<th>5 MHz</th>
+<th>10 MHz</th>
+<th>15 MHz</th>
+<th>20 MHz</th>
+<th>25 MHz</th>
+<th>30 MHz</th>
+<th>40 MHz</th>
+<th>50 MHz</th>
+<th>60 MHz</th>
+<th>80 MHz</th>
+<th>90<sup>4</sup> MHz</th>
+<th>100 MHz</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td rowspan="3">n1</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td rowspan="3">n2</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td rowspan="3">n3</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td rowspan="3">n5</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>60</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td rowspan="3">n7</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td rowspan="3">n8</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>60</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td rowspan="3">n12</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td rowspan="3">n20</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>60</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td rowspan="3">n25</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td rowspan="3">n28</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes<sup>5</sup></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes<sup>5</sup></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>60</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td rowspan="3">n34</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td rowspan="3">n38</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td rowspan="3">n39</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td rowspan="3">n40</td>
+<td>15</td>
+<td>Yes<sup>9</sup></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td rowspan="3">n41</td>
+<td>15</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td rowspan="3">n50</td>
+<td>15</td>
+<td>Yes<sup>9</sup></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes<sup>3</sup></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes<sup>3</sup></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td rowspan="3">n51</td>
+<td>15</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td rowspan="3">n66</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td rowspan="3">n70</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes<sup>3</sup></td>
+<td>Yes<sup>3</sup></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes<sup>3</sup></td>
+<td>Yes<sup>3</sup></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes<sup>3</sup></td>
+<td>Yes<sup>3</sup></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td rowspan="3">n71</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>60</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td rowspan="3">n74</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td rowspan="3">n75</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td rowspan="3">n76</td>
+<td>15</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td rowspan="3">n77</td>
+<td>15</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td rowspan="3">n78</td>
+<td>15</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td rowspan="3">n79</td>
+<td>15</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>30</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>60</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td rowspan="3">n80</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td rowspan="3">n81</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>60</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td rowspan="3">n82</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td rowspan="3">n83</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes<sup>5</sup></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes<sup>5</sup></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>60</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td rowspan="3">n84</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td rowspan="3">n86</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td colspan="14"><p>NOTE 1: void</p>
+<p>NOTE 2: void</p>
+<p>NOTE 3: This UE channel bandwidth is applicable only to downlink.</p>
+<p>NOTE 4: This UE channel bandwidth is optional in this release of the
+specification.</p>
+<p>NOTE 5: For the 20 MHz bandwidth, the minimum requirements are
+specified for NR UL carrier frequencies confined to either 713-723 MHz
+or 728-738 MHz.</p>
+<p>NOTE 6: Void.</p>
+<p>NOTE 7: Void.</p>
+<p>NOTE 8: Void.</p>
+<p>NOTE 9: For this bandwidth, the minimum requirements are restricted
+to operation when carrier is configured as an SCell part of DC or CA
+configuration.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="asymmetric-channel-bandwidths">5.3.6 Asymmetric channel
+bandwidths</h3>
+<p>The UE channel bandwidth can be asymmetric in downlink and uplink. In
+asymmetric channel bandwidth operation, the narrower carrier shall be
+confined within the frequency range of the wider channel bandwidth.</p>
+<p>In FDD, the confinement is defined as a deviation to the default
+Tx-Rx carrier center frequency separation (defined in table 5.4.4-1) as
+following:</p>
+<p>ΔF<sub>TX-RX</sub> = | (BW<sub>DL</sub> – BW<sub>UL</sub>)/2 |</p>
+<p>The operating bands and supported asymmetric channel bandwidth
+combinations are defined in table 5.3.6-1.</p>
+<p>Table 5.3.6-1: FDD asymmetric UL and DL channel bandwidth
+combinations</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 37%" />
+<col style="width: 37%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>NR Band</th>
+<th>Channel bandwidths for UL (MHz)</th>
+<th>Channel bandwidths for DL (MHz)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td rowspan="2">n66</td>
+<td>5, 10</td>
+<td>20, 40</td>
+</tr>
+<tr class="even">
+<td>20</td>
+<td>40</td>
+</tr>
+<tr class="odd">
+<td rowspan="2">n70</td>
+<td>5, 10</td>
+<td>15</td>
+</tr>
+<tr class="even">
+<td>5, 10, 15</td>
+<td>20, 25</td>
+</tr>
+<tr class="odd">
+<td rowspan="3">n71</td>
+<td>5</td>
+<td>10</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>15</td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td>20</td>
+</tr>
+</tbody>
+</table>
+<p>In TDD, the operating bands and supported asymmetric channel
+bandwidth combinations are defined in table 5.3.6-2.</p>
+<p>Table 5.3.6-2: TDD asymmetric UL and DL channel bandwidth
+combinations</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 38%" />
+<col style="width: 35%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>NR Band</th>
+<th>Channel bandwidths for UL (MHz)</th>
+<th>Channel bandwidths for DL (MHz)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>n50</td>
+<td>60</td>
+<td>80</td>
+</tr>
+<tr class="even">
+<td colspan="3"><p>NOTE 1: Both centre frequency and BWP-ID shall match
+between DL and UL carriers as defined in TS 38.331 [7] cl. 6.3.2 and TS
+38.213 [8] section 12.</p>
+<p>NOTE 2: In a case a UE is configured with a full width of BWP within
+both UL/ DL channels, the centre frequency of UL/ DL channels shall be
+same.</p>
+<p>NOTE 3: A position of Point A is common between UL and DL carriers as
+defined in TS 38.331 [7] cl. 6.3.2.</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="a-ue-channel-bandwidth-for-ca">5.3A UE channel bandwidth for
+CA</h2>
+<h3 id="a.1-general">5.3A.1 General</h3>
+<p>Figure 5.3A.1-1: Void</p>
+<p>Figure 5.3A.1-2: Void</p>
+<h3 id="a.2-maximum-transmission-bandwidth-configuration-for-ca">5.3A.2
+Maximum transmission bandwidth configuration for CA</h3>
+<p>For carrier aggregation, the maximum transmission bandwidth
+configuration is defined per component carrier and the requirement is
+specified in clause 5.3.2.</p>
+<h3
+id="a.3-minimum-guardband-and-transmission-bandwidth-configuration-for-ca">5.3A.3
+Minimum guardband and transmission bandwidth configuration for CA</h3>
+<p>For intra-band contiguous carrier aggregation, <em>Aggregated Channel
+Bandwidth</em> and <em>Guard Bands</em> are defined as follows, see
+Figure 5.3A.3-1.</p>
+<p><strong>F<sub>C, low</sub></strong></p>
+<p><strong>Lower Edge</strong></p>
+<p><strong>Upper Edge</strong></p>
+<p><strong>Lowest Carrier Transmission Bandwidth Configuration
+[RB]</strong></p>
+<p><strong>F<sub>C, high</sub></strong></p>
+<p><strong>F<sub>offset, low</sub></strong></p>
+<p><strong>Highest Carrier Transmission Bandwidth Configuration
+[RB]</strong></p>
+<p><strong>Resource block</strong></p>
+<p><strong><em>Aggregated Channel Bandwidth</em>,
+BW<sub>channel_CA</sub> (MHz)</strong></p>
+<p><strong>F<sub>edge, low</sub></strong></p>
+<p><strong>F<sub>edge, high</sub></strong></p>
+<p><strong>F<sub>offset, high</sub></strong></p>
+<p>Figure 5.3A.3-1: Definition of <em>Aggregated Channel Bandwidth</em>
+for intra-band carrier aggregation</p>
+<p>The <em>aggregated channel bandwidth,</em> BW<sub>Channel_CA</sub>,
+is defined as</p>
+<p>BW<sub>Channel_CA</sub> = F<sub>edge,high</sub> -
+F<sub>edge,low</sub> (MHz).</p>
+<p>The lower bandwidth edge F<sub>edge, low</sub> and the upper
+bandwidth edge F<sub>edge,high</sub> of the aggregated channel bandwidth
+are used as frequency reference points for transmitter and receiver
+requirements and are defined by</p>
+<p>F<sub>edge,low</sub> = F<sub>C,low</sub> - F<sub>offset,low</sub></p>
+<p>F<sub>edge,high</sub> = F<sub>C,high</sub> +
+F<sub>offset,high</sub></p>
+<p>The lower and upper frequency offsets depend on the transmission
+bandwidth configurations of the lowest and highest assigned edge
+component carrier and are defined as</p>
+<p>F<sub>offset,low</sub> = (N<sub>RB,low</sub>*12 +
+1)*SCS<sub>low</sub>/2 + BW<sub>GB</sub> (MHz)</p>
+<p>F<sub>offset,high</sub> = (N<sub>RB,high</sub>*12 -
+1)*SCS<sub>high</sub>/2 + BW<sub>GB</sub> (MHz)</p>
+<p>BW<sub>GB</sub> = max(BW<sub>GB,Channel(k)</sub>)</p>
+<p>N<sub>RB,low</sub> and N<sub>RB,high</sub> are the transmission
+bandwidth configurations according to Table 5.3.2-1 for the lowest and
+highest assigned component carrier, SCS<sub>low</sub> and
+SCS<sub>high</sub> are the sub-carrier spacing for the lowest and
+highest assigned component carrier respectively. SCS<sub>low</sub>,
+SCS<sub>high</sub>, N<sub>RB,low</sub>, N<sub>RB,high</sub>, and
+BW<sub>GB,Channel(k)</sub> use the largest μ value among the subcarrier
+spacing configurations supported in the operating band for both of the
+channel bandwidths according to Table 5.3.5-1 and
+BW<sub>GB,Channel(k)</sub> is the minimum guard band for carrier k
+according to Table 5.3.3-1 for the said <em>μ</em> value. In case there
+is no common μ value for both of the channel bandwidths, <em>μ</em>=1 is
+used for SCS<sub>low</sub>, SCS<sub>high</sub>, N<sub>RB,low</sub>,
+N<sub>RB,high</sub>, and BW<sub>GB,Channel(k)</sub>.</p>
+<p>For intra-band non-contiguous carrier aggregation <em>Sub-block
+Bandwidth</em> and <em>Sub-block edges</em> are defined as follows, see
+Figure 5.3A.3-2.</p>
+<p>Figure 5.3A.3-2: Definition of sub-block bandwidth for intra-band
+non-contiguous spectrum</p>
+<p>...</p>
+<p>Sub block n</p>
+<p><strong>Transmission Bandwidth Configuration of the highest carrier
+in a sub-block [RB]</strong></p>
+<p><strong>Transmission Bandwidth Configuration of the lowest carrier in
+a sub-block [RB]</strong></p>
+<p><strong>F<sub>edge,block n, low</sub></strong></p>
+<p><strong>F<sub>C,block n,high</sub></strong></p>
+<p><strong>F<sub>edge,block n,high</sub></strong></p>
+<p><strong>F<sub>offset,high</sub></strong></p>
+<p><strong>F<sub>offset,low</sub></strong></p>
+<p><strong>F<sub>C,block n,low</sub></strong></p>
+<p><strong>Sub-block Bandwidth, BW<sub>Channel,block n</sub>
+(MHz)</strong></p>
+<p><strong>Lower Sub-block Edge</strong></p>
+<p><strong>Upper Sub-block Edge</strong></p>
+<p><strong>Resource block</strong></p>
+<p>Sub block n+1</p>
+<p>F<sub>offset, low</sub></p>
+<p><strong>F<sub>edge,block n+1, low</sub></strong></p>
+<p><strong>F<sub>C,block n+1,low</sub></strong></p>
+<p><strong>F<sub>C,block n+1,high</sub></strong></p>
+<p><strong>F<sub>edge,block n+1,high</sub></strong></p>
+<p><strong>F<sub>offset,high</sub></strong></p>
+<p><strong>Sub-block Bandwidth, BW<sub>Channel,block n+1</sub>
+(MHz)</strong></p>
+<p><strong>Lower Sub-block Edge</strong></p>
+<p><strong>Upper Sub-block Edge</strong></p>
+<p><strong>Transmission Bandwidth Configuration of the highest carrier
+in a sub-block [RB]</strong></p>
+<p><strong>Transmission Bandwidth Configuration of the lowest carrier in
+a sub-block [RB]</strong></p>
+<p><strong>Resource block</strong></p>
+<p>The lower sub-block edge of the Sub-block Bandwidth
+(BW<sub>Channel,block</sub>) is defined as</p>
+<p>Fedge,block, low = FC,block,low - Foffset, low.</p>
+<p>The upper sub-block edge of the Sub-block Bandwidth is defined as</p>
+<p>F<sub>edge,block,high</sub> = F<sub>C,block,high</sub> +
+F<sub>offset,high.</sub></p>
+<p>The Sub-block Bandwidth, BW<sub>Channel,block</sub>, is defined as
+follows:</p>
+<p>BW<sub>Channel,block</sub> = F<sub>edge,block,high -</sub>
+F<sub>edge,block,low</sub> (MHz)</p>
+<p>The lower and upper frequency offsets F<sub>offset,block,low</sub>
+and F<sub>offset,block,high</sub> depend on the transmission bandwidth
+configurations of the lowest and highest assigned edge component
+carriers within a sub-block and are defined as</p>
+<p>F<sub>offset,block,low</sub> = (N<sub>RB,low</sub>*12 +
+1)*SCS<sub>low</sub>/2 + BW<sub>GB</sub> (MHz)</p>
+<p>F<sub>offset,block,high</sub> = (N<sub>RB,high</sub>*12 -
+1)*SCS<sub>high</sub>/2 + BW<sub>GB</sub>(MHz)</p>
+<p>BW<sub>GB</sub> = max(BW<sub>GB,Channel(k)</sub>)</p>
+<p>where N<sub>RB,low</sub> and N<sub>RB,high</sub> are the transmission
+bandwidth configurations according to Table 5.3.2-1 for the lowest and
+highest assigned component carrier within a sub-block, respectively.
+SCS<sub>low</sub> and SCS<sub>high</sub> are the sub-carrier spacing for
+the lowest and highest assigned component carrier within a sub-block,
+respectively. SCS<sub>low</sub>, SCS<sub>high</sub>, N<sub>RB,low</sub>,
+N<sub>RB,high</sub>, and BW<sub>GB,Channel(k)</sub> use the largest μ
+value among the subcarrier spacing configurations supported in the
+operating band for both of the channel bandwidths according to Table
+5.3.5-1 and BW<sub>GB,Channel(k)</sub> is the minimum guard band for
+carrier k according to Table 5.3.3-1 for the said <em>μ</em> value. In
+case there is no common μ value for both of the channel bandwidths,
+<em>μ</em>=1 is used for SCS<sub>low</sub>, SCS<sub>high</sub>,
+N<sub>RB,low</sub>, N<sub>RB,high</sub>, and
+BW<sub>GB,Channel(k)</sub>.</p>
+<p>The sub-block gap size between two consecutive sub-blocks
+W<sub>gap</sub> is defined as</p>
+<p>W<sub>gap</sub> = F<sub>edge,block n+1,low -</sub> F<sub>edge,block
+n,high</sub> (MHz)</p>
+<h3 id="a.4-void">5.3A.4 Void</h3>
+<h3 id="a.5-ue-channel-bandwidth-per-operating-band-for-ca">5.3A.5 UE
+channel bandwidth per operating band for CA</h3>
+<p>The requirements for carrier aggregation in this specification are
+defined for carrier aggregation configurations.</p>
+<p>For intra-band contiguous carrier aggregation, a carrier aggregation
+configuration is a single operating band supporting a carrier
+aggregation bandwidth class with associated bandwidth combination sets
+specified in clause 5.5A.1. For each carrier aggregation configuration,
+requirements are specified for all aggregated channel bandwidths
+contained in a bandwidth combination set, a UE can indicate support of
+several bandwidth combination sets per carrier aggregation
+configuration. For intra-band non-contiguous carrier aggregation, a
+carrier aggregation configuration is a single operating band supporting
+two or more sub-blocks, each supporting a carrier aggregation bandwidth
+class.</p>
+<p>For inter-band carrier aggregation, a carrier aggregation
+configuration is a combination of operating bands, each supporting a
+carrier aggregation bandwidth class.</p>
+<p>Table 5.3A.5-1: NR CA bandwidth classes</p>
+<table>
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 34%" />
+<col style="width: 22%" />
+<col style="width: 19%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>NR CA bandwidth class</th>
+<th>Aggregated channel bandwidth</th>
+<th>Number of contiguous CC</th>
+<th>Fallback group</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>BW<sub>Channel</sub> ≤ BW<sub>Channel,max</sub></td>
+<td>1</td>
+<td>1, 2</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>20 MHz ≤ BW<sub>Channel_CA</sub> ≤ 100 MHz</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>100 MHz &lt; BW<sub>Channel_CA</sub> ≤ 2 x
+BW<sub>Channel,max</sub></td>
+<td>2</td>
+<td rowspan="3">1</td>
+</tr>
+<tr class="even">
+<td>D</td>
+<td>200 MHz &lt; BW<sub>Channel_CA</sub> ≤ 3 x
+BW<sub>Channel,max</sub></td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>E</td>
+<td>300 MHz &lt; BW<sub>Channel_CA</sub> ≤ 4 x
+BW<sub>Channel,max</sub></td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td rowspan="7">2</td>
+</tr>
+<tr class="odd">
+<td>G</td>
+<td>100 MHz &lt; BW<sub>Channel_CA</sub> ≤ 150 MHz</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>H</td>
+<td>150 MHz &lt; BW<sub>Channel_CA</sub> ≤ 200 MHz</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>I</td>
+<td>200 MHz &lt; BW<sub>Channel_CA</sub> ≤ 250 MHz</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td>J</td>
+<td>250 MHz &lt; BW<sub>Channel_CA</sub> ≤ 300 MHz</td>
+<td>6</td>
+</tr>
+<tr class="odd">
+<td>K</td>
+<td>300 MHz &lt; BW<sub>Channel_CA</sub> ≤ 350 MHz</td>
+<td>7</td>
+</tr>
+<tr class="even">
+<td>L</td>
+<td>350 MHz &lt; BW<sub>Channel_CA</sub> ≤ 400 MHz</td>
+<td>8</td>
+</tr>
+<tr class="odd">
+<td colspan="4"><p>NOTE 1: BW<sub>Channel, max</sub> is maximum channel
+bandwidth supported among all bands in a release</p>
+<p>NOTE 2: It is mandatory for a UE to be able to fallback to lower
+order NR CA bandwidth class configuration within a fallback group. It is
+not mandatory for a UE to be able to fallback to lower order NR CA
+bandwidth class configuration that belong to a different fallback
+group</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="channel-arrangement">5.4 Channel arrangement</h2>
+<h3 id="channel-spacing">5.4.1 Channel spacing</h3>
+<h4 id="channel-spacing-for-adjacent-nr-carriers">5.4.1.1 Channel
+spacing for adjacent NR carriers</h4>
+<p>The spacing between carriers will depend on the deployment scenario,
+the size of the frequency block available and the channel bandwidths.
+The nominal channel spacing between two adjacent NR carriers is defined
+as following:</p>
+<p>- For NR operating bands with 100 kHz channel raster,</p>
+<p>Nominal Channel spacing = (BW<sub>Channel(1)</sub> +
+BW<sub>Channel(2)</sub>)/2</p>
+<p>- For NR operating bands with 15 kHz channel raster,</p>
+<p>Nominal Channel spacing = (BW<sub>Channel(1)</sub> +
+BW<sub>Channel(2)</sub>)/2+{-5 kHz, 0 kHz, 5 kHz} for
+∆F<sub>Raster</sub> equals 15 kHz</p>
+<p>Nominal Channel spacing = (BW<sub>Channel(1)</sub> +
+BW<sub>Channel(2)</sub>)/2+{-10 kHz, 0 kHz, 10 kHz} for
+∆F<sub>Raster</sub> equals 30 kHz</p>
+<p>where BW<sub>Channel(1)</sub> and BW<sub>Channel(2)</sub> are the
+channel bandwidths of the two respective NR carriers. The channel
+spacing can be adjusted depending on the channel raster to optimize
+performance in a particular deployment scenario.</p>
+<h3 id="channel-raster">5.4.2 Channel raster</h3>
+<h4 id="nr-arfcn-and-channel-raster">5.4.2.1 NR-ARFCN and channel
+raster</h4>
+<p>The global frequency channel raster defines a set of RF reference
+frequencies F<sub>REF.</sub> The RF reference frequency is used in
+signalling to identify the position of RF channels, SS blocks and other
+elements.</p>
+<p>The global frequency raster is defined for all frequencies from 0 to
+100 GHz. The granularity of the global frequency raster is
+ΔF<sub>Global</sub>.</p>
+<p>RF reference frequencies are designated by an NR Absolute Radio
+Frequency Channel Number (NR-ARFCN) in the range (0…2016666) on the
+global frequency raster. The relation between the NR-ARFCN and the RF
+reference frequency F<sub>REF</sub> in MHz is given by the following
+equation, where F<sub>REF-Offs</sub> and N<sub>Ref-Offs</sub> are given
+in table 5.4.2.1-1 and N<sub>REF</sub> is the NR-ARFCN.</p>
+<p>F<sub>REF</sub> = F<sub>REF-Offs</sub> + ΔF<sub>Global</sub>
+(N<sub>REF</sub> – N<sub>REF-Offs</sub>)</p>
+<p>Table 5.4.2.1-1: NR-ARFCN parameters for the global frequency
+raster</p>
+<table>
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 16%" />
+<col style="width: 19%" />
+<col style="width: 13%" />
+<col style="width: 23%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Frequency range (MHz)</th>
+<th>ΔF<sub>Global</sub> (kHz)</th>
+<th>F<sub>REF-Offs</sub> (MHz)</th>
+<th>N<sub>REF-Offs</sub></th>
+<th>Range of N<sub>REF</sub></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0 – 3000</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td>0 – 599999</td>
+</tr>
+<tr class="even">
+<td>3000 – 24250</td>
+<td>15</td>
+<td>3000</td>
+<td>600000</td>
+<td>600000 – 2016666</td>
+</tr>
+</tbody>
+</table>
+<p>The channel raster defines a subset of RF reference frequencies that
+can be used to identify the RF channel position in the uplink and
+downlink. The RF reference frequency for an RF channel maps to a
+resource element on the carrier. For each operating band, a subset of
+frequencies from the global frequency raster are applicable for that
+band and forms a channel raster with a granularity ΔF<sub>Raster</sub>,
+which may be equal to or larger than ΔF<sub>Global</sub>.</p>
+<p>For SUL bands, for the uplink of all FDD bands defined in Table
+5.2-1, and for TDD band n34, n38, and n39</p>
+<p>F<sub>REF, shift</sub> = F<sub>REF</sub> + Δ<sub>shift</sub>,
+Δ<sub>shift</sub> = 0 kHz or 7.5 kHz.</p>
+<p>where Δ<sub>shift</sub> is signalled by the network in higher layer
+parameter <em>frequencyShift7p5khz</em> [7]. For band n34, n38, n39
+F<sub>REF, shift</sub> is only applicable to uplink transmissions using
+a 15 kHz SCS.</p>
+<blockquote>
+<p>NOTE: A UE operating n34, n38, n39 should support application of
+F<sub>REF, shift</sub> for UL transmissions. A UE that does not support
+it will be unable to communicate with a network that signals
+Δ<sub>shift</sub> = 7.5 kHz.</p>
+</blockquote>
+<p>The mapping between the channel raster and corresponding resource
+element is given in Clause 5.4.2.2. The applicable entries for each
+operating band are defined in Clause 5.4.2.3.</p>
+<h4 id="channel-raster-to-resource-element-mapping">5.4.2.2 Channel
+raster to resource element mapping</h4>
+<p>The mapping between the RF reference frequency on the channel raster
+and the corresponding resource element is given in Table 5.4.2.2-1 and
+can be used to identify the RF channel position. The mapping depends on
+the total number of RBs that are allocated in the channel and applies to
+both UL and DL. The mapping must apply to at least one numerology
+supported by the UE.</p>
+<p>Table 5.4.2.2-1: Channel raster to resource element mapping</p>
+<table>
+<colgroup>
+<col style="width: 43%" />
+<col style="width: 28%" />
+<col style="width: 28%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td></td>
+<td>N<sub>RB</sub>mod2 = 0</td>
+<td>N<sub>RB</sub>mod2 = 1</td>
+</tr>
+<tr class="even">
+<td>Resource element index <img src="media/image5.wmf" /></td>
+<td>0</td>
+<td>6</td>
+</tr>
+<tr class="odd">
+<td>Physical resource block number <img src="media/image1.wmf" /></td>
+<td><img src="media/image6.wmf" /></td>
+<td><img src="media/image7.wmf" /></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image5.wmf" />, <em>n<sub>PRB</sub></em>,
+<em>N<sub>RB</sub></em> are as defined in TS 38.211[6].</p>
+<h4 id="channel-raster-entries-for-each-operating-band">5.4.2.3 Channel
+raster entries for each operating band</h4>
+<p>The RF channel positions on the channel raster in each NR operating
+band are given through the applicable NR-ARFCN in Table 5.4.2.3‑1, using
+the channel raster to resource element mapping in clause 5.4.2.2.</p>
+<p>For NR operating bands with 100 kHz channel raster,
+ΔF<sub>Raster</sub> = 20 × ΔF<sub>Global</sub>. In this case every
+20<sup>th</sup> NR-ARFCN within the operating band are applicable for
+the channel raster within the operating band and the step size for the
+channel raster in Table 5.4.2.3‑1 is given as &lt;20&gt;.</p>
+<p>For NR operating bands with 15 kHz channel raster below 3GHz,
+ΔF<sub>Raster</sub> = <em>I</em> × ΔF<sub>Global</sub>, where <em>I ϵ
+{3,6}</em>. Every <em>I<sup>th</sup></em> NR‑ARFCN within the operating
+band are applicable for the channel raster within the operating band and
+the step size for the channel raster in Table 5.4.2.3‑1 is given as &lt;
+<em>I</em> &gt;.</p>
+<p>For NR operating bands with 15 kHz channel raster above 3GHz,
+ΔF<sub>Raster</sub> = <em>I</em> × ΔF<sub>Global</sub>, where <em>I ϵ
+{1,2}.</em> Every <em>I<sup>th</sup></em> NR‑ARFCN within the operating
+band are applicable for the channel raster within the operating band and
+the step size for the channel raster in table 5.4.2.3-1 is given as
+&lt;<em>I</em>&gt;.</p>
+<p>In frequency bands with two ΔF<sub>Raster</sub>, the higher
+ΔF<sub>Raster</sub> applies to channels using only the SCS that is equal
+to or larger than the higher ΔF<sub>Raster</sub> and SSB SCS is equal to
+the higher ∆F<sub>Raster</sub>.</p>
+<p>Table 5.4.2.3-1: Applicable NR-ARFCN per operating band</p>
+<table>
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 14%" />
+<col style="width: 35%" />
+<col style="width: 35%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>NR operating band</th>
+<th><p>ΔF<sub>Raster</sub></p>
+<p>(kHz)</p></th>
+<th><p>Uplink</p>
+<p>Range of N<sub>REF</sub></p>
+<p>(First – &lt;Step size&gt; – Last)</p></th>
+<th><p>Downlink</p>
+<p>Range of N<sub>REF</sub></p>
+<p>(First – &lt;Step size&gt; – Last)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>n1</td>
+<td>100</td>
+<td>384000 – &lt;20&gt; – 396000</td>
+<td>422000 – &lt;20&gt; – 434000</td>
+</tr>
+<tr class="even">
+<td>n2</td>
+<td>100</td>
+<td>370000 – &lt;20&gt; – 382000</td>
+<td>386000 – &lt;20&gt; – 398000</td>
+</tr>
+<tr class="odd">
+<td>n3</td>
+<td>100</td>
+<td>342000 – &lt;20&gt; – 357000</td>
+<td>361000 – &lt;20&gt; – 376000</td>
+</tr>
+<tr class="even">
+<td>n5</td>
+<td>100</td>
+<td>164800 – &lt;20&gt; – 169800</td>
+<td>173800 – &lt;20&gt; – 178800</td>
+</tr>
+<tr class="odd">
+<td>n7</td>
+<td>100</td>
+<td>500000 – &lt;20&gt; – 514000</td>
+<td>524000 – &lt;20&gt; – 538000</td>
+</tr>
+<tr class="even">
+<td>n8</td>
+<td>100</td>
+<td>176000 – &lt;20&gt; – 183000</td>
+<td>185000 – &lt;20&gt; – 192000</td>
+</tr>
+<tr class="odd">
+<td>n12</td>
+<td>100</td>
+<td>139800 – &lt;20&gt; – 143200</td>
+<td>145800 – &lt;20&gt; – 149200</td>
+</tr>
+<tr class="even">
+<td>n20</td>
+<td>100</td>
+<td>166400 – &lt;20&gt; – 172400</td>
+<td>158200 – &lt;20&gt; – 164200</td>
+</tr>
+<tr class="odd">
+<td>n25</td>
+<td>100</td>
+<td>370000 – &lt;20&gt; – 383000</td>
+<td>386000 – &lt;20&gt; – 399000</td>
+</tr>
+<tr class="even">
+<td>n28</td>
+<td>100</td>
+<td>140600 – &lt;20&gt; – 149600</td>
+<td>151600 – &lt;20&gt; – 160600</td>
+</tr>
+<tr class="odd">
+<td>n34</td>
+<td>100</td>
+<td>402000 – &lt;20&gt; – 405000</td>
+<td>402000 – &lt;20&gt; – 405000</td>
+</tr>
+<tr class="even">
+<td>n38</td>
+<td>100</td>
+<td>514000 – &lt;20&gt; – 524000</td>
+<td>514000 – &lt;20&gt; – 524000</td>
+</tr>
+<tr class="odd">
+<td>n39</td>
+<td>100</td>
+<td>376000 – &lt;20&gt; – 384000</td>
+<td>376000 – &lt;20&gt; – 384000</td>
+</tr>
+<tr class="even">
+<td>n40</td>
+<td>100</td>
+<td>460000 – &lt;20&gt; – 480000</td>
+<td>460000 – &lt;20&gt; – 480000</td>
+</tr>
+<tr class="odd">
+<td rowspan="2">n41</td>
+<td>15</td>
+<td>499200 – &lt;3&gt; – 537999</td>
+<td>499200 – &lt;3&gt; – 537999</td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td>499200 – &lt;6&gt; – 537996</td>
+<td>499200 – &lt;6&gt; – 537996</td>
+</tr>
+<tr class="odd">
+<td>n50</td>
+<td>100</td>
+<td>286400 – &lt;20&gt; – 303400</td>
+<td>286400 – &lt;20&gt; – 303400</td>
+</tr>
+<tr class="even">
+<td>n51</td>
+<td>100</td>
+<td>285400 – &lt;20&gt; – 286400</td>
+<td>285400 – &lt;20&gt; – 286400</td>
+</tr>
+<tr class="odd">
+<td>n66</td>
+<td>100</td>
+<td>342000 – &lt;20&gt; – 356000</td>
+<td>422000 – &lt;20&gt; – 440000</td>
+</tr>
+<tr class="even">
+<td>n70</td>
+<td>100</td>
+<td>339000 – &lt;20&gt; – 342000</td>
+<td>399000 – &lt;20&gt; – 404000</td>
+</tr>
+<tr class="odd">
+<td>n71</td>
+<td>100</td>
+<td>132600 – &lt;20&gt; – 139600</td>
+<td>123400 – &lt;20&gt; – 130400</td>
+</tr>
+<tr class="even">
+<td>n74</td>
+<td>100</td>
+<td>285400 – &lt;20&gt; – 294000</td>
+<td>295000 – &lt;20&gt; – 303600</td>
+</tr>
+<tr class="odd">
+<td>n75</td>
+<td>100</td>
+<td>N/A</td>
+<td>286400 – &lt;20&gt; – 303400</td>
+</tr>
+<tr class="even">
+<td>n76</td>
+<td>100</td>
+<td>N/A</td>
+<td>285400 – &lt;20&gt; – 286400</td>
+</tr>
+<tr class="odd">
+<td rowspan="2">n77</td>
+<td>15</td>
+<td>620000 – &lt;1&gt; – 680000</td>
+<td>620000 – &lt;1&gt; – 680000</td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td>620000 – &lt;2&gt; – 680000</td>
+<td>620000 – &lt;2&gt; – 680000</td>
+</tr>
+<tr class="odd">
+<td rowspan="2">n78</td>
+<td>15</td>
+<td>620000 – &lt;1&gt; – 653333</td>
+<td>620000 – &lt;1&gt; – 653333</td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td>620000 – &lt;2&gt; – 653332</td>
+<td>620000 – &lt;2&gt; – 653332</td>
+</tr>
+<tr class="odd">
+<td rowspan="2">n79</td>
+<td>15</td>
+<td>693334 – &lt;1&gt; – 733333</td>
+<td>693334 – &lt;1&gt; – 733333</td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td>693334 – &lt;2&gt; – 733332</td>
+<td>693334 – &lt;2&gt; – 733332</td>
+</tr>
+<tr class="odd">
+<td>n80</td>
+<td>100</td>
+<td>342000 – &lt;20&gt; – 357000</td>
+<td>N/A</td>
+</tr>
+<tr class="even">
+<td>n81</td>
+<td>100</td>
+<td>176000 – &lt;20&gt; – 183000</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td>n82</td>
+<td>100</td>
+<td>166400 – &lt;20&gt; – 172400</td>
+<td>N/A</td>
+</tr>
+<tr class="even">
+<td>n83</td>
+<td>100</td>
+<td>140600 – &lt;20&gt; –149600</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td>n84</td>
+<td>100</td>
+<td>384000 – &lt;20&gt; – 396000</td>
+<td>N/A</td>
+</tr>
+<tr class="even">
+<td>n86</td>
+<td>100</td>
+<td>342000 – &lt;20&gt; – 356000</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h3 id="synchronization-raster">5.4.3 Synchronization raster</h3>
+<h4 id="synchronization-raster-and-numbering">5.4.3.1 Synchronization
+raster and numbering</h4>
+<p>The synchronization raster indicates the frequency positions of the
+synchronization block that can be used by the UE for system acquisition
+when explicit signalling of the synchronization block position is not
+present.</p>
+<p>A global synchronization raster is defined for all frequencies. The
+frequency position of the SS block is defined as SS<sub>REF</sub> with
+corresponding number GSCN. The parameters defining the SS<sub>REF</sub>
+and GSCN for all the frequency ranges are in Table 5.4.3.1-1.</p>
+<p>The resource element corresponding to the SS block reference
+freqeuncy SS<sub>REF</sub> is given in clause 5.4.3.2. The
+synchronization raster and the subcarrier spacing of the synchronization
+block is defined separately for each band.</p>
+<p>Table 5.4.3.1-1: GSCN parameters for the global frequency raster</p>
+<table>
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 35%" />
+<col style="width: 19%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Frequency range</th>
+<th>SS Block frequency position SS<sub>REF</sub></th>
+<th>GSCN</th>
+<th>Range of GSCN</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0 – 3000 MHz</td>
+<td><p>N * 1200kHz + M * 50 kHz,</p>
+<p>N=1:2499, M ϵ {1,3,5} (Note 1)</p></td>
+<td>3N + (M-3)/2</td>
+<td>2 – 7498</td>
+</tr>
+<tr class="even">
+<td>3000 – 24250 MHz</td>
+<td><p>3000 MHz + N * 1.44 MHz</p>
+<p>N = 0:14756</p></td>
+<td>7499 + N</td>
+<td>7499 – 22255</td>
+</tr>
+<tr class="odd">
+<td colspan="4">NOTE 1: The default value for operating bands with SCS
+spaced channel raster is M=3.</td>
+</tr>
+</tbody>
+</table>
+<h4
+id="synchronization-raster-to-synchronization-block-resource-element-mapping">5.4.3.2
+Synchronization raster to synchronization block resource element
+mapping</h4>
+<p>The mapping between the synchronization raster and the corresponding
+resource element of the SS block is given in Table 5.4.3.2-1.</p>
+<p>Table 5.4.3.2-1: Synchronization raster to SS block resource element
+mapping</p>
+<table>
+<colgroup>
+<col style="width: 67%" />
+<col style="width: 32%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Resource element index <img src="media/image5.wmf" /></td>
+<td>120</td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image5.wmf" /> is the subcarrier number of SS/PBCH
+block defined in TS 38.211 clause 7.4.3.1 [6].</p>
+<h4 id="synchronization-raster-entries-for-each-operating-band">5.4.3.3
+Synchronization raster entries for each operating band</h4>
+<p>The synchronization raster for each band is give in Table 5.4.3.3-1.
+The distance between applicable GSCN entries is given by the &lt;Step
+size&gt; indicated in Table 5.4.3.3-1.</p>
+<p>Table 5.4.3.3-1: Applicable SS raster entries per operating band</p>
+<table>
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 26%" />
+<col style="width: 25%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>NR operating band</th>
+<th>SS Block SCS</th>
+<th>SS Block pattern<sup>1</sup></th>
+<th><p>Range of GSCN</p>
+<p>(First – &lt;Step size&gt; – Last)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>n1</td>
+<td>15 kHz</td>
+<td>Case A</td>
+<td>5279 – &lt;1&gt; – 5419</td>
+</tr>
+<tr class="even">
+<td>n2</td>
+<td>15 kHz</td>
+<td>Case A</td>
+<td>4829 – &lt;1&gt; – 4969</td>
+</tr>
+<tr class="odd">
+<td>n3</td>
+<td>15 kHz</td>
+<td>Case A</td>
+<td>4517 – &lt;1&gt; – 4693</td>
+</tr>
+<tr class="even">
+<td rowspan="2">n5</td>
+<td>15 kHz</td>
+<td>Case A</td>
+<td>2177 – &lt;1&gt; – 2230</td>
+</tr>
+<tr class="odd">
+<td>30 kHz</td>
+<td>Case B</td>
+<td>2183 – &lt;1&gt; – 2224</td>
+</tr>
+<tr class="even">
+<td>n7</td>
+<td>15 kHz</td>
+<td>Case A</td>
+<td>6554 – &lt;1&gt; – 6718</td>
+</tr>
+<tr class="odd">
+<td>n8</td>
+<td>15 kHz</td>
+<td>Case A</td>
+<td>2318 – &lt;1&gt; – 2395</td>
+</tr>
+<tr class="even">
+<td>n12</td>
+<td>15 kHz</td>
+<td>Case A</td>
+<td>1828 – &lt;1&gt; – 1858</td>
+</tr>
+<tr class="odd">
+<td>n20</td>
+<td>15 kHz</td>
+<td>Case A</td>
+<td>1982 – &lt;1&gt; – 2047</td>
+</tr>
+<tr class="even">
+<td>n25</td>
+<td>15 kHz</td>
+<td>Case A</td>
+<td>4829 – &lt;1&gt; – 4981</td>
+</tr>
+<tr class="odd">
+<td>n28</td>
+<td>15 kHz</td>
+<td>Case A</td>
+<td>1901 – &lt;1&gt; – 2002</td>
+</tr>
+<tr class="even">
+<td rowspan="2">n34</td>
+<td>15 kHz</td>
+<td>Case A</td>
+<td>NOTE 3</td>
+</tr>
+<tr class="odd">
+<td>30 kHz</td>
+<td>Case C</td>
+<td>5036 – &lt;1&gt; – 5050</td>
+</tr>
+<tr class="even">
+<td rowspan="2">n38</td>
+<td>15 kHz</td>
+<td>Case A</td>
+<td>NOTE 2</td>
+</tr>
+<tr class="odd">
+<td>30 kHz</td>
+<td>Case C</td>
+<td>6437 – &lt;1&gt; – 6538</td>
+</tr>
+<tr class="even">
+<td rowspan="2">n39</td>
+<td>15 kHz</td>
+<td>Case A</td>
+<td>NOTE 4</td>
+</tr>
+<tr class="odd">
+<td>30 kHz</td>
+<td>Case C</td>
+<td>4712 – &lt;1&gt; – 4789</td>
+</tr>
+<tr class="even">
+<td>n40</td>
+<td>30 kHz</td>
+<td>Case C</td>
+<td>5762 – &lt;1&gt; – 5989</td>
+</tr>
+<tr class="odd">
+<td rowspan="2">n41</td>
+<td>15 kHz</td>
+<td>Case A</td>
+<td>6246 – &lt;3&gt; – 6717</td>
+</tr>
+<tr class="even">
+<td>30 kHz</td>
+<td>Case C</td>
+<td>6252 – &lt;3&gt; – 6714</td>
+</tr>
+<tr class="odd">
+<td>n50</td>
+<td>30 kHz</td>
+<td>Case C</td>
+<td>3590 – &lt;1&gt; – 3781</td>
+</tr>
+<tr class="even">
+<td>n51</td>
+<td>15 kHz</td>
+<td>Case A</td>
+<td>3572 – &lt;1&gt; – 3574</td>
+</tr>
+<tr class="odd">
+<td rowspan="2">n66</td>
+<td>15 kHz</td>
+<td>Case A</td>
+<td>5279 – &lt;1&gt; – 5494</td>
+</tr>
+<tr class="even">
+<td>30 kHz</td>
+<td>Case B</td>
+<td>5285 – &lt;1&gt; – 5488</td>
+</tr>
+<tr class="odd">
+<td>n70</td>
+<td>15 kHz</td>
+<td>Case A</td>
+<td>4993 – &lt;1&gt; – 5044</td>
+</tr>
+<tr class="even">
+<td>n71</td>
+<td>15 kHz</td>
+<td>Case A</td>
+<td>1547 – &lt;1&gt; – 1624</td>
+</tr>
+<tr class="odd">
+<td>n74</td>
+<td>15 kHz</td>
+<td>Case A</td>
+<td>3692 – &lt;1&gt; – 3790</td>
+</tr>
+<tr class="even">
+<td>n75</td>
+<td>15 kHz</td>
+<td>Case A</td>
+<td>3584 – &lt;1&gt; – 3787</td>
+</tr>
+<tr class="odd">
+<td>n76</td>
+<td>15 kHz</td>
+<td>Case A</td>
+<td>3572 – &lt;1&gt; – 3574</td>
+</tr>
+<tr class="even">
+<td>n77</td>
+<td>30 kHz</td>
+<td>Case C</td>
+<td>7711 – &lt;1&gt; – 8329</td>
+</tr>
+<tr class="odd">
+<td>n78</td>
+<td>30 kHz</td>
+<td>Case C</td>
+<td>7711 – &lt;1&gt; – 8051</td>
+</tr>
+<tr class="even">
+<td>n79</td>
+<td>30 kHz</td>
+<td>Case C</td>
+<td>8480 – &lt;16&gt; – 8880</td>
+</tr>
+<tr class="odd">
+<td colspan="4"><p>NOTE 1: SS Block pattern is defined in clause 4.1 in
+TS 38.213 [8]</p>
+<p>NOTE 2: The applicable SS raster entries are GSCN = {6432, 6443,
+6457, 6468, 6479, 6493, 6507, 6518, 6532, 6543}</p>
+<p>NOTE 3: The applicable SS raster entries are GSCN = {5032, 5043,
+5054}</p>
+<p>NOTE 4: The applicable SS raster entries are GSCN = {4707, 4715,
+4718, 4729, 4732, 4743, 4747, 4754, 4761, 4768, 4772, 4782, 4786,
+4793}</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="txrx-frequency-separation">5.4.4 TX–RX frequency separation</h3>
+<p>The default TX channel (carrier centre frequency) to RX channel
+(carrier centre frequency) separation for operating bands is specified
+in Table 5.4.4-1.</p>
+<p>Table 5.4.4-1: Default UE TX-RX frequency separation</p>
+<table>
+<colgroup>
+<col style="width: 51%" />
+<col style="width: 48%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>NR Operating Band</th>
+<th>TX – RX<br />
+carrier centre frequency<br />
+separation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>n1</td>
+<td>190 MHz</td>
+</tr>
+<tr class="even">
+<td>n2</td>
+<td>80 MHz</td>
+</tr>
+<tr class="odd">
+<td>n3</td>
+<td>95 MHz</td>
+</tr>
+<tr class="even">
+<td>n5</td>
+<td>45 MHz</td>
+</tr>
+<tr class="odd">
+<td>n7</td>
+<td>120 MHz</td>
+</tr>
+<tr class="even">
+<td>n8</td>
+<td>45 MHz</td>
+</tr>
+<tr class="odd">
+<td>n12</td>
+<td>30 MHz</td>
+</tr>
+<tr class="even">
+<td>n20</td>
+<td>-41 MHz</td>
+</tr>
+<tr class="odd">
+<td>n25</td>
+<td>80 MHz</td>
+</tr>
+<tr class="even">
+<td>n28</td>
+<td>55 MHz</td>
+</tr>
+<tr class="odd">
+<td>n66</td>
+<td>400 MHz</td>
+</tr>
+<tr class="even">
+<td>n70</td>
+<td>300 MHz</td>
+</tr>
+<tr class="odd">
+<td>n71</td>
+<td>-46 MHz</td>
+</tr>
+<tr class="even">
+<td>n74</td>
+<td>48 MHz</td>
+</tr>
+<tr class="odd">
+<td colspan="2">NOTE 1: Void</td>
+</tr>
+</tbody>
+</table>
+<h2 id="a-channel-arrangement-for-ca">5.4A Channel arrangement for
+CA</h2>
+<h3 id="a.1-channel-spacing-for-ca">5.4A.1 Channel spacing for CA</h3>
+<p>For intra-band contiguous carrier aggregation with two or more
+component carriers, the nominal channel spacing between two adjacent NR
+component carriers is defined as the following unless stated
+otherwise:</p>
+<p>For NR operating bands with a 100 kHz channel raster:</p>
+<p><img src="media/image8.wmf" /></p>
+<p>while for NR operating bands without a 100 kHz channel raster:</p>
+<p><img src="media/image9.wmf" /></p>
+<p>with</p>
+<p><em>n = µ<sub>0</sub></em></p>
+<p>where BW<sub>Channel(1)</sub> and BW<sub>Channel(2)</sub> are the
+channel bandwidths of the two respective NR component carriers according
+to Table 5.3.2-1 with values in MHz, <em>μ<sub>0</sub></em> is the
+largest <em>μ</em> value among the subcarrier spacing configurations
+supported in the operating band for both of the channel bandwidths
+according to Table 5.3.5-1 and <em>GB<sub>Channel(i)</sub></em> is the
+minimum guard band for channel bandwidth i according to Table 5.3.3-1
+for the said <em>μ</em> value with <em>μ</em> as defined in TS 38.211.
+In case there is no common μ value for both of the channel bandwidths,
+<em>μ<sub>0</sub></em>=1 is selected and
+<em>GB<sub>Channel(i)</sub></em> is the minimum guard band for channel
+bandwidth i according to Table 5.3.3-1 for <em>μ</em>=1 with <em>μ</em>
+as defined in TS 38.211.</p>
+<p>The channel spacing for intra-band contiguous carrier aggregation can
+be adjusted to any multiple of least common multiple of channel raster
+and sub-carrier spacing less than the nominal channel spacing to
+optimize performance in a particular deployment scenario.</p>
+<p>For intra-band non-contiguous carrier aggregation, the channel
+spacing between two NR component carriers in different sub-blocks shall
+be larger than the nominal channel spacing defined in this clause.</p>
+<h3 id="a.2-channel-raster-for-ca">5.4A.2 Channel raster for CA</h3>
+<p>For inter-band carrier aggregation, the channel raster requirements
+in clause 5.4.2 apply for each operating band.</p>
+<h3 id="a.3-synchronization-raster-for-ca">5.4A.3 Synchronization raster
+for CA</h3>
+<p>For inter-band carrier aggregation, the synchronization raster
+requirements in clause 5.4.3 apply for each operating band.</p>
+<h3 id="a.4-tx-rx-frequency-separation-for-ca">5.4A.4 Tx-Rx frequency
+separation for CA</h3>
+<p>For inter-band carrier aggregation, the Tx-Rx frequency separation
+requirements in clause 5.4.4 apply for each operating band.</p>
+<h2 id="void">5.5 Void</h2>
+<h2 id="a-configurations-for-ca">5.5A Configurations for CA</h2>
+<h3 id="a.1-configurations-for-intra-band-contiguous-ca">5.5A.1
+Configurations for intra-band contiguous CA</h3>
+<p>Table 5.5A.1-1: NR CA configurations and bandwidth combination sets
+defined for intra-band contiguous CA</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 9%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th colspan="9">NR CA configuration / Bandwidth combination set</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>NR CA configuration</td>
+<td>Uplink CA configurations</td>
+<td>Channel bandwidths for carrier (MHz)</td>
+<td>Channel bandwidths for carrier (MHz)</td>
+<td>Channel bandwidths for carrier (MHz)</td>
+<td>Channel bandwidths for carrier (MHz)</td>
+<td>Channel bandwidths for carrier (MHz)</td>
+<td>Maximum aggregated<br />
+bandwidth (MHz)</td>
+<td>Bandwidth combination set</td>
+</tr>
+<tr class="even">
+<td rowspan="2">CA_n41C</td>
+<td rowspan="2">-</td>
+<td>40</td>
+<td>80, 100</td>
+<td></td>
+<td></td>
+<td></td>
+<td rowspan="2">180</td>
+<td rowspan="2">0</td>
+</tr>
+<tr class="odd">
+<td>50, 60, 80</td>
+<td>60, 80, 100</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td rowspan="4"><p>CA_n77C</p>
+<p>CA_n78C</p>
+<p>CA_n79C</p></td>
+<td rowspan="4">-</td>
+<td>50</td>
+<td>60, 80, 100</td>
+<td></td>
+<td></td>
+<td></td>
+<td rowspan="4">200</td>
+<td rowspan="4">0</td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td>60, 80, 100</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>80</td>
+<td>80, 100</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>100</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td colspan="9">NOTE: Unless otherwise stated, minimum requirements are
+applicable irrespective of the order of the component carriers.</td>
+</tr>
+</tbody>
+</table>
+<p>Table 5.5A.1-2: Void</p>
+<h3 id="a.2-void">5.5A.2 Void</h3>
+<h3 id="a.3-configurations-for-inter-band-ca">5.5A.3 Configurations for
+inter-band CA</h3>
+<p>Table 5.5A.3-1: Void</p>
+<h4 id="a.3.1-configurations-for-inter-band-ca-two-bands">5.5A.3.1
+Configurations for inter-band CA (two bands)</h4>
+<p>Table 5.5A.3.1-1: NR CA configurations and bandwith combinations sets
+defined for inter-band CA (two bands)</p>
+<table>
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 10%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>NR CA configuration</th>
+<th>Uplink CA configuration</th>
+<th>NR Band</th>
+<th><p>SCS</p>
+<p>(kHz)</p></th>
+<th><p>5</p>
+<p>MHz</p></th>
+<th><p>10</p>
+<p>MHz</p></th>
+<th><p>15</p>
+<p>MHz</p></th>
+<th><p>20</p>
+<p>MHz</p></th>
+<th>25 MHz</th>
+<th>30 MHz</th>
+<th><p>40</p>
+<p>MHz</p></th>
+<th><p>50</p>
+<p>MHz</p></th>
+<th><p>60</p>
+<p>MHz</p></th>
+<th><p>80</p>
+<p>MHz</p></th>
+<th>90 MHz</th>
+<th>100 MHz</th>
+<th>Bandwidth combination set</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td rowspan="6">CA_n3A-n77A</td>
+<td rowspan="6">-</td>
+<td rowspan="3">n3</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td rowspan="6">0</td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td rowspan="3">n77</td>
+<td>15</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td rowspan="6">CA_n3A-n78A</td>
+<td rowspan="6">CA_n3A-n78A</td>
+<td rowspan="3">n3</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td rowspan="6">0</td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td rowspan="3">n78</td>
+<td>15</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td rowspan="6">CA_n3A-n79A</td>
+<td rowspan="6">-</td>
+<td rowspan="3">n3</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td rowspan="6">0</td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td rowspan="3">n79</td>
+<td>15</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td rowspan="6">CA_n8A-n75A</td>
+<td rowspan="6">-</td>
+<td rowspan="3">n8</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td rowspan="6">0</td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td rowspan="3">n75</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td rowspan="6">CA_n8A-n78A</td>
+<td rowspan="6">CA_n8A-n78A</td>
+<td rowspan="3">n8</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td rowspan="6">0</td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td rowspan="3">n78</td>
+<td>15</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td rowspan="6">CA_n8A-n79A</td>
+<td rowspan="6">-</td>
+<td rowspan="3">n8</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td rowspan="6">0</td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td rowspan="3">n79</td>
+<td>15</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td rowspan="6">CA_n28A-n75A</td>
+<td rowspan="6">-</td>
+<td rowspan="3">n28</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td rowspan="6">0</td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td rowspan="3">n75</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td rowspan="6">CA_n28A-n78A</td>
+<td rowspan="6">-</td>
+<td rowspan="3">n28</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td rowspan="6">0</td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td rowspan="3">n78</td>
+<td>15</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td rowspan="6">CA_n41A-n78A</td>
+<td rowspan="6">-</td>
+<td rowspan="3">n41</td>
+<td>15</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td rowspan="6">0</td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td rowspan="3">n78</td>
+<td>15</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td rowspan="6">CA_n75A-n78A</td>
+<td rowspan="6">-</td>
+<td rowspan="3">n75</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td rowspan="6">0</td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td rowspan="3">n78</td>
+<td>15</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td rowspan="6">CA n76A-n78A</td>
+<td rowspan="6">-</td>
+<td rowspan="3">n76</td>
+<td>15</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td rowspan="6">0</td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td rowspan="3">n78</td>
+<td>15</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td rowspan="6">CA_n77A-n79A</td>
+<td rowspan="6">-</td>
+<td rowspan="3">n77</td>
+<td>15</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td rowspan="6">0</td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td rowspan="3">n79</td>
+<td>15</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>30</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>60</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td rowspan="6">CA_n78A-n79A</td>
+<td rowspan="6">-</td>
+<td rowspan="3">n78</td>
+<td>15</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td rowspan="6">0</td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td rowspan="3">n79</td>
+<td>15</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>30</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>60</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h2 id="b-void-1">5.5B Void</h2>
+<h2 id="c-configurations-for-sul">5.5C Configurations for SUL</h2>
+<p>Table 5.5C-1: Supported channel bandwidths per SUL band
+combination</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 5%" />
+<col style="width: 7%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>SUL configuration</th>
+<th>NR Band</th>
+<th>Subcarrier spacing (kHz)</th>
+<th>5 MHz</th>
+<th>10 MHz</th>
+<th>15 MHz</th>
+<th>20 MHz</th>
+<th>25 MHz</th>
+<th>30 MHz</th>
+<th>40 MHz</th>
+<th>50 MHz</th>
+<th>60 MHz</th>
+<th>80 MHz</th>
+<th>90 MHz</th>
+<th>100 MHz</th>
+<th>Bandwidth combination set</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td rowspan="4">SUL_n78A-n80A</td>
+<td rowspan="3">n78</td>
+<td>15</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td rowspan="4">0</td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>n80</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td rowspan="4">SUL_n78A-n81A</td>
+<td rowspan="3">n78</td>
+<td>15</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td rowspan="4">0</td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>n81</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td rowspan="4">SUL_n78A-n82A</td>
+<td rowspan="3">n78</td>
+<td>15</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td rowspan="4">0</td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>n82</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td rowspan="4">SUL_n78A-n83A</td>
+<td rowspan="3">n78</td>
+<td>15</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td rowspan="4">0</td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>n83</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td rowspan="4">SUL_n78A-n84A</td>
+<td rowspan="3">n78</td>
+<td>15</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td rowspan="4">0</td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>n84</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td rowspan="4">SUL_n78A-n86A</td>
+<td rowspan="3">n78</td>
+<td>15</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td rowspan="4">0</td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>n86</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td rowspan="4">SUL_n79A-n80A</td>
+<td rowspan="3">n79</td>
+<td>15</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td rowspan="4">0</td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>n80</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td rowspan="4">SUL_n79A-n81A</td>
+<td rowspan="3">n79</td>
+<td>15</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td rowspan="4">0</td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>n81</td>
+<td>15</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

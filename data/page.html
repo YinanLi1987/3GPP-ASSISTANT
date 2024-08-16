@@ -1,0 +1,1504 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Directory Listing /ftp/Specs/archive/38_series/38.101-1/</title>
+        <style type="text/css">            
+			body{font-size:0.8em}
+            a { text-decoration: none; }
+            a:hover { text-decoration: underline; }
+            th {text-align:left;}
+            .box {float: left;  min-height: 50px;  margin: 0.5em; }
+            .after-box {  clear: left;}
+			h2 { margin-top:30px;}
+			.icon{width:22px;height:22px}
+			.myButton {
+				box-shadow:inset 0px 1px 0px 0px #a4e271;
+				background:linear-gradient(to bottom, #89c403 5%, #77a809 100%);
+				background-color:#89c403;
+				border-radius:6px;
+				border:1px solid #74b807;
+				display:inline-block;
+				cursor:pointer;
+				color:#ffffff;
+				font-family:Arial;
+				font-size:15px;
+				font-weight:bold;
+				padding:6px 24px;
+				text-decoration:none;
+				text-shadow:0px 1px 0px #528009;
+				margin-top:25px;
+			}
+			.myButton:hover {
+				background:linear-gradient(to bottom, #77a809 5%, #89c403 100%);
+				background-color:#77a809;
+			}
+			.myButton:active {
+				position:relative;
+				top:1px;
+			}
+			#dragNdrop{
+			
+				display:none;
+			
+				border:4px grey dashed;
+				width:500px;
+				padding:50px;
+				text-align: center;
+				-webkit-border-radius: 5px;
+				-moz-border-radius: 5px;
+				border-radius: 5px;
+				margin-bottom:15px;				
+			}
+			#dragNdrop:hover{
+				cursor:pointer;
+			}
+			.resultMsg{
+				font-size:20px;
+				width:40%;
+				padding: 15px;
+				margin-bottom: 20px;
+				border: 1px solid transparent;
+				border-radius: 4px;
+			}
+			.success{
+				color: #3c763d;
+				background-color: #dff0d8;
+				border-color: #d6e9c6;
+			}
+			.failure{
+				color: #a94442;
+				background-color: #f2dede;
+				border-color: #ebccd1;
+				background-repeat: no-repeat;
+				background-position: left center;
+			}
+
+        </style>
+		<script type="text/javascript">
+			function expandDnD(){
+				
+				window.location = window.location.href + "?login=1";
+				
+				var divDnD = document.getElementById("dragNdrop");
+				divDnD.style.display = "block";
+			}	
+		</script>
+    </head>
+    <body>
+        <header>
+            <div class="box">
+                <img alt="ETSI logo" width="100" src="/ftp/zIcons/main-logo-3gpp.png">
+            </div>
+            <div class="box">
+                <h2>
+                
+                        
+                        <a href="https://www.3gpp.org/">www.3gpp.org</a> /
+                        
+                        <a href="https://www.3gpp.org/ftp/">ftp</a> /
+                    
+                        <a href="https://www.3gpp.org/ftp/Specs/">Specs</a> /
+                    
+                        <a href="https://www.3gpp.org/ftp/Specs/archive/">archive</a> /
+                    
+                        <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/">38_series</a> /
+                    
+                        38.101-1
+                    
+                    </h2>
+            </div>
+			
+            <div class="after-box">
+            </div>
+        </header>
+			
+        <form method="post" action="./" id="ctl00">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMjAwODg1NzA1OA9kFgRmDxYCHgtfIUl0ZW1Db3VudAIFFgoCAQ9kFgJmDxUBLTxhIGhyZWY9Imh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC8iPmZ0cDwvYT4gL2QCAg9kFgJmDxUBNTxhIGhyZWY9Imh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy8iPlNwZWNzPC9hPiAvZAIDD2QWAmYPFQE/PGEgaHJlZj0iaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvIj5hcmNoaXZlPC9hPiAvZAIED2QWAmYPFQFLPGEgaHJlZj0iaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMzhfc2VyaWVzLyI+Mzhfc2VyaWVzPC9hPiAvZAIFD2QWAmYPFQEIMzguMTAxLTFkAgEPZBYEZg8WAh8AAk8WngFmD2QWAmYPFQUELnppcElodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8zOF9zZXJpZXMvMzguMTAxLTEvMzgxMDEtMS0wMDEuemlwDzM4MTAxLTEtMDAxLnppcA8yMDE3LzA4LzExIDE6NDQHMjgsOSBLQmQCAQ9kFgJmDxUFBC56aXBJaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMzhfc2VyaWVzLzM4LjEwMS0xLzM4MTAxLTEtMDEwLnppcA8zODEwMS0xLTAxMC56aXAPMjAxNy8xMS8xNSA5OjIyBzMyLDggS0JkAgIPZBYCZg8VBQQuemlwSWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzM4X3Nlcmllcy8zOC4xMDEtMS8zODEwMS0xLTAyMC56aXAPMzgxMDEtMS0wMjAuemlwDzIwMTcvMTEvMTUgODo1NwgyNDAsMyBLQmQCAw9kFgJmDxUFBC56aXBJaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMzhfc2VyaWVzLzM4LjEwMS0xLzM4MTAxLTEtMDMwLnppcA8zODEwMS0xLTAzMC56aXAPMjAxNy8xMi8xNSA5OjU0CDc2MCw3IEtCZAIED2QWAmYPFQUELnppcElodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8zOF9zZXJpZXMvMzguMTAxLTEvMzgxMDEtMS0wNDAuemlwDzM4MTAxLTEtMDQwLnppcA8yMDE3LzEyLzE1IDk6NTQINzY5LDcgS0JkAgUPZBYCZg8VBQQuemlwSWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzM4X3Nlcmllcy8zOC4xMDEtMS8zODEwMS0xLTEwMC56aXAPMzgxMDEtMS0xMDAuemlwEDIwMTcvMTIvMTUgMjM6MjcIMzgzLDEgS0JkAgYPZBYCZg8VBQQuemlwSWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzM4X3Nlcmllcy8zOC4xMDEtMS8zODEwMS0xLWYwMC56aXAPMzgxMDEtMS1mMDAuemlwDzIwMTgvMDEvMDkgOToxNQYzOTUgS0JkAgcPZBYCZg8VBQQuemlwSWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzM4X3Nlcmllcy8zOC4xMDEtMS8zODEwMS0xLWYxMC56aXAPMzgxMDEtMS1mMTAuemlwEDIwMTgvMDQvMDYgMTQ6MTUGNDcyIEtCZAIID2QWAmYPFQUELnppcElodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8zOF9zZXJpZXMvMzguMTAxLTEvMzgxMDEtMS1mMjAuemlwDzM4MTAxLTEtZjIwLnppcBAyMDE4LzA3LzA5IDE0OjAxCDkyMyw4IEtCZAIJD2QWAmYPFQUELnppcElodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8zOF9zZXJpZXMvMzguMTAxLTEvMzgxMDEtMS1mMzAuemlwDzM4MTAxLTEtZjMwLnppcBAyMDE4LzEwLzAzIDEyOjI3CTEyNzAsNSBLQmQCCg9kFgJmDxUFBC56aXBJaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMzhfc2VyaWVzLzM4LjEwMS0xLzM4MTAxLTEtZjQwLnppcA8zODEwMS0xLWY0MC56aXAQMjAxOS8wMS8xNSAxMTowNAkxNzM0LDYgS0JkAgsPZBYCZg8VBQQuemlwSWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzM4X3Nlcmllcy8zOC4xMDEtMS8zODEwMS0xLWY1MC56aXAPMzgxMDEtMS1mNTAuemlwEDIwMTkvMDQvMDQgMTE6NTkJMTgwNyw5IEtCZAIMD2QWAmYPFQUELnppcElodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8zOF9zZXJpZXMvMzguMTAxLTEvMzgxMDEtMS1mNjAuemlwDzM4MTAxLTEtZjYwLnppcA8yMDE5LzA3LzA0IDU6MjYJMTgzMCwxIEtCZAIND2QWAmYPFQUELnppcElodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8zOF9zZXJpZXMvMzguMTAxLTEvMzgxMDEtMS1mNzAuemlwDzM4MTAxLTEtZjcwLnppcBAyMDE5LzEwLzA3IDEwOjE1CTE4MjcsMiBLQmQCDg9kFgJmDxUFBC56aXBJaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMzhfc2VyaWVzLzM4LjEwMS0xLzM4MTAxLTEtZjgwLnppcA8zODEwMS0xLWY4MC56aXAPMjAyMC8wMS8xMyAwOjA2CTE4MzUsNyBLQmQCDw9kFgJmDxUFBC56aXBJaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMzhfc2VyaWVzLzM4LjEwMS0xLzM4MTAxLTEtZjgxLnppcA8zODEwMS0xLWY4MS56aXAPMjAyMC8wMS8xMyA4OjIxCTE4NDAsOSBLQmQCEA9kFgJmDxUFBC56aXBJaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMzhfc2VyaWVzLzM4LjEwMS0xLzM4MTAxLTEtZjgyLnppcA8zODEwMS0xLWY4Mi56aXAPMjAyMC8wMS8xNSA5OjQyCTE4NDEsNSBLQmQCEQ9kFgJmDxUFBC56aXBJaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMzhfc2VyaWVzLzM4LjEwMS0xLzM4MTAxLTEtZjkwLnppcA8zODEwMS0xLWY5MC56aXAQMjAyMC8wNC8wOCAxOToyMwkxODQ2LDcgS0JkAhIPZBYCZg8VBQQuemlwSWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzM4X3Nlcmllcy8zOC4xMDEtMS8zODEwMS0xLWZhMC56aXAPMzgxMDEtMS1mYTAuemlwEDIwMjAvMDcvMTcgMTM6NTQJMTg3MSw0IEtCZAITD2QWAmYPFQUELnppcElodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8zOF9zZXJpZXMvMzguMTAxLTEvMzgxMDEtMS1mYjAuemlwDzM4MTAxLTEtZmIwLnppcBAyMDIwLzEwLzA5IDE5OjQwCTE4NjcsNSBLQmQCFA9kFgJmDxUFBC56aXBJaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMzhfc2VyaWVzLzM4LjEwMS0xLzM4MTAxLTEtZmMwLnppcA8zODEwMS0xLWZjMC56aXAQMjAyMS8wMS8xMiAxOTowNgkxODczLDkgS0JkAhUPZBYCZg8VBQQuemlwSWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzM4X3Nlcmllcy8zOC4xMDEtMS8zODEwMS0xLWZkMC56aXAPMzgxMDEtMS1mZDAuemlwEDIwMjEvMDQvMTIgMTg6MjkJMTg2Nyw4IEtCZAIWD2QWAmYPFQUELnppcElodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8zOF9zZXJpZXMvMzguMTAxLTEvMzgxMDEtMS1mZTAuemlwDzM4MTAxLTEtZmUwLnppcBAyMDIxLzA3LzA4IDEwOjEzCTE2NzcsMSBLQmQCFw9kFgJmDxUFBC56aXBJaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMzhfc2VyaWVzLzM4LjEwMS0xLzM4MTAxLTEtZmYwLnppcA8zODEwMS0xLWZmMC56aXAPMjAyMS8xMC8wMSA3OjE3CTE2ODAsNyBLQmQCGA9kFgJmDxUFBC56aXBJaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMzhfc2VyaWVzLzM4LjEwMS0xLzM4MTAxLTEtZmcwLnppcA8zODEwMS0xLWZnMC56aXAQMjAyMi8wMS8xMiAxNjo0MQkxODAzLDEgS0JkAhkPZBYCZg8VBQQuemlwSWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzM4X3Nlcmllcy8zOC4xMDEtMS8zODEwMS0xLWZoMC56aXAPMzgxMDEtMS1maDAuemlwEDIwMjIvMDQvMDEgMTc6NTMJMTgyNiwyIEtCZAIaD2QWAmYPFQUELnppcElodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8zOF9zZXJpZXMvMzguMTAxLTEvMzgxMDEtMS1maTAuemlwDzM4MTAxLTEtZmkwLnppcBAyMDIyLzA2LzI0IDEzOjEzCTE4NjQsNSBLQmQCGw9kFgJmDxUFBC56aXBJaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMzhfc2VyaWVzLzM4LjEwMS0xLzM4MTAxLTEtZmowLnppcA8zODEwMS0xLWZqMC56aXAPMjAyMi8wOS8yOCA5OjU3CTE4NzAsNiBLQmQCHA9kFgJmDxUFBC56aXBJaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMzhfc2VyaWVzLzM4LjEwMS0xLzM4MTAxLTEtZmswLnppcA8zODEwMS0xLWZrMC56aXAQMjAyMy8wMS8xMSAyMzowMwkxOTMyLDUgS0JkAh0PZBYCZg8VBQQuemlwSWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzM4X3Nlcmllcy8zOC4xMDEtMS8zODEwMS0xLWZsMC56aXAPMzgxMDEtMS1mbDAuemlwEDIwMjMvMDQvMDYgMjA6MTIJMTk0MCw3IEtCZAIeD2QWAmYPFQUELnppcElodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8zOF9zZXJpZXMvMzguMTAxLTEvMzgxMDEtMS1mbTAuemlwDzM4MTAxLTEtZm0wLnppcBAyMDIzLzA2LzMwIDIwOjQwCTE5MzgsNCBLQmQCHw9kFgJmDxUFBC56aXBJaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMzhfc2VyaWVzLzM4LjEwMS0xLzM4MTAxLTEtZm4wLnppcA8zODEwMS0xLWZuMC56aXAQMjAyMy8wOS8yOSAxMjoxNAkxODk2LDcgS0JkAiAPZBYCZg8VBQQuemlwSWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzM4X3Nlcmllcy8zOC4xMDEtMS8zODEwMS0xLWZvMC56aXAPMzgxMDEtMS1mbzAuemlwEDIwMjQvMDEvMTIgMjI6MjMJMTg5NywzIEtCZAIhD2QWAmYPFQUELnppcElodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8zOF9zZXJpZXMvMzguMTAxLTEvMzgxMDEtMS1mcDAuemlwDzM4MTAxLTEtZnAwLnppcA8yMDI0LzA0LzA1IDk6MDgJMTkwMCw3IEtCZAIiD2QWAmYPFQUELnppcElodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8zOF9zZXJpZXMvMzguMTAxLTEvMzgxMDEtMS1mcTAuemlwDzM4MTAxLTEtZnEwLnppcA8yMDI0LzA3LzExIDA6MDcJMTkwMSwyIEtCZAIjD2QWAmYPFQUELnppcElodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8zOF9zZXJpZXMvMzguMTAxLTEvMzgxMDEtMS1nMDAuemlwDzM4MTAxLTEtZzAwLnppcA8yMDE5LzA3LzA0IDY6MDIJMjA0MCw0IEtCZAIkD2QWAmYPFQUELnppcElodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8zOF9zZXJpZXMvMzguMTAxLTEvMzgxMDEtMS1nMTAuemlwDzM4MTAxLTEtZzEwLnppcBAyMDE5LzEwLzA3IDEwOjM5CTIxMzQsOSBLQmQCJQ9kFgJmDxUFBC56aXBJaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMzhfc2VyaWVzLzM4LjEwMS0xLzM4MTAxLTEtZzIwLnppcA8zODEwMS0xLWcyMC56aXAPMjAyMC8wMS8xMyA5OjE1CTIyNjUsMSBLQmQCJg9kFgJmDxUFBC56aXBJaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMzhfc2VyaWVzLzM4LjEwMS0xLzM4MTAxLTEtZzMwLnppcA8zODEwMS0xLWczMC56aXAQMjAyMC8wNC8wOCAxOToyNAkxNjY1LDMgS0JkAicPZBYCZg8VBQQuemlwSWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzM4X3Nlcmllcy8zOC4xMDEtMS8zODEwMS0xLWc0MC56aXAPMzgxMDEtMS1nNDAuemlwEDIwMjAvMDcvMTcgMTM6NTUJMjc1Niw0IEtCZAIoD2QWAmYPFQUELnppcElodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8zOF9zZXJpZXMvMzguMTAxLTEvMzgxMDEtMS1nNTAuemlwDzM4MTAxLTEtZzUwLnppcBAyMDIwLzEwLzA5IDE5OjI3CTI5NDYsNiBLQmQCKQ9kFgJmDxUFBC56aXBJaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMzhfc2VyaWVzLzM4LjEwMS0xLzM4MTAxLTEtZzYwLnppcA8zODEwMS0xLWc2MC56aXAQMjAyMS8wMS8xMiAxOTowNwkyODA3LDggS0JkAioPZBYCZg8VBQQuemlwSWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzM4X3Nlcmllcy8zOC4xMDEtMS8zODEwMS0xLWc3MC56aXAPMzgxMDEtMS1nNzAuemlwEDIwMjEvMDQvMTIgMTg6MjkJMzI3MCw1IEtCZAIrD2QWAmYPFQUELnppcElodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8zOF9zZXJpZXMvMzguMTAxLTEvMzgxMDEtMS1nODAuemlwDzM4MTAxLTEtZzgwLnppcA8yMDIxLzA3LzA5IDk6NDAJMzEwNyw5IEtCZAIsD2QWAmYPFQUELnppcElodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8zOF9zZXJpZXMvMzguMTAxLTEvMzgxMDEtMS1nOTAuemlwDzM4MTAxLTEtZzkwLnppcBAyMDIxLzEwLzA1IDEyOjA5CTMxNDYsOCBLQmQCLQ9kFgJmDxUFBC56aXBJaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMzhfc2VyaWVzLzM4LjEwMS0xLzM4MTAxLTEtZ2EwLnppcA8zODEwMS0xLWdhMC56aXAQMjAyMi8wMS8xMiAxNjo0MQkzMjc3LDIgS0JkAi4PZBYCZg8VBQQuemlwSWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzM4X3Nlcmllcy8zOC4xMDEtMS8zODEwMS0xLWdiMC56aXAPMzgxMDEtMS1nYjAuemlwEDIwMjIvMDQvMDEgMTc6NTQJMzI5Myw1IEtCZAIvD2QWAmYPFQUELnppcElodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8zOF9zZXJpZXMvMzguMTAxLTEvMzgxMDEtMS1nYzAuemlwDzM4MTAxLTEtZ2MwLnppcBAyMDIyLzA2LzI0IDEzOjE0BzMzNTMgS0JkAjAPZBYCZg8VBQQuemlwSWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzM4X3Nlcmllcy8zOC4xMDEtMS8zODEwMS0xLWdjMS56aXAPMzgxMDEtMS1nYzEuemlwEDIwMjIvMDYvMjQgMTU6MjcJMzM1Myw3IEtCZAIxD2QWAmYPFQUELnppcElodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8zOF9zZXJpZXMvMzguMTAxLTEvMzgxMDEtMS1nZDAuemlwDzM4MTAxLTEtZ2QwLnppcA8yMDIyLzA5LzI4IDk6NTcJMzMxNyw3IEtCZAIyD2QWAmYPFQUELnppcElodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8zOF9zZXJpZXMvMzguMTAxLTEvMzgxMDEtMS1nZTAuemlwDzM4MTAxLTEtZ2UwLnppcBAyMDIzLzAxLzExIDIzOjA0CTMzNzAsMyBLQmQCMw9kFgJmDxUFBC56aXBJaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMzhfc2VyaWVzLzM4LjEwMS0xLzM4MTAxLTEtZ2YwLnppcA8zODEwMS0xLWdmMC56aXAQMjAyMy8wNC8wNiAyMDoxMgkzMzg3LDUgS0JkAjQPZBYCZg8VBQQuemlwSWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzM4X3Nlcmllcy8zOC4xMDEtMS8zODEwMS0xLWdnMC56aXAPMzgxMDEtMS1nZzAuemlwEDIwMjMvMDYvMzAgMjA6NDAJMzM0OSwyIEtCZAI1D2QWAmYPFQUELnppcElodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8zOF9zZXJpZXMvMzguMTAxLTEvMzgxMDEtMS1naDAuemlwDzM4MTAxLTEtZ2gwLnppcBAyMDIzLzA5LzI5IDEyOjE1CTMzNTAsNSBLQmQCNg9kFgJmDxUFBC56aXBJaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMzhfc2VyaWVzLzM4LjEwMS0xLzM4MTAxLTEtZ2kwLnppcA8zODEwMS0xLWdpMC56aXAPMjAyNC8wMS8xNiA3OjA4CTMzNjgsNCBLQmQCNw9kFgJmDxUFBC56aXBJaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMzhfc2VyaWVzLzM4LjEwMS0xLzM4MTAxLTEtZ2owLnppcA8zODEwMS0xLWdqMC56aXAPMjAyNC8wNC8wNSA5OjA5CTMzNzYsNCBLQmQCOA9kFgJmDxUFBC56aXBJaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMzhfc2VyaWVzLzM4LjEwMS0xLzM4MTAxLTEtZ2swLnppcA8zODEwMS0xLWdrMC56aXAPMjAyNC8wNy8xMSAwOjA3CTMzODEsMyBLQmQCOQ9kFgJmDxUFBC56aXBJaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMzhfc2VyaWVzLzM4LjEwMS0xLzM4MTAxLTEtaDAwLnppcA8zODEwMS0xLWgwMC56aXAQMjAyMS8wMS8xMiAxOTowOAkyMTI2LDQgS0JkAjoPZBYCZg8VBQQuemlwSWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzM4X3Nlcmllcy8zOC4xMDEtMS8zODEwMS0xLWgxMC56aXAPMzgxMDEtMS1oMTAuemlwDzIwMjEvMDQvMTMgMjoyNgkzMjkwLDMgS0JkAjsPZBYCZg8VBQQuemlwSWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzM4X3Nlcmllcy8zOC4xMDEtMS8zODEwMS0xLWgyMC56aXAPMzgxMDEtMS1oMjAuemlwDzIwMjEvMDcvMDkgOTo0MQkzNDY3LDUgS0JkAjwPZBYCZg8VBQQuemlwSWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzM4X3Nlcmllcy8zOC4xMDEtMS8zODEwMS0xLWgzMC56aXAPMzgxMDEtMS1oMzAuemlwEDIwMjEvMTAvMDYgMTA6MTIJMzc5NCwzIEtCZAI9D2QWAmYPFQUELnppcElodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8zOF9zZXJpZXMvMzguMTAxLTEvMzgxMDEtMS1oNDAuemlwDzM4MTAxLTEtaDQwLnppcBAyMDIyLzAxLzEyIDE2OjQ0CTQyNzgsMiBLQmQCPg9kFgJmDxUFBC56aXBJaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMzhfc2VyaWVzLzM4LjEwMS0xLzM4MTAxLTEtaDUwLnppcA8zODEwMS0xLWg1MC56aXAQMjAyMi8wNC8wMSAxODowMQk0MzExLDMgS0JkAj8PZBYCZg8VBQQuemlwSWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzM4X3Nlcmllcy8zOC4xMDEtMS8zODEwMS0xLWg2MC56aXAPMzgxMDEtMS1oNjAuemlwEDIwMjIvMDYvMzAgMTQ6MjgJNDQyNSw3IEtCZAJAD2QWAmYPFQUELnppcElodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8zOF9zZXJpZXMvMzguMTAxLTEvMzgxMDEtMS1oNzAuemlwDzM4MTAxLTEtaDcwLnppcA8yMDIyLzEwLzA1IDg6MjQJNDQ2NywzIEtCZAJBD2QWAmYPFQUELnppcElodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8zOF9zZXJpZXMvMzguMTAxLTEvMzgxMDEtMS1oODAuemlwDzM4MTAxLTEtaDgwLnppcBAyMDIzLzAxLzEyIDE3OjIzBzQ1NTUgS0JkAkIPZBYCZg8VBQQuemlwSWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzM4X3Nlcmllcy8zOC4xMDEtMS8zODEwMS0xLWg5MC56aXAPMzgxMDEtMS1oOTAuemlwEDIwMjMvMDQvMDYgMjA6MTQJNDU4MSwyIEtCZAJDD2QWAmYPFQUELnppcElodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8zOF9zZXJpZXMvMzguMTAxLTEvMzgxMDEtMS1oYTAuemlwDzM4MTAxLTEtaGEwLnppcBAyMDIzLzA2LzMwIDIwOjQxCTQ1MjUsMSBLQmQCRA9kFgJmDxUFBC56aXBJaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMzhfc2VyaWVzLzM4LjEwMS0xLzM4MTAxLTEtaGIwLnppcA8zODEwMS0xLWhiMC56aXAQMjAyMy8wOS8yOSAxMzozNwk0NTA2LDQgS0JkAkUPZBYCZg8VBQQuemlwSWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzM4X3Nlcmllcy8zOC4xMDEtMS8zODEwMS0xLWhjMC56aXAPMzgxMDEtMS1oYzAuemlwEDIwMjQvMDEvMTYgMjI6MDYJNDUyMiwxIEtCZAJGD2QWAmYPFQUELnppcElodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8zOF9zZXJpZXMvMzguMTAxLTEvMzgxMDEtMS1oZDAuemlwDzM4MTAxLTEtaGQwLnppcA8yMDI0LzA0LzA1IDk6MDkJNDU2MCw4IEtCZAJHD2QWAmYPFQUELnppcElodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8zOF9zZXJpZXMvMzguMTAxLTEvMzgxMDEtMS1oZTAuemlwDzM4MTAxLTEtaGUwLnppcA8yMDI0LzA3LzExIDA6MjEJNDU3Myw4IEtCZAJID2QWAmYPFQUELnppcElodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8zOF9zZXJpZXMvMzguMTAxLTEvMzgxMDEtMS1pMDAuemlwDzM4MTAxLTEtaTAwLnppcBAyMDIzLzAxLzEyIDE3OjI0CTQ3MDIsMiBLQmQCSQ9kFgJmDxUFBC56aXBJaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMzhfc2VyaWVzLzM4LjEwMS0xLzM4MTAxLTEtaTEwLnppcA8zODEwMS0xLWkxMC56aXAQMjAyMy8wNC8wNyAxMjozNAk1MDI0LDggS0JkAkoPZBYCZg8VBQQuemlwSWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzM4X3Nlcmllcy8zOC4xMDEtMS8zODEwMS0xLWkyMC56aXAPMzgxMDEtMS1pMjAuemlwEDIwMjMvMDYvMzAgMjA6NDEJNTE1NCwxIEtCZAJLD2QWAmYPFQUELnppcElodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8zOF9zZXJpZXMvMzguMTAxLTEvMzgxMDEtMS1pMzAuemlwDzM4MTAxLTEtaTMwLnppcBAyMDIzLzA5LzI5IDE3OjUzCTUzMDYsOCBLQmQCTA9kFgJmDxUFBC56aXBJaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMzhfc2VyaWVzLzM4LjEwMS0xLzM4MTAxLTEtaTQwLnppcA8zODEwMS0xLWk0MC56aXAPMjAyNC8wMS8xOSA0OjEwCTYwMzQsNCBLQmQCTQ9kFgJmDxUFBC56aXBJaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMzhfc2VyaWVzLzM4LjEwMS0xLzM4MTAxLTEtaTUwLnppcA8zODEwMS0xLWk1MC56aXAQMjAyNC8wNC8wOSAxNjozMgk2NDc0LDQgS0JkAk4PZBYCZg8VBQQuemlwSWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzM4X3Nlcmllcy8zOC4xMDEtMS8zODEwMS0xLWk2MC56aXAPMzgxMDEtMS1pNjAuemlwEDIwMjQvMDcvMTcgMTM6MTkJNjgwOSw1IEtCZAIBDw8WAh4EVGV4dAUJNzkgaXRlbXMuZGRkO1sOi5EepqLGj3ZVCl7F7beO/RzUKsgq5z+JtBgQZ4Q=" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="EDC176C3" />
+			<div id="dragNdrop">
+				<img src="/ftp/zIcons/cloud-upload.png" alt="upload" width="100" />
+				<br />Drag and drop documents here or click to upload
+				<br />
+				<div id="file-preview"></div>
+			</div>
+			
+			<div class="resultMsg failure" id="InvalidFolder" style="display:none">Invalid folder name</div>
+			
+            
+            <table style="margin-left:20px">
+                <thead>
+                  <tr>
+                    <th>&nbsp;</th>
+                    <th><a href="?sortby=name">sort by name</a>/<a href="?sortby=namerev">desc</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                    <th><a href="?sortby=date">sort by date</a>/<a href="?sortby=daterev">desc</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th> 
+                    <th><a href="?sortby=size">sort by size</a>/<a href="?sortby=sizerev">desc</a></th>
+                  </tr>
+                </thead>
+                <tbody>
+                    
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-001.zip">38101-1-001.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2017/08/11 1:44
+                                </td>
+                                <td>
+                                    28,9 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-010.zip">38101-1-010.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2017/11/15 9:22
+                                </td>
+                                <td>
+                                    32,8 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-020.zip">38101-1-020.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2017/11/15 8:57
+                                </td>
+                                <td>
+                                    240,3 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-030.zip">38101-1-030.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2017/12/15 9:54
+                                </td>
+                                <td>
+                                    760,7 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-040.zip">38101-1-040.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2017/12/15 9:54
+                                </td>
+                                <td>
+                                    769,7 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-100.zip">38101-1-100.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2017/12/15 23:27
+                                </td>
+                                <td>
+                                    383,1 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-f00.zip">38101-1-f00.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2018/01/09 9:15
+                                </td>
+                                <td>
+                                    395 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-f10.zip">38101-1-f10.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2018/04/06 14:15
+                                </td>
+                                <td>
+                                    472 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-f20.zip">38101-1-f20.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2018/07/09 14:01
+                                </td>
+                                <td>
+                                    923,8 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-f30.zip">38101-1-f30.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2018/10/03 12:27
+                                </td>
+                                <td>
+                                    1270,5 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-f40.zip">38101-1-f40.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2019/01/15 11:04
+                                </td>
+                                <td>
+                                    1734,6 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-f50.zip">38101-1-f50.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2019/04/04 11:59
+                                </td>
+                                <td>
+                                    1807,9 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-f60.zip">38101-1-f60.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2019/07/04 5:26
+                                </td>
+                                <td>
+                                    1830,1 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-f70.zip">38101-1-f70.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2019/10/07 10:15
+                                </td>
+                                <td>
+                                    1827,2 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-f80.zip">38101-1-f80.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2020/01/13 0:06
+                                </td>
+                                <td>
+                                    1835,7 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-f81.zip">38101-1-f81.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2020/01/13 8:21
+                                </td>
+                                <td>
+                                    1840,9 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-f82.zip">38101-1-f82.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2020/01/15 9:42
+                                </td>
+                                <td>
+                                    1841,5 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-f90.zip">38101-1-f90.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2020/04/08 19:23
+                                </td>
+                                <td>
+                                    1846,7 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-fa0.zip">38101-1-fa0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2020/07/17 13:54
+                                </td>
+                                <td>
+                                    1871,4 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-fb0.zip">38101-1-fb0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2020/10/09 19:40
+                                </td>
+                                <td>
+                                    1867,5 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-fc0.zip">38101-1-fc0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2021/01/12 19:06
+                                </td>
+                                <td>
+                                    1873,9 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-fd0.zip">38101-1-fd0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2021/04/12 18:29
+                                </td>
+                                <td>
+                                    1867,8 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-fe0.zip">38101-1-fe0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2021/07/08 10:13
+                                </td>
+                                <td>
+                                    1677,1 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-ff0.zip">38101-1-ff0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2021/10/01 7:17
+                                </td>
+                                <td>
+                                    1680,7 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-fg0.zip">38101-1-fg0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2022/01/12 16:41
+                                </td>
+                                <td>
+                                    1803,1 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-fh0.zip">38101-1-fh0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2022/04/01 17:53
+                                </td>
+                                <td>
+                                    1826,2 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-fi0.zip">38101-1-fi0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2022/06/24 13:13
+                                </td>
+                                <td>
+                                    1864,5 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-fj0.zip">38101-1-fj0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2022/09/28 9:57
+                                </td>
+                                <td>
+                                    1870,6 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-fk0.zip">38101-1-fk0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2023/01/11 23:03
+                                </td>
+                                <td>
+                                    1932,5 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-fl0.zip">38101-1-fl0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2023/04/06 20:12
+                                </td>
+                                <td>
+                                    1940,7 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-fm0.zip">38101-1-fm0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2023/06/30 20:40
+                                </td>
+                                <td>
+                                    1938,4 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-fn0.zip">38101-1-fn0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2023/09/29 12:14
+                                </td>
+                                <td>
+                                    1896,7 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-fo0.zip">38101-1-fo0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2024/01/12 22:23
+                                </td>
+                                <td>
+                                    1897,3 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-fp0.zip">38101-1-fp0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2024/04/05 9:08
+                                </td>
+                                <td>
+                                    1900,7 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-fq0.zip">38101-1-fq0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2024/07/11 0:07
+                                </td>
+                                <td>
+                                    1901,2 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-g00.zip">38101-1-g00.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2019/07/04 6:02
+                                </td>
+                                <td>
+                                    2040,4 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-g10.zip">38101-1-g10.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2019/10/07 10:39
+                                </td>
+                                <td>
+                                    2134,9 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-g20.zip">38101-1-g20.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2020/01/13 9:15
+                                </td>
+                                <td>
+                                    2265,1 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-g30.zip">38101-1-g30.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2020/04/08 19:24
+                                </td>
+                                <td>
+                                    1665,3 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-g40.zip">38101-1-g40.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2020/07/17 13:55
+                                </td>
+                                <td>
+                                    2756,4 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-g50.zip">38101-1-g50.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2020/10/09 19:27
+                                </td>
+                                <td>
+                                    2946,6 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-g60.zip">38101-1-g60.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2021/01/12 19:07
+                                </td>
+                                <td>
+                                    2807,8 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-g70.zip">38101-1-g70.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2021/04/12 18:29
+                                </td>
+                                <td>
+                                    3270,5 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-g80.zip">38101-1-g80.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2021/07/09 9:40
+                                </td>
+                                <td>
+                                    3107,9 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-g90.zip">38101-1-g90.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2021/10/05 12:09
+                                </td>
+                                <td>
+                                    3146,8 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-ga0.zip">38101-1-ga0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2022/01/12 16:41
+                                </td>
+                                <td>
+                                    3277,2 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-gb0.zip">38101-1-gb0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2022/04/01 17:54
+                                </td>
+                                <td>
+                                    3293,5 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-gc0.zip">38101-1-gc0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2022/06/24 13:14
+                                </td>
+                                <td>
+                                    3353 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-gc1.zip">38101-1-gc1.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2022/06/24 15:27
+                                </td>
+                                <td>
+                                    3353,7 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-gd0.zip">38101-1-gd0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2022/09/28 9:57
+                                </td>
+                                <td>
+                                    3317,7 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-ge0.zip">38101-1-ge0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2023/01/11 23:04
+                                </td>
+                                <td>
+                                    3370,3 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-gf0.zip">38101-1-gf0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2023/04/06 20:12
+                                </td>
+                                <td>
+                                    3387,5 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-gg0.zip">38101-1-gg0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2023/06/30 20:40
+                                </td>
+                                <td>
+                                    3349,2 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-gh0.zip">38101-1-gh0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2023/09/29 12:15
+                                </td>
+                                <td>
+                                    3350,5 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-gi0.zip">38101-1-gi0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2024/01/16 7:08
+                                </td>
+                                <td>
+                                    3368,4 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-gj0.zip">38101-1-gj0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2024/04/05 9:09
+                                </td>
+                                <td>
+                                    3376,4 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-gk0.zip">38101-1-gk0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2024/07/11 0:07
+                                </td>
+                                <td>
+                                    3381,3 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-h00.zip">38101-1-h00.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2021/01/12 19:08
+                                </td>
+                                <td>
+                                    2126,4 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-h10.zip">38101-1-h10.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2021/04/13 2:26
+                                </td>
+                                <td>
+                                    3290,3 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-h20.zip">38101-1-h20.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2021/07/09 9:41
+                                </td>
+                                <td>
+                                    3467,5 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-h30.zip">38101-1-h30.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2021/10/06 10:12
+                                </td>
+                                <td>
+                                    3794,3 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-h40.zip">38101-1-h40.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2022/01/12 16:44
+                                </td>
+                                <td>
+                                    4278,2 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-h50.zip">38101-1-h50.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2022/04/01 18:01
+                                </td>
+                                <td>
+                                    4311,3 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-h60.zip">38101-1-h60.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2022/06/30 14:28
+                                </td>
+                                <td>
+                                    4425,7 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-h70.zip">38101-1-h70.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2022/10/05 8:24
+                                </td>
+                                <td>
+                                    4467,3 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-h80.zip">38101-1-h80.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2023/01/12 17:23
+                                </td>
+                                <td>
+                                    4555 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-h90.zip">38101-1-h90.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2023/04/06 20:14
+                                </td>
+                                <td>
+                                    4581,2 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-ha0.zip">38101-1-ha0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2023/06/30 20:41
+                                </td>
+                                <td>
+                                    4525,1 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-hb0.zip">38101-1-hb0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2023/09/29 13:37
+                                </td>
+                                <td>
+                                    4506,4 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-hc0.zip">38101-1-hc0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2024/01/16 22:06
+                                </td>
+                                <td>
+                                    4522,1 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-hd0.zip">38101-1-hd0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2024/04/05 9:09
+                                </td>
+                                <td>
+                                    4560,8 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-he0.zip">38101-1-he0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2024/07/11 0:21
+                                </td>
+                                <td>
+                                    4573,8 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-i00.zip">38101-1-i00.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2023/01/12 17:24
+                                </td>
+                                <td>
+                                    4702,2 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-i10.zip">38101-1-i10.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2023/04/07 12:34
+                                </td>
+                                <td>
+                                    5024,8 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-i20.zip">38101-1-i20.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2023/06/30 20:41
+                                </td>
+                                <td>
+                                    5154,1 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-i30.zip">38101-1-i30.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2023/09/29 17:53
+                                </td>
+                                <td>
+                                    5306,8 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-i40.zip">38101-1-i40.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2024/01/19 4:10
+                                </td>
+                                <td>
+                                    6034,4 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-i50.zip">38101-1-i50.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2024/04/09 16:32
+                                </td>
+                                <td>
+                                    6474,4 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip" /> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a href="https://www.3gpp.org/ftp/Specs/archive/38_series/38.101-1/38101-1-i60.zip">38101-1-i60.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2024/07/17 13:19
+                                </td>
+                                <td>
+                                    6809,5 KB
+                                </td>
+                            </tr>
+                        
+                </tbody>
+            </table>
+            <hr />
+            <p>
+                <span id="FileCount">79 items.</span>
+            </p>
+        </form>	
+	<script type="text/javascript">
+		var
+			dropRegion = document.getElementById("dragNdrop"),
+			filePreviewRegion = document.getElementById("file-preview");
+
+
+		// open file selector when clicked on the drop region
+		var fakeInput = document.createElement("input");
+		fakeInput.type = "file";
+		fakeInput.multiple = true;
+		dropRegion.addEventListener('click', function() {
+			fakeInput.click();
+		});
+
+		fakeInput.addEventListener("change", function() {
+			var files = fakeInput.files;
+			handleFiles(files);
+		});
+
+
+		function preventDefault(e) {
+			e.preventDefault();
+			e.stopPropagation();
+		}
+
+		dropRegion.addEventListener('dragenter', preventDefault, false)
+		dropRegion.addEventListener('dragleave', preventDefault, false)
+		dropRegion.addEventListener('dragover', preventDefault, false)
+		dropRegion.addEventListener('drop', preventDefault, false)
+
+
+		function handleDrop(e) {
+			var dt = e.dataTransfer,
+				files = dt.files;
+
+			if (files.length) {
+
+				handleFiles(files);
+			}				
+			
+
+		}
+
+		dropRegion.addEventListener('drop', handleDrop, false);
+
+
+
+		function handleFiles(files) {
+			if (window.confirm("Are you sure you want to upload?")) {
+				for (var i = 0, len = files.length; i < len; i++) {
+					previewAnduploadFile(files[i]);
+				}
+			}
+		}
+		function previewAnduploadFile(file) {
+
+			// container
+			var imgView = document.createElement("div");
+			imgView.className = "image-view";
+			filePreviewRegion.appendChild(imgView);
+
+			// previewing image
+			var img = document.createElement("span");
+			img.innerHTML = file.name + " ";
+			imgView.appendChild(img);
+
+			// progress overlay
+			var overlay = document.createElement("progress");
+			overlay.className = "overlay";
+			imgView.appendChild(overlay);
+
+
+			// create FormData
+			var formData = new FormData();
+			formData.append(file.name, file);
+
+			// upload the image
+			var getLocation = function(href) {
+				var l = document.createElement("a");
+				l.href = href;
+				return l;
+			};
+			var l = getLocation(window.location.href);
+			var uploadLocation = l.pathname;
+			
+
+			var ajax = new XMLHttpRequest();
+			ajax.open("POST", uploadLocation, true);
+
+			ajax.onreadystatechange = function(e) {
+				if (ajax.readyState === 4) {
+					if (ajax.status === 200) {
+						// done!
+						var bodyHtml = /<body.*?>([\s\S]*)<\/body>/.exec(ajax.responseText)[1];
+						document.getElementsByTagName("body")[0].innerHTML = bodyHtml;
+					} else {
+						// error!
+					}
+				}
+			}
+
+			ajax.upload.onprogress = function(e) {
+
+				var perc = (e.loaded / e.total * 100) || 100;
+
+				overlay.value = perc;
+				overlay.max=100;
+			}
+
+			ajax.send(formData);
+			
+
+		}
+		function changeFolderPermissions(){
+			var r = confirm("You are about to change the permissions for this folder.");
+			if (r == true) {
+				var ajax = new XMLHttpRequest();
+				ajax.open("GET", location.pathname + "?changeFolderPermissions=1&t=" + Date.now() , true);
+				ajax.onreadystatechange = function(e) {
+					if (ajax.readyState === 4) {
+						if (ajax.status === 200) {
+							// done!
+							var bodyHtml = /<body.*?>([\s\S]*)<\/body>/.exec(ajax.responseText)[1];
+							document.getElementsByTagName("body")[0].innerHTML = bodyHtml;
+							var element = document.getElementById("enableUploads");
+							document.getElementById("dragNdrop").style.display = "block";
+							if(typeof(element) != 'undefined' && element != null){
+								document.getElementById("dragNdrop").style.display = "none";
+							}
+						} else {
+							// error!
+						}
+					}
+				}
+				ajax.send();
+			} 
+			return false;
+		}
+		function uploadFolder(event){
+			document.getElementById("InvalidFolder").style.display = "none";
+			event.preventDefault();
+			if(validateFileName(document.getElementById("folderName").value)){
+				var ajax = new XMLHttpRequest();
+				ajax.open("GET", location.pathname + "?createFolder=" + encodeURIComponent(document.getElementById("folderName").value) , true);
+				ajax.onreadystatechange = function(e) {
+					if (ajax.readyState === 4) {
+						if (ajax.status === 200) {
+							// done!
+							var bodyHtml = /<body.*?>([\s\S]*)<\/body>/.exec(ajax.responseText)[1];
+							document.getElementsByTagName("body")[0].innerHTML = bodyHtml;
+						} else {
+							// error!
+						}
+					}
+				}
+				ajax.send();
+				return false;
+			}else{
+				document.getElementById("InvalidFolder").style.display = "block";
+				return false;
+			}
+		}
+		function validateFileName(text) { 
+			var re = /[<>:"\/\\|?*\x00-\x1F]|^(?:aux|con|clock\$|nul|prn|com[1-9]|lpt[1-9])$/i;
+		    if(!re.test(text)) {
+			  return true;
+			}
+			return false;
+		}
+	</script>		
+    </body>
+</html>
