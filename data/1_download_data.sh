@@ -1,4 +1,5 @@
 #！/bin/bash
+# Downlaod all the document of 38.101-1
 
 # Define URL and output filenames
 
