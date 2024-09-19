@@ -36,6 +36,23 @@ CR_DOWNLOAD_DIR="./cr_downloads"
 #    fi
 #done < $CR_LINKS_FILE
 
+# Unzip downloaded .zip files
+for zip_file in "$CR_DOWNLOAD_DIR"/*.zip; do
+   if [ -f "$zip_file" ]; then
+        echo "Unzipping $zip_file..."
+        unzip -d "$CR_DOWNLOAD_DIR" "$zip_file"
+        # Check if unzip was successful
+        if [ $? -eq 0 ]; then
+            echo "Unzipping complete. Deleting $zip_file..."
+            rm "$zip_file"
+        else
+            echo "Failed to unzip $zip_file. Not deleting."
+        fi
+    else
+       echo "No zip files found in $CR_DOWNLOAD_DIR."
+    fi
+done
 
+echo "Unzipping complete."
 
 echo "All tasks completed."

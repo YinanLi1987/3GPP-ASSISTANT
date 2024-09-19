@@ -1,0 +1,64 @@
+# These are standard name or format of metadata
+
+TSG/WG
+TSG RAN: Radio Access Network
+RAN WG1: Radio Layer 1 (Physical layer)
+RAN WG2: Radio layer 2 and Radio layer 3 Radio Resource Control
+RAN WG3: UTRAN/E-UTRAN/NG-RAN architecture and related network interfaces
+RAN WG4: Radio Performance and Protocol Aspects
+RAN WG5: Mobile terminal conformance testing
+RAN AH1: ITU-R Ad Hoc
+TSG SA: Service & System Aspects
+SA WG1: Services
+SA WG2: System Architecture and Services
+SA WG3: Security and Privacy
+SA WG4: Multimedia Codecs, Systems and Services
+SA WG5: Management, Orchestration and Charging
+SA WG6: Application Enablement and Critical Communication Applications
+TSG CT: Core Network & Terminals
+CT WG1: User Equipment to Core Network protocols
+CT WG3: Interworking with External Networks & Policy and Charging Control
+CT WG4: Core Network Protocols
+CT WG6: Smart Card Application Aspects
+
+Proposed change affects: UICC apps, ME, Radio Access Network, Core Network. 
+
+Work item code:
+
+The 3GPP Organizational Partners:
+ARIB: Association of Radio Industries and Businesses (Japan)
+Anritsu Corporation
+DENSO CORPORATION
+Ericsson Japan K.K.
+Facebook Japan G.K.
+Fujitsu Limited
+Honda Motor Co., Ltd
+HUAWEI Technologies Japan K.K.
+Japan Radio Co., Ltd
+KDDI Corporation
+Kyocera Corporation
+Mitsubishi Electric Co.
+Murata Manufacturing Co Ltd.
+NEC Corporation
+NHK (Japan Broadcasting Corporation)
+National Institute of Information and Communications Technology (NICT)
+Nokia Japan
+NTT DOCOMO INC.
+Panasonic Holdings Corporation
+QUALCOMM JAPAN LLC.
+Rakuten Mobile, Inc
+SAMSUNG R&D INSTITUTE JAPAN
+SHARP Corporation
+SKY Perfect JSAT Corporation
+SoftBank Corp.
+Sony Corporation
+Sony Group Corporation
+Sumitomo Electric Industries, Ltd.
+Tomorrow’s Creation Labs
+ZTE Japan K.K.
+ATIS: Alliance for Telecommunications Industry Solutions (USA)
+CCSA: China Communications Standards Association (China)
+ETSI: European Telecommunications Standards Institute (Europe)
+TSDSI: Telecommunications Standards Development Society, India (India)
+TTA: Telecommunications Technology Association (Korea)
+TTC: Telecommunication Technology Committee (Japan) 

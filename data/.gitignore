@@ -1,11 +1,12 @@
-/downloads
-/cr_downloads
+/1_download_raw_data/downloads
+/1_download_raw_data/cr_downloads
 config.js
 R4-1707796 TS 38.101-1 v0.0.1 (2017-08) .docx
-wget-log
-cr_links.txt
-cr_page.html
-links.txt
-page.html
-.DS_Store
-
+/1_download_raw_data/wget-log
+/1_download_raw_data/cr_links.txt
+/1_download_raw_data/cr_page.html
+/1_download_raw_data/links.txt
+/1_download_raw_data/page.html
+/1_download_raw_data/.DS_Store
+.env
+test.py
