@@ -10,3 +10,7 @@ R4-1707796 TS 38.101-1 v0.0.1 (2017-08) .docx
 /1_download_raw_data/.DS_Store
 .env
 test.py
+wget-log
+/2_extract_data/1_standart_data.txt
+/2_extract_data/3GPPMembership.csv
+/2_extract_data/testtext.txt
