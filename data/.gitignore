@@ -14,3 +14,4 @@ wget-log
 /2_extract_data/1_standart_data.txt
 /2_extract_data/3GPPMembership.csv
 /2_extract_data/testtext.txt
+/2_extract_data/__pycache__
