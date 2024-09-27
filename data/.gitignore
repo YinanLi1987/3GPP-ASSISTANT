@@ -15,3 +15,8 @@ wget-log
 /2_extract_data/3GPPMembership.csv
 /2_extract_data/testtext.txt
 /2_extract_data/__pycache__
+/2_extract_data/raw_data_example
+/2_extract_data/extract_changement.py
+/2_extract_data/example_pdfs
+
+/2_extract_data/cropped_images

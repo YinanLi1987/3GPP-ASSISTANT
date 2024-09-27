@@ -1,0 +1,57 @@
+{
+    "meeting": "3GPP TSG-RAN4 Meeting #111",
+    "meeting_location": "Fukuoka City, Fukuoka, Japan",
+    "meeting_dates": "2024-05-20 to 2024-05-24",
+    "document_id": "R4-2409310",
+    "cr_template_version": "CR-Form-v12.3",
+    "affected_species": "38.101-1",
+    "cr_number": "2335",
+    "revision": "-",
+    "current_version": "18.5.0",
+   "proposed_change_affects": {
+    "UICC_apps":false,
+    "ME":true,
+    "Radio_Accesss_Networks":false,
+    "Core_Networks":false
+   },
+    "title": "Big CR on Introduction of completed SUL band combinations into TS 38.101-1",
+    "source_to_wg": ["Huawei" ,"HiSilicon"],
+    "source_to_tsg": "R4",
+    "work_item_code": "NR_SUL_combos_R18-Core",
+    "date": "2024-05-27", 
+    "category": "B(addition of feature)",
+    "target_release": "Rel-18",
+    "reason_for_change": "There is no MSD issue for SUL_n79A-n83A. Thus it’s proposed to introduce SUL_n79A-n83A with BCS4&5.",
+    "summary_of_change": "Based on the endorsed CR R4-2406646, it’s proposed to introduce SUL_n79A-n83A with BCS4&5 and test configurations in 7.3C.2.",
+    "consequences_if_not_approved": "Current specification can’t support SUL_n79A-n83A with BCS4&5.",
+    "clauses_affected": ["5.5C", "7.3C.2"],
+    "other_affected_core_specifications": [],
+    "other_affected_test_specifications": [],
+    "other_affected_O&M_specifications": [],
+    "other_comments": "",
+    "this_cr_revision_history": "",
+    "start_of_change":"5.5C configurations for SUL",
+    "change_01":{
+        "section_number":"5.5C",
+        "section_title":"Configurations for SULConfigurations for SUL",
+        "table_number":"5.5C-1",
+        "table_title":"Supported channel bandwidths per SUL band combination",
+        "change_type":"insert",
+        "change_content":"5.5.5-1 for each carrier",
+        "graph_number":"",
+        "graph_title":"",
+        "image":"link..."
+       },
+    "change_02":{
+        "section_number":"7.3C.2",
+        "section_title":"Reference sensitivity power level for SUL",
+        "table_number":"7.3C.2-1",
+        "table_title":"Supplementary uplink configuration for reference sensitivity",
+        "change_start_line":"100 100 100 100 100 100 100 100 100",
+        "change_end_line":"50 50 50 50 50 50 50 50 50",
+        "graph_number":"",
+        "graph_title":"",
+        "image":"link..."
+       }
+  }
+  

@@ -1,14 +1,16 @@
 import os
 from extract_meta_data import extract_metadata
 from load_data import load_document_content
+from load_xml import  process_xml
 from dotenv import load_dotenv
 from pathlib import Path
 
 if __name__ == "__main__":
-    file_path = Path(__file__).resolve().parent.parent / '1_download_raw_data' / 'cr_downloads' / 'Draft R4-2409310 SUL big CR.docx'
-
+   # file_path = Path(__file__).resolve().parent.parent / '1_download_raw_data' / 'cr_downloads' / 'Draft R4-2409310 SUL big CR.docx'
+    file_path = Path(__file__).resolve().parent.parent / '2_extract_data' / 'raw_data_example' / 'xml_content_in_docx.docx'
     # Load document contents
     contents = load_document_content(file_path)
+    
 
     # Iterate through the loaded contents and extract metadata
     for idx, content in enumerate(contents):
